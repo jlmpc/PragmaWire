@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Qué son las passkeys y por qué importan",
+    "slug": "que-son-passkeys",
+    "categoria": "Seguridad Digital",
+    "palabra_clave_principal": "qué son las passkeys",
+    "palabras_clave_secundarias": [
+      "passkeys",
+      "contraseñas",
+      "seguridad digital"
+    ],
+    "tema_principal": "passkeys",
+    "angulo_editorial": "explicación práctica para usuarios no expertos",
+    "fecha_publicacion": "2026-04-28",
+    "url": "",
+    "entidades": [
+      "passkeys",
+      "contraseñas",
+      "autenticación",
+      "Apple",
+      "Google",
+      "Microsoft"
+    ],
+    "estado": "ejemplo"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "run_id": "",
+  "run_path": "",
+  "created_at": "",
+  "updated_at": "",
+  "execution_mode": "SIMULACION",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "initialized",
+  "current_stage": "01-run-context",
+  "next_agent": "supervisor-inicial",
+  "stages": {},
+  "errors": [],
+  "warnings": [],
+  "blocked_reason": ""
+}
