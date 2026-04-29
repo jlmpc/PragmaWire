@@ -1,0 +1,7 @@
+{
+  "sandbox": {
+    "network": {
+      "allowedDomains": ["pragmawire.com", "www.pragmawire.com"]
+    }
+  }
+}
