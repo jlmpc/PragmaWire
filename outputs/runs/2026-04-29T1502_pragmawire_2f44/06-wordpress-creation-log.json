@@ -5,9 +5,6 @@
   "success_count": 0,
   "error_count": 12,
   "publish": false,
-  "status": "SANDBOX_BLOCKED",
-  "nota": "Las llamadas HTTP salientes a pragmawire.com están bloqueadas en el entorno sandbox (HTTP 403: Host not in allowlist). Los 12 archivos wordpress-ready están preparados en 05-wordpress-ready/ y listos para ser publicados como borradores. Ejecutar create_wp_drafts.py desde un entorno con acceso a red a pragmawire.com.",
-  "accion_requerida": "Ejecutar outputs/runs/2026-04-29T1502_pragmawire_2f44/create_wp_drafts.py con acceso de red",
   "results": [
     {
       "articulo_id": "articulo_001",
