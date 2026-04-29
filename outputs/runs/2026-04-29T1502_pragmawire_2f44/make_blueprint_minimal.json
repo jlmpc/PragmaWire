@@ -1,0 +1,215 @@
+{
+  "flow": [
+    {
+      "id": 1,
+      "module": "builtin:BasicFeeder",
+      "version": 1,
+      "parameters": {
+        "array": [
+          {
+            "id": "articulo_001",
+            "title": "Qué es Matter: el protocolo que hace que todos tus dispositivos inteligentes se entiendan por fin",
+            "slug": "que-es-matter-domotica",
+            "excerpt": "Matter es el protocolo que hace que dispositivos de Amazon, Google y Apple funcionen juntos. Cómo funciona, qué dispositivos son compatibles y cómo reconocerlo en la caja.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_002",
+            "title": "Home Assistant para principiantes: automatiza tu casa aunque no sepas nada de tecnología",
+            "slug": "home-assistant-principiantes",
+            "excerpt": "Instala Home Assistant desde cero: hardware, configuración en menos de una hora y automatizaciones sin programar. Guía práctica para principiantes 2026.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_003",
+            "title": "Agentes de IA: qué son, para qué sirven y cómo puedes usarlos hoy mismo",
+            "slug": "que-son-agentes-de-ia",
+            "excerpt": "Los agentes de IA no solo responden preguntas: toman acciones por ti. Te explicamos qué son, en qué se diferencian de un chatbot y cómo activar tus primeras automatizaciones hoy.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_004",
+            "title": "ChatGPT, Claude o Gemini: cuál usar en 2026 según lo que necesitas",
+            "slug": "chatgpt-vs-claude-vs-gemini-2026",
+            "excerpt": "No hay una IA mejor: hay la más adecuada para lo que haces. Comparamos ChatGPT, Claude y Gemini en 2026 con tabla, casos de uso y recomendación por perfil.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_005",
+            "title": "Notion para principiantes: cómo empezar sin perderte en la configuración",
+            "slug": "notion-para-principiantes",
+            "excerpt": "Abriste Notion y no sabes por dónde empezar. Esta guía te explica los 3 conceptos clave, las 3 páginas que necesitas crear el primer día y cuándo Notion no es la mejor opción.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_006",
+            "title": "Cómo automatizar tareas repetitivas con IA sin saber programar (2026)",
+            "slug": "automatizar-tareas-ia-sin-programar",
+            "excerpt": "5 automatizaciones reales que puedes activar hoy con ChatGPT Tasks, Gemini, Notion AI, Zapier y Make. Sin código, sin conocimientos técnicos. Guía paso a paso.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_007",
+            "title": "Anillos inteligentes 2026: Oura Ring, Galaxy Ring y RingConn comparados",
+            "slug": "anillos-inteligentes-cual-comprar-2026",
+            "excerpt": "Comparamos los tres mejores anillos inteligentes de 2026 (Oura Ring 4, Samsung Galaxy Ring, RingConn) con tabla, precios y recomendación por perfil. Sin hype.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_008",
+            "title": "Gadgets de viaje 2026: los que sí valen la pena (y los que dejarías en casa)",
+            "slug": "gadgets-viaje-2026",
+            "excerpt": "Los 5 gadgets de viaje con retorno real: cargador GaN, rastreador Bluetooth, eSIM, power bank y cable multiconector. Sin listas de 25 artículos que nadie usa.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_009",
+            "title": "Tecnología para dormir mejor: apps y hábitos que funcionan de verdad (2026)",
+            "slug": "mejorar-sueno-tecnologia",
+            "excerpt": "Entre tantas apps de sueño, ¿cuáles funcionan de verdad? Te explicamos qué puede y qué no puede hacer la tecnología por tu sueño, con checklist de rutina nocturna.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_010",
+            "title": "Bienestar digital: cómo reducir el tiempo de pantalla sin afectar a tu trabajo",
+            "slug": "bienestar-digital-limites-pantallas",
+            "excerpt": "Reduce tu tiempo de pantalla con las herramientas que ya tienes en el teléfono: Screen Time (iOS) y Digital Wellbeing (Android). Guía práctica con checklist de 15 minutos.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_011",
+            "title": "Quishing: qué es el phishing con códigos QR y cómo protegerte en 5 pasos",
+            "slug": "que-es-el-quishing",
+            "excerpt": "El quishing usa códigos QR para llevarte a webs fraudulentas. Te explicamos qué es, por qué es más peligroso que el phishing clásico y 5 pasos para protegerte.",
+            "status": "draft"
+          },
+          {
+            "id": "articulo_012",
+            "title": "Las estafas digitales más usadas en España en 2026: cómo detectarlas y qué hacer si caes",
+            "slug": "estafas-digitales-espana-2026",
+            "excerpt": "Las 5 estafas digitales más activas en España en 2026: phishing bancario, smishing de Hacienda, fraude por WhatsApp, falsas ofertas de trabajo y quishing. Con qué hacer si caes.",
+            "status": "draft"
+          }
+        ]
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        },
+        "restore": {},
+        "interface": [
+          {
+            "name": "value",
+            "type": "collection",
+            "label": "Value",
+            "spec": [
+              {
+                "name": "id",
+                "type": "text",
+                "label": "ID"
+              },
+              {
+                "name": "title",
+                "type": "text",
+                "label": "Title"
+              },
+              {
+                "name": "slug",
+                "type": "text",
+                "label": "Slug"
+              },
+              {
+                "name": "excerpt",
+                "type": "text",
+                "label": "Excerpt"
+              },
+              {
+                "name": "status",
+                "type": "text",
+                "label": "Status"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "module": "http:ActionSendData",
+      "version": 3,
+      "parameters": {
+        "handleErrors": false,
+        "useNewZLibDecompression": true
+      },
+      "mapper": {
+        "url": "https://pragmawire.com/wp-json/wp/v2/posts",
+        "serializeUrl": false,
+        "method": "post",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Basic dXNlcjAyMDAyNzE3MTIzODc1OkVUaHkgdHNaMiAxRHFIIFNEeEUgMHJ0TCBBSkVK"
+          },
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "qs": [],
+        "bodyType": "raw",
+        "parseResponse": true,
+        "timeout": "",
+        "shareCookies": false,
+        "ca": "",
+        "rejectUnauthorized": true,
+        "followRedirect": true,
+        "useQuerystring": false,
+        "gzip": true,
+        "useMtls": false,
+        "contentType": "application/json",
+        "data": "{\"title\":\"{{1.value.title}}\",\"slug\":\"{{1.value.slug}}\",\"excerpt\":\"{{1.value.excerpt}}\",\"status\":\"draft\"}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 0
+        },
+        "restore": {
+          "expect": {
+            "method": {
+              "label": "POST"
+            },
+            "bodyType": {
+              "label": "Raw"
+            },
+            "contentType": {
+              "label": "JSON (application/json)"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "name": "PragmaWire WP Draft Publisher 2f44",
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "designer": {
+      "orphans": []
+    },
+    "scenario": {
+      "dlq": false,
+      "slots": null,
+      "dataloss": false,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "roundtrips": 1,
+      "sequential": true,
+      "confidential": false,
+      "freshVariables": false,
+      "autoCommitTriggerLast": true
+    }
+  }
+}

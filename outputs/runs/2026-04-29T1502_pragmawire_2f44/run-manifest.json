@@ -7,8 +7,8 @@
   "publish_allowed": false,
   "overall_status": "wordpress_draft_pending",
   "updated_at": "2026-04-29T17:45:00",
-  "current_stage": "06-wordpress-creation",
-  "next_agent": "wordpress-publisher",
+  "current_stage": "completed",
+  "next_agent": null,
   "stages": {
     "01-run-context": {
       "agent": "supervisor-inicial",
@@ -16,7 +16,10 @@
       "stage_complete": true,
       "completed_at": "2026-04-29T15:03:00",
       "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
-      "output_paths": ["01-run-context/run-context.md", "01-run-context/_STAGE_COMPLETE"]
+      "output_paths": [
+        "01-run-context/run-context.md",
+        "01-run-context/_STAGE_COMPLETE"
+      ]
     },
     "02-briefings": {
       "agent": "agente-investigador",
@@ -28,13 +31,20 @@
       "total_aptos": 12,
       "score_promedio": 85.1,
       "output_paths": [
-        "02-briefings/briefing_001.md", "02-briefings/briefing_002.md",
-        "02-briefings/briefing_003.md", "02-briefings/briefing_004.md",
-        "02-briefings/briefing_005.md", "02-briefings/briefing_006.md",
-        "02-briefings/briefing_007.md", "02-briefings/briefing_008.md",
-        "02-briefings/briefing_009.md", "02-briefings/briefing_010.md",
-        "02-briefings/briefing_011.md", "02-briefings/briefing_012.md",
-        "02-briefings/briefings-index.json", "02-briefings/_STAGE_COMPLETE"
+        "02-briefings/briefing_001.md",
+        "02-briefings/briefing_002.md",
+        "02-briefings/briefing_003.md",
+        "02-briefings/briefing_004.md",
+        "02-briefings/briefing_005.md",
+        "02-briefings/briefing_006.md",
+        "02-briefings/briefing_007.md",
+        "02-briefings/briefing_008.md",
+        "02-briefings/briefing_009.md",
+        "02-briefings/briefing_010.md",
+        "02-briefings/briefing_011.md",
+        "02-briefings/briefing_012.md",
+        "02-briefings/briefings-index.json",
+        "02-briefings/_STAGE_COMPLETE"
       ],
       "valid_outputs_count": 12
     },
@@ -47,13 +57,20 @@
       "total_articulos_redactados": 12,
       "total_bloqueados": 0,
       "output_paths": [
-        "03-drafts/articulo_001_draft.md", "03-drafts/articulo_002_draft.md",
-        "03-drafts/articulo_003_draft.md", "03-drafts/articulo_004_draft.md",
-        "03-drafts/articulo_005_draft.md", "03-drafts/articulo_006_draft.md",
-        "03-drafts/articulo_007_draft.md", "03-drafts/articulo_008_draft.md",
-        "03-drafts/articulo_009_draft.md", "03-drafts/articulo_010_draft.md",
-        "03-drafts/articulo_011_draft.md", "03-drafts/articulo_012_draft.md",
-        "03-drafts/drafts-index.json", "03-drafts/_STAGE_COMPLETE"
+        "03-drafts/articulo_001_draft.md",
+        "03-drafts/articulo_002_draft.md",
+        "03-drafts/articulo_003_draft.md",
+        "03-drafts/articulo_004_draft.md",
+        "03-drafts/articulo_005_draft.md",
+        "03-drafts/articulo_006_draft.md",
+        "03-drafts/articulo_007_draft.md",
+        "03-drafts/articulo_008_draft.md",
+        "03-drafts/articulo_009_draft.md",
+        "03-drafts/articulo_010_draft.md",
+        "03-drafts/articulo_011_draft.md",
+        "03-drafts/articulo_012_draft.md",
+        "03-drafts/drafts-index.json",
+        "03-drafts/_STAGE_COMPLETE"
       ],
       "valid_outputs_count": 12
     },
@@ -68,13 +85,20 @@
       "total_bloqueados": 0,
       "score_promedio": 84.8,
       "output_paths": [
-        "04-edited/articulo_001_edited.md", "04-edited/articulo_002_edited.md",
-        "04-edited/articulo_003_edited.md", "04-edited/articulo_004_edited.md",
-        "04-edited/articulo_005_edited.md", "04-edited/articulo_006_edited.md",
-        "04-edited/articulo_007_edited.md", "04-edited/articulo_008_edited.md",
-        "04-edited/articulo_009_edited.md", "04-edited/articulo_010_edited.md",
-        "04-edited/articulo_011_edited.md", "04-edited/articulo_012_edited.md",
-        "04-edited/edited-index.json", "04-edited/_STAGE_COMPLETE"
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/articulo_004_edited.md",
+        "04-edited/articulo_005_edited.md",
+        "04-edited/articulo_006_edited.md",
+        "04-edited/articulo_007_edited.md",
+        "04-edited/articulo_008_edited.md",
+        "04-edited/articulo_009_edited.md",
+        "04-edited/articulo_010_edited.md",
+        "04-edited/articulo_011_edited.md",
+        "04-edited/articulo_012_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
       ],
       "approved_wordpress_drafts": 12
     },
@@ -108,7 +132,36 @@
         "05-wordpress-ready/_STAGE_COMPLETE"
       ],
       "approved_for_wordpress_draft": 12,
-      "alta_prioridad": ["articulo_011", "articulo_012"]
+      "alta_prioridad": [
+        "articulo_011",
+        "articulo_012"
+      ]
+    },
+    "06-wordpress-creation": {
+      "status": "completed",
+      "completed_at": "2026-04-29T17:47:00",
+      "method": "Make.com scenario 5505376 via MCP",
+      "total": 12,
+      "success": 12,
+      "publish": false,
+      "make_scenario_id": 5505376,
+      "execution_ids": [
+        "247015bd72f74bc6887875f848153694",
+        "d4173384dfed4412bca5da62bbe8a5e2",
+        "b7dbc6645750473fa47fe0eb1db2018a",
+        "0e6e8af8d921497abb379057441cd5a8",
+        "c79c4befd32b4bc690dd3c37e3cd8657",
+        "f97ca5fc14c741c0ade182f4575dce1d",
+        "f2c4fcdfe15041b28e1f00dc2e3c39dc",
+        "6b6c55c90abb4a60a9960ea613f91e59",
+        "56546716f1a84068ae16aede51c2af77",
+        "7c286791d612413086a1623f9f5ba501",
+        "bde3ed1eb35a4635bdd2763f39c98282",
+        "0aa61c5ba4d14a56b3bc6489d388dd46"
+      ],
+      "outputs": [
+        "outputs/runs/2026-04-29T1502_pragmawire_2f44/06-wordpress-creation-log.json"
+      ]
     }
   },
   "category_coverage": {
@@ -124,5 +177,6 @@
     "articulos_publicados.json contiene solo 1 artículo de ejemplo — enlazado interno limitado",
     "Google Trends accesible solo via búsqueda web general — sin herramienta dedicada"
   ],
-  "blocked_reason": ""
+  "blocked_reason": "",
+  "completed_at": "2026-04-29T17:47:00"
 }
