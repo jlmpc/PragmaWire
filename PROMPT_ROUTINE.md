@@ -68,9 +68,20 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
-Para cada artículo aprobado en `05-wordpress-ready/`:
-- Usa el WordPress MCP connector para crear un borrador (create_draft: true, publish: false).
-- Registra el ID de borrador y la URL en `run-manifest.json`.
+Para cada artículo aprobado en `05-wordpress-ready/`, crea un borrador en WordPress usando la REST API con las variables de entorno WP_URL, WP_USER y WP_APP_PASSWORD:
+
+```bash
+curl -s -X POST "$WP_URL/wp-json/wp/v2/posts" \
+  -u "$WP_USER:$WP_APP_PASSWORD" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "TÍTULO_DEL_ARTÍCULO",
+    "content": "CONTENIDO_HTML_DEL_ARTÍCULO",
+    "status": "draft"
+  }'
+```
+
+Extrae el `id` y el `link` de la respuesta JSON y regístralos en `run-manifest.json`.
 
 Si el Supervisor Final NO devuelve CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 
