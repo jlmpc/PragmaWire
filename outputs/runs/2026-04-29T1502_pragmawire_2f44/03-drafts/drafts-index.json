@@ -1,0 +1,131 @@
+{
+  "run_id": "2026-04-29T1502_pragmawire_2f44",
+  "generated_at": "2026-04-29T16:00:00",
+  "redaccion_batch_status": "COMPLETA",
+  "total_briefings_recibidos": 12,
+  "total_articulos_redactados": 12,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "archivo": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Hogar Inteligente",
+      "titulo": "Qué es Matter: el protocolo que hace que todos tus dispositivos inteligentes se entiendan por fin",
+      "palabra_clave_principal": "qué es Matter domótica",
+      "tipo_contenido": "Explicación práctica con FAQ y tabla comparativa"
+    },
+    {
+      "id": "articulo_002",
+      "archivo": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Hogar Inteligente",
+      "titulo": "Home Assistant para principiantes: automatiza tu casa aunque no sepas nada de tecnología",
+      "palabra_clave_principal": "Home Assistant principiantes",
+      "tipo_contenido": "Guía práctica paso a paso con checklist y FAQ"
+    },
+    {
+      "id": "articulo_003",
+      "archivo": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo": "Agentes de IA: qué son, para qué sirven y cómo puedes usarlos hoy mismo",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "tipo_contenido": "Explicación + guía práctica con ejemplos reales y FAQ"
+    },
+    {
+      "id": "articulo_004",
+      "archivo": "articulo_004_draft.md",
+      "briefing_id": "briefing_004",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo": "ChatGPT, Claude o Gemini: cuál deberías usar en 2026 según para qué lo necesitas",
+      "palabra_clave_principal": "ChatGPT vs Claude vs Gemini 2026",
+      "tipo_contenido": "Comparativa con tabla y recomendación por perfil"
+    },
+    {
+      "id": "articulo_005",
+      "archivo": "articulo_005_draft.md",
+      "briefing_id": "briefing_005",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Productividad Digital",
+      "titulo": "Notion para principiantes: la guía más honesta para empezar sin perderte en la configuración",
+      "palabra_clave_principal": "Notion para principiantes",
+      "tipo_contenido": "Guía práctica paso a paso con checklist y FAQ"
+    },
+    {
+      "id": "articulo_006",
+      "archivo": "articulo_006_draft.md",
+      "briefing_id": "briefing_006",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Productividad Digital",
+      "titulo": "Cómo automatizar las tareas que más tiempo te roban usando IA (sin saber programar)",
+      "palabra_clave_principal": "automatizar tareas con IA sin programar",
+      "tipo_contenido": "Guía práctica con ejemplos paso a paso y tabla de herramientas"
+    },
+    {
+      "id": "articulo_007",
+      "archivo": "articulo_007_draft.md",
+      "briefing_id": "briefing_007",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo": "Anillos inteligentes: qué miden, cuáles son los mejores de 2026 y cuándo merece la pena comprar uno",
+      "palabra_clave_principal": "anillos inteligentes cuál comprar 2026",
+      "tipo_contenido": "Comparativa con tabla de modelos y guía de compra"
+    },
+    {
+      "id": "articulo_008",
+      "archivo": "articulo_008_draft.md",
+      "briefing_id": "briefing_008",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo": "Gadgets de viaje en 2026: los que sí vale la pena llevar (y los que puedes dejar en casa)",
+      "palabra_clave_principal": "gadgets de viaje que merece la pena 2026",
+      "tipo_contenido": "Guía de compra con tabla y checklist por tipo de viajero"
+    },
+    {
+      "id": "articulo_009",
+      "archivo": "articulo_009_draft.md",
+      "briefing_id": "briefing_009",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo": "Tecnología para dormir mejor: apps, wearables y hábitos que tienen base real (y los que no)",
+      "palabra_clave_principal": "mejorar sueño con tecnología",
+      "tipo_contenido": "Guía práctica con tabla de herramientas y checklist"
+    },
+    {
+      "id": "articulo_010",
+      "archivo": "articulo_010_draft.md",
+      "briefing_id": "briefing_010",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo": "Bienestar digital: cómo reducir el tiempo de pantalla sin que afecte a tu trabajo ni a tu vida",
+      "palabra_clave_principal": "bienestar digital límites pantallas",
+      "tipo_contenido": "Guía práctica con checklist y tabla de herramientas nativas"
+    },
+    {
+      "id": "articulo_011",
+      "archivo": "articulo_011_draft.md",
+      "briefing_id": "briefing_011",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Seguridad Digital",
+      "titulo": "Quishing: qué es el phishing con códigos QR y cómo protegerte en 5 pasos",
+      "palabra_clave_principal": "qué es el quishing",
+      "tipo_contenido": "Alerta de seguridad + guía práctica con checklist"
+    },
+    {
+      "id": "articulo_012",
+      "archivo": "articulo_012_draft.md",
+      "briefing_id": "briefing_012",
+      "estado_redaccion": "REDACCION_COMPLETA",
+      "categoria_principal": "Seguridad Digital",
+      "titulo": "Las estafas digitales más usadas en España en 2026: cómo detectarlas y qué hacer si caes",
+      "palabra_clave_principal": "estafas digitales España 2026",
+      "tipo_contenido": "Guía de alerta con checklist y FAQ"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "run_id": "2026-04-29T1502_pragmawire_2f44",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-04-29T1502_pragmawire_2f44",
+  "created_at": "2026-04-29T15:02:31",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "wordpress_draft_pending",
+  "updated_at": "2026-04-29T17:45:00",
+  "current_stage": "06-wordpress-creation",
+  "next_agent": "wordpress-publisher",
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "completed",
+      "stage_complete": true,
+      "completed_at": "2026-04-29T15:03:00",
+      "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
+      "output_paths": ["01-run-context/run-context.md", "01-run-context/_STAGE_COMPLETE"]
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "completed",
+      "stage_complete": true,
+      "completed_at": "2026-04-29T15:32:00",
+      "investigacion_status": "INVESTIGACION_COMPLETA",
+      "total_briefings": 12,
+      "total_aptos": 12,
+      "score_promedio": 85.1,
+      "output_paths": [
+        "02-briefings/briefing_001.md", "02-briefings/briefing_002.md",
+        "02-briefings/briefing_003.md", "02-briefings/briefing_004.md",
+        "02-briefings/briefing_005.md", "02-briefings/briefing_006.md",
+        "02-briefings/briefing_007.md", "02-briefings/briefing_008.md",
+        "02-briefings/briefing_009.md", "02-briefings/briefing_010.md",
+        "02-briefings/briefing_011.md", "02-briefings/briefing_012.md",
+        "02-briefings/briefings-index.json", "02-briefings/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 12
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "completed",
+      "stage_complete": true,
+      "completed_at": "2026-04-29T16:01:00",
+      "redaccion_status": "COMPLETA",
+      "total_articulos_redactados": 12,
+      "total_bloqueados": 0,
+      "output_paths": [
+        "03-drafts/articulo_001_draft.md", "03-drafts/articulo_002_draft.md",
+        "03-drafts/articulo_003_draft.md", "03-drafts/articulo_004_draft.md",
+        "03-drafts/articulo_005_draft.md", "03-drafts/articulo_006_draft.md",
+        "03-drafts/articulo_007_draft.md", "03-drafts/articulo_008_draft.md",
+        "03-drafts/articulo_009_draft.md", "03-drafts/articulo_010_draft.md",
+        "03-drafts/articulo_011_draft.md", "03-drafts/articulo_012_draft.md",
+        "03-drafts/drafts-index.json", "03-drafts/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 12
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "completed",
+      "stage_complete": true,
+      "completed_at": "2026-04-29T17:30:00",
+      "edicion_status": "COMPLETA",
+      "total_articulos_editados": 12,
+      "total_aprobados": 12,
+      "total_bloqueados": 0,
+      "score_promedio": 84.8,
+      "output_paths": [
+        "04-edited/articulo_001_edited.md", "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md", "04-edited/articulo_004_edited.md",
+        "04-edited/articulo_005_edited.md", "04-edited/articulo_006_edited.md",
+        "04-edited/articulo_007_edited.md", "04-edited/articulo_008_edited.md",
+        "04-edited/articulo_009_edited.md", "04-edited/articulo_010_edited.md",
+        "04-edited/articulo_011_edited.md", "04-edited/articulo_012_edited.md",
+        "04-edited/edited-index.json", "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 12
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "completed",
+      "stage_complete": true,
+      "completed_at": "2026-04-29T17:45:00",
+      "supervision_status": "COMPLETA",
+      "total_articulos_aprobados": 12,
+      "total_bloqueados": 0,
+      "score_promedio": 90.8,
+      "score_minimo": 90,
+      "score_maximo": 93,
+      "vetos_aplicados": 2,
+      "output_paths": [
+        "05-wordpress-ready/supervisor-batch-assessment.md",
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/articulo_004_wordpress_ready.md",
+        "05-wordpress-ready/articulo_005_wordpress_ready.md",
+        "05-wordpress-ready/articulo_006_wordpress_ready.md",
+        "05-wordpress-ready/articulo_007_wordpress_ready.md",
+        "05-wordpress-ready/articulo_008_wordpress_ready.md",
+        "05-wordpress-ready/articulo_009_wordpress_ready.md",
+        "05-wordpress-ready/articulo_010_wordpress_ready.md",
+        "05-wordpress-ready/articulo_011_wordpress_ready.md",
+        "05-wordpress-ready/articulo_012_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 12,
+      "alta_prioridad": ["articulo_011", "articulo_012"]
+    }
+  },
+  "category_coverage": {
+    "Hogar Inteligente": 2,
+    "Inteligencia Artificial": 2,
+    "Productividad Digital": 2,
+    "Recomendaciones Tecnológicas": 2,
+    "Salud y Bienestar Digital": 2,
+    "Seguridad Digital": 2
+  },
+  "errors": [],
+  "warnings": [
+    "articulos_publicados.json contiene solo 1 artículo de ejemplo — enlazado interno limitado",
+    "Google Trends accesible solo via búsqueda web general — sin herramienta dedicada"
+  ],
+  "blocked_reason": ""
+}

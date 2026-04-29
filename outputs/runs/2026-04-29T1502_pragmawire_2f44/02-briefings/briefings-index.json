@@ -1,0 +1,164 @@
+{
+  "run_id": "2026-04-29T1502_pragmawire_2f44",
+  "generated_at": "2026-04-29T15:30:00",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "total_briefings": 12,
+  "total_aptos": 12,
+  "total_descartados": 0,
+  "total_necesitan_revision": 0,
+  "segunda_pasada": false,
+  "cobertura_por_categoria": {
+    "Hogar Inteligente": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" },
+    "Inteligencia Artificial": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" },
+    "Productividad Digital": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" },
+    "Recomendaciones Tecnológicas": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" },
+    "Salud y Bienestar Digital": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" },
+    "Seguridad Digital": { "objetivo": 2, "minimo": 1, "aptos": 2, "estado": "COMPLETO" }
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "archivo": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "tema": "Qué es Matter y cómo cambia el hogar inteligente para siempre",
+      "palabra_clave_principal": "qué es Matter domótica",
+      "score": 88,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_002",
+      "archivo": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "tema": "Home Assistant para principiantes: cómo empezar a automatizar tu casa sin ser técnico",
+      "palabra_clave_principal": "Home Assistant principiantes",
+      "score": 82,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_003",
+      "archivo": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "tema": "Qué son los agentes de IA y para qué sirven a una persona normal",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "score": 87,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_004",
+      "archivo": "briefing_004.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "tema": "ChatGPT vs Claude vs Gemini en 2026: cuál te conviene según lo que haces",
+      "palabra_clave_principal": "ChatGPT vs Claude vs Gemini 2026",
+      "score": 85,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_005",
+      "archivo": "briefing_005.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "tema": "Notion para principiantes: cómo empezar a organizar tu vida digital sin volverte loco",
+      "palabra_clave_principal": "Notion para principiantes",
+      "score": 83,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_006",
+      "archivo": "briefing_006.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "tema": "Cómo automatizar tareas repetitivas con IA sin saber programar",
+      "palabra_clave_principal": "automatizar tareas con IA sin programar",
+      "score": 86,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_007",
+      "archivo": "briefing_007.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Anillos inteligentes en 2026: qué son, cuáles son los mejores y si merece la pena comprar uno",
+      "palabra_clave_principal": "anillos inteligentes cuál comprar 2026",
+      "score": 84,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_008",
+      "archivo": "briefing_008.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Los gadgets de viaje que sí merecen la pena en 2026",
+      "palabra_clave_principal": "gadgets de viaje que merece la pena 2026",
+      "score": 80,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_009",
+      "archivo": "briefing_009.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Cómo mejorar tu sueño con tecnología: apps, wearables y hábitos que funcionan de verdad",
+      "palabra_clave_principal": "mejorar sueño con tecnología",
+      "score": 86,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_010",
+      "archivo": "briefing_010.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Bienestar digital: cómo establecer límites saludables con tus pantallas sin dejar de ser productivo",
+      "palabra_clave_principal": "bienestar digital límites pantallas",
+      "score": 83,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_011",
+      "archivo": "briefing_011.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Qué es el quishing y cómo no caer en la trampa de los códigos QR maliciosos",
+      "palabra_clave_principal": "qué es el quishing",
+      "score": 89,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    },
+    {
+      "id": "briefing_012",
+      "archivo": "briefing_012.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Las 5 estafas digitales más usadas en España en 2026 y cómo evitarlas",
+      "palabra_clave_principal": "estafas digitales España 2026",
+      "score": 88,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO"
+    }
+  ],
+  "score_promedio": 85.1,
+  "score_minimo": 80,
+  "score_maximo": 89,
+  "temas_descartados": [],
+  "fuentes_principales_consultadas": {
+    "tendencias": ["Google Trends via WebSearch", "búsquedas relacionadas"],
+    "medios_es": ["Xataka", "Xataka Home", "Genbeta", "Hipertextual", "Computer Hoy"],
+    "medios_en": ["The Verge", "TechCrunch", "Wired", "Ars Technica", "Tom's Guide", "Wareable", "Forbes", "TechTimes"],
+    "comunidades": ["Reddit r/homeassistant"],
+    "fuentes_oficiales": ["Connectivity Standards Alliance", "Google Developers", "Apple", "Samsung", "OpenAI", "Anthropic", "INCIBE", "OSI", "Kaspersky", "Check Point"],
+    "competidores_referentes": ["DomoticaMatter.com", "Zemith.com", "Coderhouse", "aprender21.com", "ecosistemastartup.com"]
+  }
+}
