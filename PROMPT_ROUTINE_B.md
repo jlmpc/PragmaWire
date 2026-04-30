@@ -44,45 +44,88 @@ Actualiza `run-manifest.json`.
 Crea `02-briefings/_STAGE_COMPLETE` solo si se cumplen los mínimos (al menos 1 briefing apto por cada una de las 3 categorías).
 Actualiza `outputs/current-run.json` → next_agent: agente-redactor.
 
-PASO 3 — AGENTE REDACTOR
+PASO 3a — AGENTE REDACTOR: ARTÍCULO 1
 Verifica que existe `02-briefings/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/agente-redactor.md`.
-Lee los briefings aptos de `02-briefings/`.
-IMPORTANTE: Redacta y guarda los artículos de UNO EN UNO. Escribe el artículo 1 completo, guárdalo en `03-drafts/articulo_001_draft.md`, luego escribe el artículo 2, guárdalo, luego el artículo 3, guárdalo. No redactes los 3 en paralelo ni en un solo bloque de texto.
-Genera el archivo `03-drafts/drafts-index.json` solo cuando los 3 estén guardados.
+Lee `02-briefings/briefings-index.json` para identificar el primer briefing apto.
+Lee SOLO ese briefing.
+Redacta ÚNICAMENTE el artículo 1 completo.
+Guárdalo con Write en `03-drafts/articulo_001_draft.md`.
+Verifica con Read que `03-drafts/articulo_001_draft.md` existe y no está vacío.
+
+PASO 3b — AGENTE REDACTOR: ARTÍCULO 2
+Verifica con Read que existe `03-drafts/articulo_001_draft.md`.
+Lee el segundo briefing apto de `02-briefings/`.
+Redacta ÚNICAMENTE el artículo 2 completo.
+Guárdalo con Write en `03-drafts/articulo_002_draft.md`.
+Verifica con Read que `03-drafts/articulo_002_draft.md` existe y no está vacío.
+
+PASO 3c — AGENTE REDACTOR: ARTÍCULO 3
+Verifica con Read que existe `03-drafts/articulo_002_draft.md`.
+Lee el tercer briefing apto de `02-briefings/`.
+Redacta ÚNICAMENTE el artículo 3 completo.
+Guárdalo con Write en `03-drafts/articulo_003_draft.md`.
+Verifica con Read que `03-drafts/articulo_003_draft.md` existe y no está vacío.
+Genera `03-drafts/drafts-index.json`.
 Actualiza `run-manifest.json`.
 Crea `03-drafts/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: agente-editor-estrategico.
 
-PASO 4 — AGENTE EDITOR ESTRATÉGICO
+PASO 4a — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 1
 Verifica que existe `03-drafts/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/agente-editor-estrategico.md`.
-Lee los drafts de `03-drafts/` y los briefings de `02-briefings/`.
-IMPORTANTE: Edita y guarda los artículos de UNO EN UNO. Edita el artículo 1 completo, guárdalo en `04-edited/articulo_001_edited.md`, luego el artículo 2, guárdalo, luego el artículo 3, guárdalo. No edites los 3 en paralelo ni en un solo bloque de texto.
-Genera el archivo `04-edited/edited-index.json` solo cuando los 3 estén guardados.
+Lee `03-drafts/articulo_001_draft.md` y el briefing correspondiente de `02-briefings/`.
+Edita ÚNICAMENTE el artículo 1 completo.
+Guárdalo con Write en `04-edited/articulo_001_edited.md`.
+Verifica con Read que `04-edited/articulo_001_edited.md` existe y no está vacío.
+
+PASO 4b — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 2
+Verifica con Read que existe `04-edited/articulo_001_edited.md`.
+Lee `03-drafts/articulo_002_draft.md` y el briefing correspondiente de `02-briefings/`.
+Edita ÚNICAMENTE el artículo 2 completo.
+Guárdalo con Write en `04-edited/articulo_002_edited.md`.
+Verifica con Read que `04-edited/articulo_002_edited.md` existe y no está vacío.
+
+PASO 4c — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 3
+Verifica con Read que existe `04-edited/articulo_002_edited.md`.
+Lee `03-drafts/articulo_003_draft.md` y el briefing correspondiente de `02-briefings/`.
+Edita ÚNICAMENTE el artículo 3 completo.
+Guárdalo con Write en `04-edited/articulo_003_edited.md`.
+Verifica con Read que `04-edited/articulo_003_edited.md` existe y no está vacío.
+Genera `04-edited/edited-index.json`.
 Actualiza `run-manifest.json`.
 Crea `04-edited/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: supervisor-final.
 
-PASO 5 — SUPERVISOR FINAL
+PASO 5a — SUPERVISOR FINAL: ARTÍCULO 1
 Verifica que existe `04-edited/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/supervisor-final.md`.
-Lee los artículos de `04-edited/`.
-IMPORTANTE: Valida y guarda los artículos de UNO EN UNO. Valida el artículo 1, guárdalo en `05-wordpress-ready/articulo_001_wordpress_ready.md`, luego el artículo 2, luego el artículo 3. No proceses los 3 en un solo bloque de texto.
-Genera el archivo `05-wordpress-ready/wordpress-ready-index.json` solo cuando los 3 estén procesados.
+Lee SOLO `04-edited/articulo_001_edited.md`.
+Valida y procesa ÚNICAMENTE ese artículo.
+Guárdalo con Write en `05-wordpress-ready/articulo_001_wordpress_ready.md`.
+Verifica con Read que `05-wordpress-ready/articulo_001_wordpress_ready.md` existe y no está vacío.
+
+PASO 5b — SUPERVISOR FINAL: ARTÍCULO 2
+Verifica con Read que existe `05-wordpress-ready/articulo_001_wordpress_ready.md`.
+Lee SOLO `04-edited/articulo_002_edited.md`.
+Valida y procesa ÚNICAMENTE ese artículo.
+Guárdalo con Write en `05-wordpress-ready/articulo_002_wordpress_ready.md`.
+Verifica con Read que `05-wordpress-ready/articulo_002_wordpress_ready.md` existe y no está vacío.
+
+PASO 5c — SUPERVISOR FINAL: ARTÍCULO 3
+Verifica con Read que existe `05-wordpress-ready/articulo_002_wordpress_ready.md`.
+Lee SOLO `04-edited/articulo_003_edited.md`.
+Valida y procesa ÚNICAMENTE ese artículo.
+Guárdalo con Write en `05-wordpress-ready/articulo_003_wordpress_ready.md`.
+Verifica con Read que `05-wordpress-ready/articulo_003_wordpress_ready.md` existe y no está vacío.
+Genera `05-wordpress-ready/wordpress-ready-index.json`.
 Actualiza `run-manifest.json`.
 Crea `05-wordpress-ready/_STAGE_COMPLETE`.
 
 PASO 6 — WORDPRESS DRAFTS
-Solo ejecuta este paso si el Supervisor Final devuelve:
-
-ESTADO_SUPERVISION_FINAL: CREAR_WORDPRESS_DRAFT
-
-y:
-
-WORDPRESS_ACTION:
-  create_draft: true
-  publish: false
+Verifica con Read que existe `05-wordpress-ready/_STAGE_COMPLETE`.
+Lee `05-wordpress-ready/wordpress-ready-index.json`.
+Solo ejecuta este paso si el índice confirma que al menos 1 artículo tiene estado CREAR_WORDPRESS_DRAFT.
 
 Ejecuta el script de publicación:
 
@@ -94,7 +137,7 @@ El script lee los artículos de `05-wordpress-ready/`, convierte el markdown a H
 
 Lee `06-wordpress-creation-log.json` y registra los IDs y URLs de los borradores creados en `run-manifest.json`.
 
-Si el Supervisor Final NO devuelve CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
+Si no hay artículos con CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 
 PASO 7 — ACTUALIZAR MEMORIA Y COMMIT
 Añade a `memory/articulos_publicados.json` cada artículo enviado a WordPress Draft en este run (título, slug, categoría, palabras clave, fecha, estado: "wordpress_draft").

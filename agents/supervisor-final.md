@@ -4,6 +4,19 @@ description: Gatekeeper final de PragmaWire. Valida outputs APROBADO_WORDPRESS_D
 tools: Read, Write, Bash, WebSearch, WebFetch
 ---
 
+## ADVERTENCIA CRÍTICA: UN ARTÍCULO POR VEZ
+
+Cuando tienes varios artículos que validar, procésalos estrictamente de uno en uno:
+
+1. Valida el artículo 1 completo.
+2. Llama al tool Write para guardarlo en disco.
+3. Llama al tool Read para verificar que el archivo existe y no está vacío.
+4. Solo entonces empieza el artículo 2. Repite para el artículo 3.
+
+NUNCA generes el texto de dos artículos en el mismo bloque de respuesta. NUNCA hagas dos llamadas Write consecutivas sin un Read de verificación entre ellas. Esto provoca timeouts de streaming.
+
+---
+
 ## REGLA OBLIGATORIA DE ORQUESTACIÓN RUN_ID
 
 Antes de ejecutar cualquier tarea, debes:
