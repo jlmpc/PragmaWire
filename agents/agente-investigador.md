@@ -129,17 +129,7 @@ Tu trabajo es investigar y preparar briefings.
 
 ## OBJETIVO DEL FLUJO
 
-Objetivo normal:
-
-- 6 temas aptos.
-- 1 tema por cada categoría principal.
-
-Cobertura mínima obligatoria:
-
-- mínimo 1 tema apto por categoría.
-- mínimo total: 6 temas aptos.
-
-Categorías principales:
+Las categorías activas del run son las definidas en `01-run-context/categorias_target.md` si ese archivo existe. Si no existe, son las 6 categorías principales:
 
 1. Hogar Inteligente
 2. Inteligencia Artificial
@@ -148,13 +138,23 @@ Categorías principales:
 5. Salud y Bienestar Digital
 6. Seguridad Digital
 
+Objetivo normal:
+
+- N temas aptos (N = número de categorías activas del run).
+- 1 tema por cada categoría activa.
+
+Cobertura mínima obligatoria:
+
+- mínimo 1 tema apto por cada categoría activa.
+- mínimo total: N temas aptos.
+
 Regla:
 
-> La calidad manda, pero ninguna categoría principal debe quedarse vacía.
+> La calidad manda, pero ninguna categoría activa del run debe quedarse vacía.
 
-Si no encuentras 6 temas aptos en la primera pasada, debes hacer una segunda pasada de investigación ampliada antes de cerrar.
+Si no encuentras N temas aptos en la primera pasada, debes hacer una segunda pasada de investigación ampliada antes de cerrar.
 
-Si después de ampliar fuentes alguna categoría sigue sin al menos 1 tema apto, debes devolver estado de bloqueo parcial y explicar por qué.
+Si después de ampliar fuentes alguna categoría activa sigue sin al menos 1 tema apto, debes devolver estado de bloqueo parcial y explicar por qué.
 
 ---
 
@@ -402,19 +402,17 @@ Selecciona primero:
 
 El resultado ideal debe contener:
 
-- 6 briefings aptos.
-- 1 por categoría.
+- N briefings aptos (1 por cada categoría activa del run).
 
 El resultado mínimo aceptable debe contener:
 
-- 6 briefings aptos.
-- 1 por categoría.
+- N briefings aptos (1 por cada categoría activa del run).
 
 ---
 
 ## SEGUNDA PASADA OBLIGATORIA
 
-Si no consigues 6 temas aptos en la primera pasada, debes realizar una segunda pasada antes de cerrar.
+Si no consigues N temas aptos (1 por cada categoría activa del run) en la primera pasada, debes realizar una segunda pasada antes de cerrar.
 
 En esa segunda pasada debes ampliar:
 

@@ -109,11 +109,11 @@ Cualquier publicación definitiva requiere revisión humana.
 
 ---
 
-## OBJETIVO ESTÁNDAR DEL FLUJO
+## OBJETIVO DEL FLUJO
 
-El objetivo estándar del flujo es generar **6 propuestas de artículos**, con una distribución de **1 artículo por categoría**.
+El objetivo del flujo es generar **1 artículo por cada categoría activa del run**, con una distribución de **1 artículo por categoría**.
 
-Categorías principales:
+Las categorías activas del run son las definidas en `01-run-context/categorias_target.md` si ese archivo existe. Si no existe, las categorías activas son las 6 categorías principales:
 
 1. Hogar Inteligente
 2. Inteligencia Artificial
@@ -122,37 +122,28 @@ Categorías principales:
 5. Salud y Bienestar Digital
 6. Seguridad Digital
 
-Distribución ideal:
+Distribución ideal: 1 artículo por cada categoría activa.
 
-- Hogar Inteligente: 1 artículo
-- Inteligencia Artificial: 1 artículo
-- Productividad Digital: 1 artículo
-- Recomendaciones Tecnológicas: 1 artículo
-- Salud y Bienestar Digital: 1 artículo
-- Seguridad Digital: 1 artículo
-
-Total ideal:
-
-`6 artículos`
+Total ideal: N artículos, donde N = número de categorías activas del run.
 
 ---
 
 ## COBERTURA MÍNIMA OBLIGATORIA
 
-Aunque la calidad manda sobre la cantidad, el flujo debe cubrir todas las categorías.
+Aunque la calidad manda sobre la cantidad, el flujo debe cubrir todas las categorías activas del run.
 
 Cobertura mínima obligatoria:
 
-- mínimo 1 artículo apto por cada categoría principal;
-- mínimo total del flujo: 6 artículos aptos;
-- objetivo normal: 6 artículos aptos;
-- si una categoría no obtiene al menos 1 tema apto, el Agente Investigador debe ampliar la búsqueda antes de cerrar la tanda.
+- mínimo 1 artículo apto por cada categoría activa del run;
+- mínimo total del flujo: N artículos aptos (N = número de categorías activas);
+- objetivo normal: N artículos aptos (1 por categoría activa);
+- si una categoría activa no obtiene al menos 1 tema apto, el Agente Investigador debe ampliar la búsqueda antes de cerrar la tanda.
 
 Regla editorial:
 
-> La calidad va por encima de la cantidad, pero ninguna categoría principal debe quedarse vacía.
+> La calidad va por encima de la cantidad, pero ninguna categoría activa del run debe quedarse vacía.
 
-El Agente Investigador no debe abandonar una categoría tras una búsqueda superficial. Debe ampliar fuentes, idiomas, ángulos y herramientas hasta encontrar propuestas aptas o justificar con precisión por qué no ha sido posible.
+El Agente Investigador no debe abandonar una categoría activa tras una búsqueda superficial. Debe ampliar fuentes, idiomas, ángulos y herramientas hasta encontrar propuestas aptas o justificar con precisión por qué no ha sido posible.
 
 ---
 
@@ -164,9 +155,9 @@ Pero dado que el Agente Investigador debe consultar Google Trends, fuentes en es
 
 Regla práctica:
 
-- entrega 6 temas aptos, 1 por categoría;
-- si no consigue alguna categoría, amplía fuentes y ángulos;
-- si no puede entregar mínimo 1 por categoría, bloquea el flujo y explica la categoría afectada.
+- entrega N temas aptos (1 por cada categoría activa del run);
+- si no consigue alguna categoría activa, amplía fuentes y ángulos;
+- si no puede entregar mínimo 1 por categoría activa, bloquea el flujo y explica la categoría afectada.
 
 No se permite completar la tanda con temas mediocres.
 
@@ -470,7 +461,7 @@ Reglas:
 
 - No aceptar temas por debajo de 75 salvo justificación editorial muy sólida.
 - Cada categoría debe tener al menos 1 tema con score igual o superior a 75.
-- El objetivo normal es conseguir 2 temas aptos por categoría.
+- El objetivo normal es conseguir 1 tema apto por cada categoría activa del run.
 - Si una categoría no llega al mínimo, el Investigador debe ampliar búsqueda antes de cerrar la tanda.
 
 ---
@@ -558,7 +549,7 @@ Evita o bloquea temas que:
 
 ## EXPANSIÓN OBLIGATORIA SI NO HAY SUFICIENTES TEMAS
 
-Si el Investigador no encuentra 6 temas aptos en la primera pasada, debe hacer una segunda pasada.
+Si el Investigador no encuentra N temas aptos (1 por cada categoría activa del run) en la primera pasada, debe hacer una segunda pasada.
 
 La segunda pasada debe ampliar:
 
@@ -573,13 +564,13 @@ La segunda pasada debe ampliar:
 9. Temas evergreen con oportunidad AEO/GEO.
 10. Temas de actualización de artículos previos.
 
-Si tras la segunda pasada no hay 6 temas aptos, puede entregar menos, pero nunca menos de 1 por categoría salvo bloqueo justificado.
+Si tras la segunda pasada no hay N temas aptos, puede entregar menos, pero nunca menos de 1 por categoría activa salvo bloqueo justificado.
 
 ---
 
 ## OUTPUT ESPERADO DEL AGENTE INVESTIGADOR
 
-El Agente Investigador debe entregar hasta 6 briefings.
+El Agente Investigador debe entregar hasta N briefings (1 por cada categoría activa del run).
 
 Cada briefing debe incluir:
 
@@ -820,7 +811,7 @@ Entrega una instrucción clara y completa para el Agente Investigador usando el 
 
 Debe empezar así:
 
-> Busca y valida hasta 12 temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT. El objetivo es conseguir 2 temas aptos por categoría y un mínimo obligatorio de 1 tema apto por categoría. No rellenes con temas mediocres: si no llegas a 12 en la primera pasada, amplía fuentes, idiomas, tendencias y competencia antes de cerrar la tanda.
+> Busca y valida temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT y el archivo `01-run-context/categorias_target.md` si existe. El objetivo es conseguir 1 tema apto por cada categoría activa del run (mínimo obligatorio también de 1 por categoría activa). No rellenes con temas mediocres: si no llegas al objetivo en la primera pasada, amplía fuentes, idiomas, tendencias y competencia antes de cerrar la tanda.
 
 Después debe incluir los requisitos exactos de briefing.
 
@@ -834,18 +825,11 @@ Lista las condiciones que obligan a detener el pipeline.
 
 Cuando el pipeline esté listo, entrega al Agente Investigador esta instrucción:
 
-Busca y valida hasta 12 temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT.
+Busca y valida temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT y el archivo `01-run-context/categorias_target.md` si existe.
 
-El objetivo normal es conseguir 2 temas aptos por cada una de las 6 categorías principales:
+El objetivo es conseguir 1 tema apto por cada categoría activa del run. Las categorías activas son las definidas en `categorias_target.md` si ese archivo existe; si no existe, son las 6 categorías principales.
 
-1. Hogar Inteligente
-2. Inteligencia Artificial
-3. Productividad Digital
-4. Recomendaciones Tecnológicas
-5. Salud y Bienestar Digital
-6. Seguridad Digital
-
-Mínimo obligatorio: 1 tema apto por categoría.
+Mínimo obligatorio: 1 tema apto por categoría activa.
 
 Debes investigar en español e inglés, usando tendencias, competencia, medios tecnológicos, documentación oficial, comunidades y fuentes especializadas.
 
@@ -885,7 +869,7 @@ Por cada tema, entrega un briefing con:
 30. Recomendación final: INVESTIGAR / DESCARTAR / RESERVAR.
 31. Notas para el Redactor.
 
-Si no encuentras 12 temas aptos en la primera pasada, realiza una segunda pasada obligatoria ampliando:
+Si no encuentras N temas aptos (1 por cada categoría activa del run) en la primera pasada, realiza una segunda pasada obligatoria ampliando:
 
 - fuentes en inglés;
 - Google Trends;
