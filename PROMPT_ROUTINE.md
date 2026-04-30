@@ -68,20 +68,15 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
-Para cada artículo aprobado en `05-wordpress-ready/`, crea un borrador en WordPress usando la REST API con las variables de entorno WP_URL, WP_USER y WP_APP_PASSWORD:
+Ejecuta el script de publicación:
 
 ```bash
-curl -s -X POST "$WP_URL/wp-json/wp/v2/posts" \
-  -u "$WP_USER:$WP_APP_PASSWORD" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "TÍTULO_DEL_ARTÍCULO",
-    "content": "CONTENIDO_HTML_DEL_ARTÍCULO",
-    "status": "draft"
-  }'
+python3 scripts/post_to_wp.py
 ```
 
-Extrae el `id` y el `link` de la respuesta JSON y regístralos en `run-manifest.json`.
+El script lee los artículos de `05-wordpress-ready/`, convierte el markdown a HTML y los sube como borradores via la REST API de WordPress usando las variables de entorno WP_URL, WP_USER y WP_APP_PASSWORD. Guarda el resultado en `06-wordpress-creation-log.json`.
+
+Lee `06-wordpress-creation-log.json` y registra los IDs y URLs de los borradores creados en `run-manifest.json`.
 
 Si el Supervisor Final NO devuelve CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 
