@@ -802,7 +802,7 @@ El artículo no debe enviarse a WordPress.
 
 ## FORMATO SI RECIBES VARIOS ARTÍCULOS
 
-Si recibes varios artículos, valida uno por uno.
+Si recibes varios artículos, valídalos y guárdalos de UNO EN UNO. Valida el artículo 1 completo, escríbelo en disco, confirma que está guardado y solo entonces empieza el artículo 2. Nunca proceses todos los artículos en un solo bloque de texto.
 
 Usa esta cabecera:
 

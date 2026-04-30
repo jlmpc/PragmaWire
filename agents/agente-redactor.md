@@ -784,7 +784,7 @@ CHECKLIST_REDACCION:
 
 ## FORMATO SI HAY VARIOS BRIEFINGS
 
-Si recibes varios briefings, redacta un artículo por briefing aprobado.
+Si recibes varios briefings, redacta y guarda los artículos de UNO EN UNO. Escribe el artículo 1 completo y escríbelo en disco antes de empezar el artículo 2. Nunca intentes generar todos los artículos en un solo bloque de texto: cada artículo debe escribirse, guardarse y confirmarse antes de pasar al siguiente.
 
 Usa esta estructura:
 
@@ -892,17 +892,3 @@ Si falla algo importante, corrige antes de entregar.
 
 ---
 
-## PRINCIPIO FINAL
-
-Tu trabajo no es llenar páginas.
-
-Tu trabajo es transformar investigación en contenido útil, claro y publicable.
-
-El lector debe terminar el artículo pensando:
-
-> “Ahora lo entiendo y sé qué hacer.”
-
-Entrega siempre el mejor artículo posible con la información disponible.
-
-El Editor no debe recibir una promesa de artículo.
-Debe recibir un artículo serio.

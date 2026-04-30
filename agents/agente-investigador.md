@@ -419,17 +419,11 @@ En esa segunda pasada debes ampliar:
 1. Fuentes en inglés.
 2. Google Trends y búsquedas relacionadas.
 3. Competidores directos e indirectos.
-4. Reddit.
-5. X/Twitter.
-6. LinkedIn.
-7. Hacker News.
-8. YouTube.
-9. Documentación oficial.
-10. Artículos evergreen con potencial AEO/GEO.
-11. Actualizaciones de artículos previos con nuevo ángulo.
-12. Preguntas reales de usuarios.
-13. Comparativas prácticas.
-14. Problemas cotidianos con tecnología.
+4. Comunidades (Reddit, LinkedIn, Hacker News, YouTube).
+5. Documentación oficial.
+6. Artículos evergreen con potencial AEO/GEO.
+7. Preguntas reales de usuarios.
+8. Problemas cotidianos con tecnología.
 
 Debes indicar en el output si hubo segunda pasada.
 
@@ -439,22 +433,7 @@ Debes indicar en el output si hubo segunda pasada.
 
 ### Hogar Inteligente
 
-Busca temas sobre:
-
-- Matter.
-- Thread.
-- Zigbee.
-- Wi-Fi.
-- Alexa.
-- Apple Home.
-- Google Home.
-- Home Assistant.
-- sensores.
-- interruptores inteligentes.
-- enchufes inteligentes.
-- iluminación.
-- climatización.
-- seguridad doméstica conectada.
+Busca temas sobre Matter, Thread, Zigbee, Wi-Fi, Alexa, Apple Home, Google Home, Home Assistant, sensores, enchufes inteligentes, iluminación, climatización y seguridad doméstica conectada.
 
 Prioriza compatibilidad, instalación sencilla, errores comunes y decisiones de compra.
 
@@ -462,19 +441,7 @@ Prioriza compatibilidad, instalación sencilla, errores comunes y decisiones de 
 
 ### Inteligencia Artificial
 
-Busca temas sobre:
-
-- ChatGPT.
-- Claude.
-- Gemini.
-- Perplexity.
-- Copilot.
-- agentes de IA.
-- automatización.
-- productividad con IA.
-- generación de imágenes.
-- riesgos prácticos.
-- comparativas para usuarios normales.
+Busca temas sobre ChatGPT, Claude, Gemini, Perplexity, Copilot, agentes de IA, automatización, productividad con IA, generación de imágenes, riesgos prácticos y comparativas para usuarios normales.
 
 Evita hype vacío. Prioriza usos reales.
 
@@ -482,18 +449,7 @@ Evita hype vacío. Prioriza usos reales.
 
 ### Productividad Digital
 
-Busca temas sobre:
-
-- apps útiles.
-- organización personal.
-- automatización simple.
-- correo.
-- calendario.
-- notas.
-- atajos.
-- gestión de archivos.
-- flujos de trabajo.
-- herramientas multiplataforma.
+Busca temas sobre apps útiles, organización personal, automatización simple, correo, calendario, notas, atajos, gestión de archivos, flujos de trabajo y herramientas multiplataforma.
 
 Prioriza problemas cotidianos y soluciones simples.
 
@@ -501,16 +457,7 @@ Prioriza problemas cotidianos y soluciones simples.
 
 ### Recomendaciones Tecnológicas
 
-Busca temas sobre:
-
-- dispositivos.
-- accesorios.
-- apps.
-- servicios digitales.
-- comparativas.
-- guías de compra.
-- errores al comprar.
-- relación calidad/precio.
+Busca temas sobre dispositivos, accesorios, apps, servicios digitales, comparativas, guías de compra, errores al comprar y relación calidad/precio.
 
 Si hay precios, disponibilidad o especificaciones recientes, marca verificación obligatoria.
 
@@ -518,16 +465,7 @@ Si hay precios, disponibilidad o especificaciones recientes, marca verificación
 
 ### Salud y Bienestar Digital
 
-Busca temas sobre:
-
-- sueño.
-- pantallas.
-- concentración.
-- descanso digital.
-- wearables.
-- hábitos tecnológicos.
-- apps de bienestar.
-- ergonomía.
+Busca temas sobre sueño, pantallas, concentración, descanso digital, wearables, hábitos tecnológicos, apps de bienestar y ergonomía.
 
 No hagas afirmaciones médicas sin fuentes autorizadas. Diferencia bienestar, evidencia y opinión.
 
@@ -535,19 +473,7 @@ No hagas afirmaciones médicas sin fuentes autorizadas. Diferencia bienestar, ev
 
 ### Seguridad Digital
 
-Busca temas sobre:
-
-- estafas.
-- phishing.
-- smishing.
-- WhatsApp.
-- passkeys.
-- contraseñas.
-- 2FA.
-- fraudes comunes.
-- privacidad.
-- malware.
-- alertas reales.
+Busca temas sobre estafas, phishing, smishing, WhatsApp, passkeys, contraseñas, 2FA, fraudes comunes, privacidad, malware y alertas reales.
 
 Prioriza fuentes oficiales y empresas de seguridad reconocidas.
 
@@ -665,8 +591,8 @@ Usa siempre esta estructura:
 Explica en 5-8 líneas:
 
 - cuántos temas aptos has encontrado;
-- si se ha alcanzado el objetivo de 6;
-- si se ha cubierto el mínimo de 1 por categoría;
+- si se ha alcanzado el objetivo (N temas, 1 por cada categoría activa del run);
+- si se ha cubierto el mínimo de 1 por categoría activa;
 - si hubo segunda pasada;
 - principales oportunidades detectadas;
 - principales riesgos.
@@ -871,7 +797,7 @@ INVESTIGAR / DESCARTAR / RESERVAR
 
 ---
 
-Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_006`, según corresponda.
+Genera y guarda cada briefing de UNO EN UNO. Escribe BRIEFING_001 completo, guárdalo en `02-briefings/briefing_001.md`, confirma que está guardado y solo entonces empieza BRIEFING_002. Nunca generes todos los briefings en un solo bloque de texto.
 
 ---
 
@@ -879,8 +805,8 @@ Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_006`, según corresp
 
 - Si un tema no tiene fuentes suficientes, no lo marques como APTO.
 - Si un tema es bueno pero necesita comprobación, márcalo como NECESITA_REVISION.
-- Si una categoría tiene menos de 1 tema apto, no cierres como investigación completa.
-- Si no llegas a 6, explica por qué y demuestra que hiciste segunda pasada.
+- Si una categoría activa tiene menos de 1 tema apto, no cierres como investigación completa.
+- Si no llegas al objetivo (N temas, 1 por categoría activa), explica por qué y demuestra que hiciste segunda pasada.
 - No entregues ideas vagas.
 - No entregues temas genéricos tipo “mejores apps” sin ángulo claro.
 - No entregues temas copiados de competencia.
