@@ -102,7 +102,7 @@ Cualquier publicación definitiva requiere revisión humana.
 
 ## OBJETIVO ESTÁNDAR DEL FLUJO
 
-El objetivo estándar del flujo es generar **hasta 12 propuestas de artículos**, con una distribución ideal de **2 artículos por categoría**.
+El objetivo estándar del flujo es generar **6 propuestas de artículos**, con una distribución de **1 artículo por categoría**.
 
 Categorías principales:
 
@@ -115,16 +115,16 @@ Categorías principales:
 
 Distribución ideal:
 
-- Hogar Inteligente: 2 artículos
-- Inteligencia Artificial: 2 artículos
-- Productividad Digital: 2 artículos
-- Recomendaciones Tecnológicas: 2 artículos
-- Salud y Bienestar Digital: 2 artículos
-- Seguridad Digital: 2 artículos
+- Hogar Inteligente: 1 artículo
+- Inteligencia Artificial: 1 artículo
+- Productividad Digital: 1 artículo
+- Recomendaciones Tecnológicas: 1 artículo
+- Salud y Bienestar Digital: 1 artículo
+- Seguridad Digital: 1 artículo
 
 Total ideal:
 
-`12 artículos`
+`6 artículos`
 
 ---
 
@@ -136,7 +136,7 @@ Cobertura mínima obligatoria:
 
 - mínimo 1 artículo apto por cada categoría principal;
 - mínimo total del flujo: 6 artículos aptos;
-- objetivo normal: 12 artículos aptos;
+- objetivo normal: 6 artículos aptos;
 - si una categoría no obtiene al menos 1 tema apto, el Agente Investigador debe ampliar la búsqueda antes de cerrar la tanda.
 
 Regla editorial:
@@ -155,12 +155,11 @@ Pero dado que el Agente Investigador debe consultar Google Trends, fuentes en es
 
 Regla práctica:
 
-- primero intenta llegar a 12 temas aptos;
-- si no lo consigue, amplía fuentes y ángulos;
-- si aun así no llega, entrega mínimo 6 temas, con 1 por categoría;
+- entrega 6 temas aptos, 1 por categoría;
+- si no consigue alguna categoría, amplía fuentes y ángulos;
 - si no puede entregar mínimo 1 por categoría, bloquea el flujo y explica la categoría afectada.
 
-No se permite completar la tanda con temas mediocres solo para llegar a 12.
+No se permite completar la tanda con temas mediocres.
 
 ---
 
@@ -550,7 +549,7 @@ Evita o bloquea temas que:
 
 ## EXPANSIÓN OBLIGATORIA SI NO HAY SUFICIENTES TEMAS
 
-Si el Investigador no encuentra 12 temas aptos en la primera pasada, debe hacer una segunda pasada.
+Si el Investigador no encuentra 6 temas aptos en la primera pasada, debe hacer una segunda pasada.
 
 La segunda pasada debe ampliar:
 
@@ -565,13 +564,13 @@ La segunda pasada debe ampliar:
 9. Temas evergreen con oportunidad AEO/GEO.
 10. Temas de actualización de artículos previos.
 
-Si tras la segunda pasada no hay 12 temas aptos, puede entregar menos, pero nunca menos de 1 por categoría salvo bloqueo justificado.
+Si tras la segunda pasada no hay 6 temas aptos, puede entregar menos, pero nunca menos de 1 por categoría salvo bloqueo justificado.
 
 ---
 
 ## OUTPUT ESPERADO DEL AGENTE INVESTIGADOR
 
-El Agente Investigador debe entregar hasta 12 briefings.
+El Agente Investigador debe entregar hasta 6 briefings.
 
 Cada briefing debe incluir:
 
