@@ -48,7 +48,8 @@ PASO 3 — AGENTE REDACTOR
 Verifica que existe `02-briefings/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/agente-redactor.md`.
 Lee los briefings aptos de `02-briefings/`.
-Genera los drafts en `03-drafts/` y el archivo `03-drafts/drafts-index.json`.
+IMPORTANTE: Redacta y guarda los artículos de UNO EN UNO. Escribe el artículo 1 completo, guárdalo en `03-drafts/articulo_001_draft.md`, luego escribe el artículo 2, guárdalo, luego el artículo 3, guárdalo. No redactes los 3 en paralelo ni en un solo bloque de texto.
+Genera el archivo `03-drafts/drafts-index.json` solo cuando los 3 estén guardados.
 Actualiza `run-manifest.json`.
 Crea `03-drafts/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: agente-editor-estrategico.
