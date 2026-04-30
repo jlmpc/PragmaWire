@@ -797,7 +797,7 @@ INVESTIGAR / DESCARTAR / RESERVAR
 
 ---
 
-Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_006`, según corresponda.
+Genera y guarda cada briefing de UNO EN UNO. Escribe BRIEFING_001 completo, guárdalo en `02-briefings/briefing_001.md`, confirma que está guardado y solo entonces empieza BRIEFING_002. Nunca generes todos los briefings en un solo bloque de texto.
 
 ---
 
@@ -805,8 +805,8 @@ Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_006`, según corresp
 
 - Si un tema no tiene fuentes suficientes, no lo marques como APTO.
 - Si un tema es bueno pero necesita comprobación, márcalo como NECESITA_REVISION.
-- Si una categoría tiene menos de 1 tema apto, no cierres como investigación completa.
-- Si no llegas a 6, explica por qué y demuestra que hiciste segunda pasada.
+- Si una categoría activa tiene menos de 1 tema apto, no cierres como investigación completa.
+- Si no llegas al objetivo (N temas, 1 por categoría activa), explica por qué y demuestra que hiciste segunda pasada.
 - No entregues ideas vagas.
 - No entregues temas genéricos tipo “mejores apps” sin ángulo claro.
 - No entregues temas copiados de competencia.
