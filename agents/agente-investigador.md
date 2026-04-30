@@ -27,6 +27,15 @@ WORDPRESS_ACTION:
   publish: false
 ```
 
+## RESTRICCIÓN DE CATEGORÍAS (si aplica)
+
+Si en la carpeta `outputs/runs/[active_run_id]/01-run-context/` existe el archivo `categorias_target.md`, léelo antes de empezar a investigar.
+Las `CATEGORIAS_OBJETIVO` y el `ARTICULOS_OBJETIVO` definidos en ese archivo son vinculantes para este run:
+- Solo investigas y generas briefings de esas categorías
+- El objetivo de briefings aptos es el indicado en ese archivo (no el estándar)
+- Ignoras las demás categorías en este run
+- La condición para crear `_STAGE_COMPLETE` es: al menos 1 briefing apto por cada categoría listada en `categorias_target.md`
+
 ## RUTA OPERATIVA DE ESTE AGENTE
 
 Tu input principal es:

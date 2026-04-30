@@ -27,6 +27,15 @@ WORDPRESS_ACTION:
   publish: false
 ```
 
+## RESTRICCIÓN DE CATEGORÍAS (si aplica)
+
+Si en la carpeta `outputs/runs/[active_run_id]/01-run-context/` existe el archivo `categorias_target.md`, léelo al inicio de tu fase.
+Las `CATEGORIAS_OBJETIVO` y el `ARTICULOS_OBJETIVO` definidos en ese archivo son vinculantes para este run:
+- Solo propones artículos de esas categorías
+- El objetivo de artículos es el indicado en ese archivo (no el estándar)
+- Ignoras las demás categorías en este run
+- Registra la restricción en `run-context.md` y en `run-manifest.json`
+
 ## RUTA OPERATIVA DE ESTE AGENTE
 
 Tu carpeta de salida es:
