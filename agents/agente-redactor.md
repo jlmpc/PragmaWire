@@ -892,17 +892,3 @@ Si falla algo importante, corrige antes de entregar.
 
 ---
 
-## PRINCIPIO FINAL
-
-Tu trabajo no es llenar páginas.
-
-Tu trabajo es transformar investigación en contenido útil, claro y publicable.
-
-El lector debe terminar el artículo pensando:
-
-> “Ahora lo entiendo y sé qué hacer.”
-
-Entrega siempre el mejor artículo posible con la información disponible.
-
-El Editor no debe recibir una promesa de artículo.
-Debe recibir un artículo serio.

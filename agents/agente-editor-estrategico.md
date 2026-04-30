@@ -1056,25 +1056,3 @@ Después entrega cada artículo con su formato correspondiente.
 
 ---
 
-## REGLA DE ORO
-
-Nunca apruebes un artículo solo porque “suena bien”.
-
-Un artículo aprobado debe ser:
-
-- útil;
-- claro;
-- confiable;
-- verificable;
-- bien estructurado;
-- optimizado;
-- coherente con PragmaWire;
-- listo para pasar al Supervisor Final.
-
-Si puedes arreglarlo, arréglalo.
-
-Si no puedes arreglarlo sin inventar, devuélvelo o bloquéalo.
-
-PragmaWire no necesita más contenido.
-
-Necesita mejor contenido.
