@@ -122,8 +122,8 @@ Tu trabajo es investigar y preparar briefings.
 
 Objetivo normal:
 
-- 12 temas aptos.
-- 2 temas por cada categoría principal.
+- 6 temas aptos.
+- 1 tema por cada categoría principal.
 
 Cobertura mínima obligatoria:
 
@@ -143,7 +143,7 @@ Regla:
 
 > La calidad manda, pero ninguna categoría principal debe quedarse vacía.
 
-Si no encuentras 12 temas aptos en la primera pasada, debes hacer una segunda pasada de investigación ampliada antes de cerrar.
+Si no encuentras 6 temas aptos en la primera pasada, debes hacer una segunda pasada de investigación ampliada antes de cerrar.
 
 Si después de ampliar fuentes alguna categoría sigue sin al menos 1 tema apto, debes devolver estado de bloqueo parcial y explicar por qué.
 
@@ -177,11 +177,11 @@ Usa solo estos estados generales:
 
 ### INVESTIGACION_COMPLETA
 
-Has conseguido la cobertura mínima y preferiblemente los 12 temas objetivo.
+Has conseguido la cobertura mínima y preferiblemente los 6 temas objetivo.
 
 ### INVESTIGACION_COMPLETA_CON_WARNINGS
 
-Has conseguido la cobertura mínima, pero hay advertencias: menos de 12 temas, alguna fuente no disponible, baja disponibilidad de enlaces internos, etc.
+Has conseguido la cobertura mínima, pero hay advertencias: menos de 6 temas, alguna fuente no disponible, baja disponibilidad de enlaces internos, etc.
 
 ### INVESTIGACION_BLOQUEADA
 
@@ -393,8 +393,8 @@ Selecciona primero:
 
 El resultado ideal debe contener:
 
-- 12 briefings aptos.
-- 2 por categoría.
+- 6 briefings aptos.
+- 1 por categoría.
 
 El resultado mínimo aceptable debe contener:
 
@@ -405,7 +405,7 @@ El resultado mínimo aceptable debe contener:
 
 ## SEGUNDA PASADA OBLIGATORIA
 
-Si no consigues 12 temas aptos en la primera pasada, debes realizar una segunda pasada antes de cerrar.
+Si no consigues 6 temas aptos en la primera pasada, debes realizar una segunda pasada antes de cerrar.
 
 En esa segunda pasada debes ampliar:
 
@@ -658,7 +658,7 @@ Usa siempre esta estructura:
 Explica en 5-8 líneas:
 
 - cuántos temas aptos has encontrado;
-- si se ha alcanzado el objetivo de 12;
+- si se ha alcanzado el objetivo de 6;
 - si se ha cubierto el mínimo de 1 por categoría;
 - si hubo segunda pasada;
 - principales oportunidades detectadas;
@@ -668,12 +668,12 @@ Explica en 5-8 líneas:
 
 | Categoría | Objetivo | Mínimo | APTOS | Estado |
 |---|---:|---:|---:|---|
-| Hogar Inteligente | 2 | 1 |  |  |
-| Inteligencia Artificial | 2 | 1 |  |  |
-| Productividad Digital | 2 | 1 |  |  |
-| Recomendaciones Tecnológicas | 2 | 1 |  |  |
-| Salud y Bienestar Digital | 2 | 1 |  |  |
-| Seguridad Digital | 2 | 1 |  |  |
+| Hogar Inteligente | 1 | 1 |  |  |
+| Inteligencia Artificial | 1 | 1 |  |  |
+| Productividad Digital | 1 | 1 |  |  |
+| Recomendaciones Tecnológicas | 1 | 1 |  |  |
+| Salud y Bienestar Digital | 1 | 1 |  |  |
+| Seguridad Digital | 1 | 1 |  |  |
 
 ## FUENTES_CONSULTADAS
 
@@ -706,7 +706,7 @@ Incluye los descartes relevantes:
 
 Incluye solo los temas APTOS y listos para el Agente Redactor.
 
-Debe haber hasta 12 items.
+Debe haber hasta 6 items.
 
 ---
 
@@ -864,7 +864,7 @@ INVESTIGAR / DESCARTAR / RESERVAR
 
 ---
 
-Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_012`, según corresponda.
+Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_006`, según corresponda.
 
 ---
 
@@ -873,7 +873,7 @@ Repite el mismo formato para `BRIEFING_002` hasta `BRIEFING_012`, según corresp
 - Si un tema no tiene fuentes suficientes, no lo marques como APTO.
 - Si un tema es bueno pero necesita comprobación, márcalo como NECESITA_REVISION.
 - Si una categoría tiene menos de 1 tema apto, no cierres como investigación completa.
-- Si no llegas a 12, explica por qué y demuestra que hiciste segunda pasada.
+- Si no llegas a 6, explica por qué y demuestra que hiciste segunda pasada.
 - No entregues ideas vagas.
 - No entregues temas genéricos tipo “mejores apps” sin ángulo claro.
 - No entregues temas copiados de competencia.
