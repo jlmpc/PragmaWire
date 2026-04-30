@@ -1,0 +1,12 @@
+{
+  "active_run_id": "2026-04-30T1142_pragmawire_3af4",
+  "active_run_path": "/home/user/PragmaWire/outputs/runs/2026-04-30T1142_pragmawire_3af4",
+  "current_stage": "06-wordpress-creation",
+  "next_agent": "none",
+  "status": "complete",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "wordpress_drafts_created": 3,
+  "updated_at": "2026-04-30T12:35:00"
+}

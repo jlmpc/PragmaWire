@@ -1,0 +1,63 @@
+{
+  "run_id": "2026-04-30T1142_pragmawire_3af4",
+  "stage": "02-briefings",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "generated_at": "2026-04-30T11:47:00",
+  "resumen_ejecutivo": "Se han encontrado 3 temas APTOS, uno por cada categoría activa del run (Hogar Inteligente, Inteligencia Artificial, Productividad Digital). Todos superan el score mínimo de 75. No fue necesaria segunda pasada. Los 3 temas son NUEVO según deduplicación contra articulos_publicados.json. Las principales oportunidades son: SEO y AEO fuertes en los 3 casos; temática evergreen con revisión periódica en Hogar Inteligente y Productividad Digital; alta actualidad y demanda en Inteligencia Artificial. Riesgo principal: obsolescencia media-alta en los temas de IA y automatización por evolución rápida de plataformas y precios.",
+  "cobertura_por_categoria": {
+    "Hogar Inteligente": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"},
+    "Inteligencia Artificial": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"},
+    "Productividad Digital": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"}
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "categoria_secundaria": null,
+      "tema": "Matter y Thread: qué son y por qué deberías mirarlos antes de comprar tu próximo dispositivo inteligente",
+      "palabra_clave_principal": "qué es Matter hogar inteligente",
+      "score": 84,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "MEDIO",
+      "recomendacion": "INVESTIGAR"
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Agentes de IA: qué son, en qué se diferencian de ChatGPT y cómo crear el tuyo gratis en 2026",
+      "palabra_clave_principal": "qué es un agente de IA",
+      "score": 87,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "ALTO",
+      "recomendacion": "INVESTIGAR"
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "tema": "Cómo automatizar tareas repetitivas sin saber programar: guía práctica con Zapier, Make y n8n",
+      "palabra_clave_principal": "automatizar tareas sin programar",
+      "score": 82,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "MEDIO",
+      "recomendacion": "INVESTIGAR"
+    }
+  ],
+  "descartados": [],
+  "fuentes_consultadas": {
+    "tendencias": ["WebSearch Google 2026", "wwwhatsnew.com", "ecosistemastartup.com"],
+    "medios_es": ["Xataka", "xatakahome.com", "domoticamatter.com", "lacasadomotica.com", "nocodehackers.es", "ticweb.es", "merca2.es", "javadex.es"],
+    "medios_en": ["The Verge (indirecto)", "gmelius.com", "onoff.gr", "dualmedia.com"],
+    "comunidades": [],
+    "fuentes_oficiales": ["developers.home.google.com/matter", "eu.aqara.com", "zapier.com", "make.com", "n8n.io", "blog.google"],
+    "competidores_referentes": ["vitualdomo.com", "elclubdomotica.com", "worten.es", "blog.hubspot.es", "zemith.com"]
+  }
+}

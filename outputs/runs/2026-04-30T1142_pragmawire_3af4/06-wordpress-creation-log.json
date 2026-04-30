@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 946,
+      "link": "https://www.pragmawire.com/?p=946",
+      "title": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 947,
+      "link": "https://www.pragmawire.com/?p=947",
+      "title": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 948,
+      "link": "https://www.pragmawire.com/?p=948",
+      "title": "Cómo automatizar tareas repetitivas sin saber programar: Zapier, Make y n8n explicados",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}

@@ -1,0 +1,147 @@
+{
+  "run_id": "2026-04-30T1142_pragmawire_3af4",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-04-30T1142_pragmawire_3af4",
+  "created_at": "2026-04-30T11:42:40",
+  "updated_at": "2026-04-30T12:35:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "routine": "A",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "complete",
+  "current_stage": "06-wordpress-creation",
+  "next_agent": "none",
+  "pipeline_estado": "PIPELINE_COMPLETE",
+  "categoria_restriccion_activa": true,
+  "categorias_activas_este_run": ["Hogar Inteligente", "Inteligencia Artificial", "Productividad Digital"],
+  "categorias_excluidas_este_run": ["Recomendaciones Tecnológicas", "Salud y Bienestar Digital", "Seguridad Digital"],
+  "target_articles": 3,
+  "minimum_articles": 3,
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T11:43:30",
+      "output_paths": ["01-run-context/run-context.md", "01-run-context/categorias_target.md", "01-run-context/_STAGE_COMPLETE"],
+      "pipeline_estado": "PIPELINE_READY_WITH_WARNINGS"
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T11:47:00",
+      "estado_investigacion": "INVESTIGACION_COMPLETA",
+      "output_paths": ["02-briefings/briefing_001.md", "02-briefings/briefing_002.md", "02-briefings/briefing_003.md", "02-briefings/briefings-index.json", "02-briefings/_STAGE_COMPLETE"],
+      "valid_outputs_count": 3,
+      "briefings_aptos": [
+        {"id": "briefing_001", "categoria": "Hogar Inteligente", "score": 84},
+        {"id": "briefing_002", "categoria": "Inteligencia Artificial", "score": 87},
+        {"id": "briefing_003", "categoria": "Productividad Digital", "score": 82}
+      ]
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T11:55:00",
+      "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+      "output_paths": ["03-drafts/articulo_001_draft.md", "03-drafts/articulo_002_draft.md", "03-drafts/articulo_003_draft.md", "03-drafts/drafts-index.json", "03-drafts/_STAGE_COMPLETE"],
+      "valid_outputs_count": 3
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T12:10:00",
+      "editor_batch_status": "COMPLETO_CON_WARNINGS",
+      "output_paths": ["04-edited/articulo_001_edited.md", "04-edited/articulo_002_edited.md", "04-edited/articulo_003_edited.md", "04-edited/edited-index.json", "04-edited/_STAGE_COMPLETE"],
+      "approved_wordpress_drafts": 3,
+      "articulos_aprobados": [
+        {"id": "articulo_001_edited", "slug": "que-es-matter-hogar-inteligente", "score": 88, "categoria": "Hogar Inteligente"},
+        {"id": "articulo_002_edited", "slug": "que-es-agente-ia-como-configurar-gratis", "score": 87, "categoria": "Inteligencia Artificial"},
+        {"id": "articulo_003_edited", "slug": "automatizar-tareas-sin-programar-zapier-make-n8n", "score": 86, "categoria": "Productividad Digital"}
+      ]
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T12:25:00",
+      "supervision_batch_status": "COMPLETA_CON_WARNINGS",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "articulos_aprobados": [
+        {"id": "articulo_001_wordpress_ready", "slug": "que-es-matter-hogar-inteligente", "quality_score": 91, "categoria": "Hogar Inteligente"},
+        {"id": "articulo_002_wordpress_ready", "slug": "que-es-agente-ia-como-configurar-gratis", "quality_score": 93, "categoria": "Inteligencia Artificial"},
+        {"id": "articulo_003_wordpress_ready", "slug": "automatizar-tareas-sin-programar-zapier-make-n8n", "quality_score": 90, "categoria": "Productividad Digital"}
+      ]
+    },
+    "06-wordpress-creation": {
+      "agent": "script-post_to_wp",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-04-30T12:35:00",
+      "output_paths": ["06-wordpress-creation-log.json"],
+      "total": 3,
+      "success": 3,
+      "wordpress_drafts": [
+        {
+          "file": "articulo_001_wordpress_ready.md",
+          "wp_id": 946,
+          "link": "https://www.pragmawire.com/?p=946",
+          "title": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+          "slug": "que-es-matter-hogar-inteligente",
+          "categoria": "Hogar Inteligente",
+          "quality_score": 91,
+          "status": "draft"
+        },
+        {
+          "file": "articulo_002_wordpress_ready.md",
+          "wp_id": 947,
+          "link": "https://www.pragmawire.com/?p=947",
+          "title": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+          "slug": "que-es-agente-ia-como-configurar-gratis",
+          "categoria": "Inteligencia Artificial",
+          "quality_score": 93,
+          "status": "draft"
+        },
+        {
+          "file": "articulo_003_wordpress_ready.md",
+          "wp_id": 948,
+          "link": "https://www.pragmawire.com/?p=948",
+          "title": "Cómo automatizar tareas repetitivas sin saber programar: Zapier, Make y n8n explicados",
+          "slug": "automatizar-tareas-sin-programar-zapier-make-n8n",
+          "categoria": "Productividad Digital",
+          "quality_score": 90,
+          "status": "draft"
+        }
+      ]
+    }
+  },
+  "category_coverage": {
+    "Hogar Inteligente": 1,
+    "Inteligencia Artificial": 1,
+    "Productividad Digital": 1
+  },
+  "final_summary": {
+    "articles_created": 3,
+    "articles_published": 0,
+    "wordpress_drafts_created": 3,
+    "average_quality_score": 91.3,
+    "pipeline_complete": true,
+    "publish_allowed": false
+  },
+  "errors": [],
+  "warnings": [
+    "Artículo 001: verificar precios IKEA DIRIGERA y firmware hubs antes de publicar",
+    "Artículo 002: verificar límites plan gratuito Gemini y ChatGPT antes de publicar — revisión trimestral obligatoria",
+    "Artículo 003: verificar límites plan gratuito Zapier y Make antes de publicar"
+  ],
+  "blocked_reason": ""
+}

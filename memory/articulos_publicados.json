@@ -22,5 +22,124 @@
       "Microsoft"
     ],
     "estado": "ejemplo"
+  },
+  {
+    "title": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+    "slug": "que-es-matter-hogar-inteligente",
+    "categoria": "Hogar Inteligente",
+    "palabra_clave_principal": "qué es Matter hogar inteligente",
+    "palabras_clave_secundarias": [
+      "Matter protocolo compatible dispositivos",
+      "Thread Matter diferencia",
+      "Matter Apple Google Alexa",
+      "dispositivos Matter 2026",
+      "hogar inteligente sin problemas compatibilidad"
+    ],
+    "tema_principal": "Matter y Thread — protocolo hogar inteligente",
+    "angulo_editorial": "explicación práctica + guía de compra",
+    "fecha_publicacion": "2026-04-30",
+    "url": "https://www.pragmawire.com/?p=946",
+    "wp_id": 946,
+    "entidades": [
+      "Matter",
+      "Thread",
+      "Connectivity Standards Alliance",
+      "Apple Home",
+      "Google Home",
+      "Amazon Alexa",
+      "IKEA DIRIGERA",
+      "Philips Hue",
+      "Aqara",
+      "TP-Link Tapo"
+    ],
+    "quality_score": 91,
+    "run_id": "2026-04-30T1142_pragmawire_3af4",
+    "estado": "wordpress_draft",
+    "revision_pendiente": [
+      "Verificar precios IKEA DIRIGERA Matter en España",
+      "Verificar firmware de hubs para Matter 1.4"
+    ],
+    "obsolescence_risk": "medio",
+    "revision_recomendada": "semestral"
+  },
+  {
+    "title": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+    "slug": "que-es-agente-ia-como-configurar-gratis",
+    "categoria": "Inteligencia Artificial",
+    "categoria_secundaria": "Productividad Digital",
+    "palabra_clave_principal": "qué es un agente de IA",
+    "palabras_clave_secundarias": [
+      "agente IA cómo funciona",
+      "diferencia chatbot agente IA",
+      "cómo crear agente IA gratis",
+      "ChatGPT agente modo",
+      "Gemini Gems agente",
+      "agentes IA para usuarios"
+    ],
+    "tema_principal": "agentes de IA — qué son y cómo configurarlos",
+    "angulo_editorial": "explicación + tutorial práctico para usuarios no técnicos",
+    "fecha_publicacion": "2026-04-30",
+    "url": "https://www.pragmawire.com/?p=947",
+    "wp_id": 947,
+    "entidades": [
+      "Agentes de IA",
+      "ChatGPT",
+      "OpenAI",
+      "Claude",
+      "Anthropic",
+      "Gemini",
+      "Google",
+      "Copilot",
+      "Microsoft",
+      "Gemini Gems"
+    ],
+    "quality_score": 93,
+    "run_id": "2026-04-30T1142_pragmawire_3af4",
+    "estado": "wordpress_draft",
+    "revision_pendiente": [
+      "Verificar límites plan gratuito Gemini Gems",
+      "Verificar límites plan gratuito ChatGPT GPTs",
+      "Programar revisión trimestral obligatoria"
+    ],
+    "obsolescence_risk": "alto",
+    "revision_recomendada": "trimestral"
+  },
+  {
+    "title": "Cómo automatizar tareas repetitivas sin saber programar: Zapier, Make y n8n explicados",
+    "slug": "automatizar-tareas-sin-programar-zapier-make-n8n",
+    "categoria": "Productividad Digital",
+    "categoria_secundaria": "Inteligencia Artificial",
+    "palabra_clave_principal": "automatizar tareas sin programar",
+    "palabras_clave_secundarias": [
+      "Zapier qué es y cómo funciona",
+      "Make automatización",
+      "n8n gratis automatización",
+      "Zapier vs Make vs n8n",
+      "automatización sin código 2026",
+      "herramientas no-code productividad"
+    ],
+    "tema_principal": "automatización sin código — Zapier, Make, n8n",
+    "angulo_editorial": "guía práctica + comparativa para usuarios sin conocimientos técnicos",
+    "fecha_publicacion": "2026-04-30",
+    "url": "https://www.pragmawire.com/?p=948",
+    "wp_id": 948,
+    "entidades": [
+      "Zapier",
+      "Make",
+      "n8n",
+      "Google Sheets",
+      "Gmail",
+      "Notion",
+      "Slack"
+    ],
+    "quality_score": 90,
+    "run_id": "2026-04-30T1142_pragmawire_3af4",
+    "estado": "wordpress_draft",
+    "revision_pendiente": [
+      "Verificar límites plan gratuito Zapier",
+      "Verificar límites plan gratuito Make"
+    ],
+    "obsolescence_risk": "medio",
+    "revision_recomendada": "semestral"
   }
 ]

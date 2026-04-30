@@ -1,0 +1,4 @@
+STAGE_COMPLETE: 06-wordpress-creation
+completed_at: 2026-04-30T12:35:00
+success: 3/3
+wp_ids: 946, 947, 948

@@ -1,0 +1,78 @@
+{
+  "run_id": "2026-04-30T1142_pragmawire_3af4",
+  "stage": "05-wordpress-ready",
+  "supervision_batch_status": "COMPLETA_CON_WARNINGS",
+  "generated_at": "2026-04-30T12:25:00",
+  "total_articulos_recibidos": 3,
+  "total_crear_wordpress_draft": 3,
+  "total_devolver_a_editor": 0,
+  "total_devolver_a_investigador": 0,
+  "total_bloquear_draft": 0,
+  "wordpress_action": {
+    "create_draft": true,
+    "publish": false
+  },
+  "articulos": [
+    {
+      "id": "articulo_001_wordpress_ready",
+      "file": "articulo_001_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_supervisor": 91,
+      "categoria_principal": "Hogar Inteligente",
+      "categoria_secundaria": null,
+      "title": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+      "slug": "que-es-matter-hogar-inteligente",
+      "meta_title": "Qué es Matter y Thread: guía práctica para el hogar inteligente",
+      "focus_keyword": "qué es Matter hogar inteligente",
+      "update_level": "medio",
+      "obsolescence_risk": "medio",
+      "revision_humana_pendiente": [
+        "Verificar precios IKEA DIRIGERA Matter en España",
+        "Verificar firmware de hubs para Matter 1.4"
+      ]
+    },
+    {
+      "id": "articulo_002_wordpress_ready",
+      "file": "articulo_002_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_supervisor": 93,
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "title": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+      "slug": "que-es-agente-ia-como-configurar-gratis",
+      "meta_title": "Qué es un agente de IA y cómo crear uno gratis en 2026",
+      "focus_keyword": "qué es un agente de IA",
+      "update_level": "alto",
+      "obsolescence_risk": "alto",
+      "revision_humana_pendiente": [
+        "Verificar límites plan gratuito Gemini Gems",
+        "Verificar límites plan gratuito ChatGPT GPTs",
+        "Programar revisión trimestral obligatoria"
+      ]
+    },
+    {
+      "id": "articulo_003_wordpress_ready",
+      "file": "articulo_003_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_supervisor": 90,
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "title": "Cómo automatizar tareas repetitivas sin saber programar: Zapier, Make y n8n explicados",
+      "slug": "automatizar-tareas-sin-programar-zapier-make-n8n",
+      "meta_title": "Automatizar tareas sin programar: Zapier, Make y n8n en 2026",
+      "focus_keyword": "automatizar tareas sin programar",
+      "update_level": "medio",
+      "obsolescence_risk": "medio",
+      "revision_humana_pendiente": [
+        "Verificar límites plan gratuito Zapier",
+        "Verificar límites plan gratuito Make"
+      ]
+    }
+  ],
+  "notas_globales": [
+    "Todos los artículos aprobados con CREAR_WORDPRESS_DRAFT. publish: false en todos los casos.",
+    "Los artículos 002 y 003 tienen enlace interno natural bidireccional — coordinar en WordPress.",
+    "Artículo 002 requiere revisión trimestral por obsolescencia ALTA.",
+    "Artículos 001 y 003 requieren revisión semestral."
+  ]
+}

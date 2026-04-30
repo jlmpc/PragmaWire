@@ -18,12 +18,18 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Instalar markdown si no está disponible
+# Instalar dependencias si no están disponibles
 try:
     import markdown
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "markdown", "-q"])
     import markdown
+
+try:
+    import requests
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "-q"])
+    import requests
 
 # IDs de categorías de pragmawire.com
 CATEGORY_IDS = {
@@ -48,52 +54,57 @@ def get_category_id(category_name: str) -> list:
     return [1]
 
 
-def parse_article(content: str) -> tuple:
-    """Extrae metadatos y cuerpo del artículo."""
+def parse_wordpress_draft(content: str) -> dict:
+    """Extrae metadatos del bloque WORDPRESS_DRAFT_VALIDADO."""
     meta = {"title": "", "slug": "", "excerpt": "", "category": "", "tags": []}
-    lines = content.split("\n")
 
-    # Título: primera línea con #
-    for line in lines:
-        if line.startswith("# ") and not meta["title"]:
-            meta["title"] = line[2:].strip()
-            break
+    # Buscar el bloque WORDPRESS_DRAFT_VALIDADO
+    wp_block = ""
+    if "WORDPRESS_DRAFT_VALIDADO:" in content:
+        parts = content.split("WORDPRESS_DRAFT_VALIDADO:", 1)
+        if len(parts) > 1:
+            # Termina en ARTICLE_MARKDOWN o el siguiente bloque ---
+            end_markers = ["ARTICLE_MARKDOWN:", "\n---\n\nARTICLE_MARKDOWN"]
+            wp_block = parts[1]
+            for marker in end_markers:
+                if marker in wp_block:
+                    wp_block = wp_block.split(marker, 1)[0]
+                    break
 
-    # Metadatos en formato **Campo:** valor
-    for line in lines:
-        m = re.match(r"\*\*([^*]+)\*\*:?\s*(.*)", line)
-        if not m:
-            continue
-        key = m.group(1).lower().strip()
-        val = m.group(2).strip().strip("*").strip()
-        if "título" in key or "title" in key:
-            if val:
-                meta["title"] = val
-        elif "slug" in key:
-            meta["slug"] = val
-        elif "excerpt" in key or "extracto" in key or "descripción" in key:
-            meta["excerpt"] = val
-        elif "categoría" in key or "categoria" in key:
-            meta["category"] = val
-        elif "palabras clave" in key or "tags" in key or "etiquetas" in key:
-            meta["tags"] = [t.strip() for t in re.split(r"[,;]", val) if t.strip()]
+    if wp_block:
+        for line in wp_block.split("\n"):
+            line = line.strip()
+            if line.startswith("title:"):
+                meta["title"] = line[6:].strip()
+            elif line.startswith("slug:"):
+                meta["slug"] = line[5:].strip()
+            elif line.startswith("excerpt:"):
+                meta["excerpt"] = line[8:].strip()
+            elif line.startswith("category_primary:"):
+                meta["category"] = line[17:].strip()
+            elif line.startswith("tags:"):
+                raw = line[5:].strip()
+                meta["tags"] = [t.strip() for t in raw.split(",") if t.strip()]
 
-    # Cuerpo: sección ARTICULO_FINAL_MARKDOWN o todo el contenido
-    body = content
-    for marker in ["## ARTICULO_FINAL_MARKDOWN", "## CONTENIDO_FINAL", "## CONTENIDO"]:
+    return meta
+
+
+def extract_article_body(content: str) -> str:
+    """Extrae el cuerpo del artículo desde ARTICLE_MARKDOWN:"""
+    for marker in ["ARTICLE_MARKDOWN:\n", "ARTICLE_MARKDOWN:"]:
         if marker in content:
-            body = content.split(marker, 1)[1].strip()
-            # Cortar en la siguiente sección ##
-            if "\n## " in body:
-                body = body.split("\n## ")[0].strip()
-            break
-
-    return meta, body
+            body = content.split(marker, 1)[1]
+            # Cortar antes de FAQ_SCHEMA_CANDIDATES si existe
+            if "\nFAQ_SCHEMA_CANDIDATES:" in body:
+                body = body.split("\nFAQ_SCHEMA_CANDIDATES:")[0]
+            return body.strip()
+    return content.strip()
 
 
 def post_article(article_path: Path, wp_url: str, wp_user: str, wp_password: str) -> tuple:
     content = article_path.read_text(encoding="utf-8")
-    meta, body = parse_article(content)
+    meta = parse_wordpress_draft(content)
+    body = extract_article_body(content)
 
     # Markdown → HTML
     md = markdown.Markdown(extensions=["tables", "fenced_code"])
@@ -111,34 +122,66 @@ def post_article(article_path: Path, wp_url: str, wp_user: str, wp_password: str
     if meta["excerpt"]:
         payload["excerpt"] = meta["excerpt"]
 
-    result = subprocess.run(
-        [
-            "curl", "-s", "-X", "POST",
-            f"{wp_url}/wp-json/wp/v2/posts",
-            "-u", f"{wp_user}:{wp_password}",
-            "-H", "Content-Type: application/json",
-            "-d", json.dumps(payload, ensure_ascii=False),
-            "--max-time", "30",
-        ],
-        capture_output=True,
-        text=True,
-    )
+    endpoint = f"{wp_url}/wp-json/wp/v2/posts"
 
-    if result.returncode != 0:
-        return False, f"curl error: {result.stderr}"
+    def do_post(url, verify_ssl=True):
+        # Do NOT auto-follow redirects on POST — a 301/302 would convert POST to GET
+        r = requests.post(
+            url,
+            json=payload,
+            auth=(wp_user, wp_password),
+            headers={"Accept": "application/json"},
+            allow_redirects=False,
+            timeout=60,
+            verify=verify_ssl,
+        )
+        # Follow redirect manually, keeping POST method and auth
+        if r.status_code in (301, 302, 307, 308):
+            location = r.headers.get("Location", "")
+            if location:
+                r = requests.post(
+                    location,
+                    json=payload,
+                    auth=(wp_user, wp_password),
+                    headers={"Accept": "application/json"},
+                    allow_redirects=False,
+                    timeout=60,
+                    verify=verify_ssl,
+                )
+        return r
 
     try:
-        resp = json.loads(result.stdout)
-    except json.JSONDecodeError:
-        return False, f"Respuesta inválida: {result.stdout[:200]}"
+        resp = do_post(endpoint, verify_ssl=True)
+    except requests.exceptions.SSLError:
+        try:
+            resp = do_post(endpoint, verify_ssl=False)
+        except Exception as e2:
+            return False, f"SSL error + retry failed: {e2}"
+    except requests.exceptions.ConnectionError as e:
+        return False, f"Connection error: {e}"
+    except requests.exceptions.Timeout:
+        return False, "Timeout (60s)"
+    except Exception as e:
+        return False, f"Request error: {e}"
 
-    if "id" in resp:
-        return True, {"id": resp["id"], "link": resp.get("link", ""), "title": title}
-    return False, resp.get("message") or resp.get("code") or result.stdout[:200]
+    if resp.status_code not in (200, 201):
+        return False, f"HTTP {resp.status_code} at {resp.url}: {resp.text[:300]}"
+
+    try:
+        data = resp.json()
+    except Exception:
+        return False, f"Respuesta inválida (HTTP {resp.status_code}): {resp.text[:200]}"
+
+    if isinstance(data, list):
+        return False, f"API returned list instead of post object (HTTP {resp.status_code}, url={resp.url})"
+
+    if "id" in data:
+        return True, {"id": data["id"], "link": data.get("link", ""), "title": title}
+    return False, data.get("message") or data.get("code") or str(data)[:200]
 
 
 def main():
-    wp_url = os.environ.get("WP_URL", "").rstrip("/")
+    wp_url = os.environ.get("WP_URL", "").strip().strip("<>").rstrip("/")
     wp_user = os.environ.get("WP_USER", "")
     wp_password = os.environ.get("WP_APP_PASSWORD", "")
 
@@ -170,24 +213,34 @@ def main():
         print("No se encontraron artículos en 05-wordpress-ready/")
         sys.exit(1)
 
-    print(f"Publicando {len(articles)} borradores en WordPress...")
+    print(f"Publicando {len(articles)} borradores en WordPress ({wp_url})...")
     results = []
     success = 0
 
     for article in articles:
+        print(f"  Procesando {article.name}...")
         ok, data = post_article(article, wp_url, wp_user, wp_password)
         if ok:
             print(f"  OK {article.name} → ID {data['id']} | {data['link']}")
-            results.append({"file": article.name, "wp_id": data["id"], "link": data["link"], "title": data["title"], "status": "ok"})
+            results.append({
+                "file": article.name,
+                "wp_id": data["id"],
+                "link": data["link"],
+                "title": data["title"],
+                "status": "ok",
+            })
             success += 1
         else:
             print(f"  ERR {article.name} → {data}")
             results.append({"file": article.name, "error": str(data), "status": "error"})
 
     log_path = run_path / "06-wordpress-creation-log.json"
-    log_path.write_text(json.dumps({"results": results, "total": len(articles), "success": success}, ensure_ascii=False, indent=2))
+    log_path.write_text(
+        json.dumps({"results": results, "total": len(articles), "success": success}, ensure_ascii=False, indent=2)
+    )
 
     print(f"\nResultado: {success}/{len(articles)} borradores creados")
+    print(f"Log: {log_path}")
     sys.exit(0 if success == len(articles) else 1)
 
 

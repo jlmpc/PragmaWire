@@ -1,0 +1,68 @@
+{
+  "run_id": "2026-04-30T1142_pragmawire_3af4",
+  "stage": "03-drafts",
+  "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+  "generated_at": "2026-04-30T11:55:00",
+  "total_briefings_recibidos": 3,
+  "total_articulos_redactados": 3,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Hogar Inteligente",
+      "tema": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+      "titulo_h1": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+      "palabra_clave_principal": "qué es Matter hogar inteligente",
+      "tipo_contenido": "Explicación + guía de compra práctica",
+      "longitud_estimada_palabras": 1650,
+      "datos_pendientes_verificar": [
+        "Precios actuales productos IKEA DIRIGERA Matter en España",
+        "Versión firmware mínima de hubs para Matter 1.4"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+      "titulo_h1": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+      "palabra_clave_principal": "qué es un agente de IA",
+      "tipo_contenido": "Explicación + tutorial práctico",
+      "longitud_estimada_palabras": 1700,
+      "datos_pendientes_verificar": [
+        "Límites plan gratuito Gemini Gems en abril 2026",
+        "Límites plan gratuito ChatGPT GPTs personalizados en abril 2026"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "tema": "Cómo automatizar tareas repetitivas sin saber programar: guía práctica con Zapier, Make y n8n",
+      "titulo_h1": "Cómo automatizar tareas repetitivas sin saber programar: guía práctica con Zapier, Make y n8n",
+      "palabra_clave_principal": "automatizar tareas sin programar",
+      "tipo_contenido": "Guía práctica + comparativa",
+      "longitud_estimada_palabras": 1900,
+      "datos_pendientes_verificar": [
+        "Límites plan gratuito Zapier en abril 2026",
+        "Límites plan gratuito Make en abril 2026"
+      ]
+    }
+  ],
+  "notas_batch": [
+    "Los tres artículos están completos y listos para revisión editorial",
+    "Los datos de precios y límites de planes gratuitos deben verificarse antes de publicar en todos los artículos",
+    "El dato del 87% de ChatGPT Agent Mode fue omitido por falta de fuente primaria verificable",
+    "Los artículos 002 y 003 tienen enlace interno natural entre sí y deben coordinarse"
+  ]
+}
