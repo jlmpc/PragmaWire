@@ -1020,7 +1020,7 @@ Este artículo no debe enviarse a WordPress todavía.
 
 ## FORMATO SI RECIBES VARIOS ARTÍCULOS
 
-Si recibes varios artículos en batch, audita uno por uno.
+Si recibes varios artículos, edítalos y guárdalos de UNO EN UNO. Edita el artículo 1 completo, escríbelo en disco, confirma que está guardado y solo entonces empieza el artículo 2. Nunca generes todos los artículos en un solo bloque de texto.
 
 Usa esta cabecera:
 

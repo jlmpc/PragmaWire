@@ -58,7 +58,8 @@ PASO 4 — AGENTE EDITOR ESTRATÉGICO
 Verifica que existe `03-drafts/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/agente-editor-estrategico.md`.
 Lee los drafts de `03-drafts/` y los briefings de `02-briefings/`.
-Genera los artículos editados en `04-edited/` y el archivo `04-edited/edited-index.json`.
+IMPORTANTE: Edita y guarda los artículos de UNO EN UNO. Edita el artículo 1 completo, guárdalo en `04-edited/articulo_001_edited.md`, luego el artículo 2, guárdalo, luego el artículo 3, guárdalo. No edites los 3 en paralelo ni en un solo bloque de texto.
+Genera el archivo `04-edited/edited-index.json` solo cuando los 3 estén guardados.
 Actualiza `run-manifest.json`.
 Crea `04-edited/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: supervisor-final.
@@ -67,7 +68,8 @@ PASO 5 — SUPERVISOR FINAL
 Verifica que existe `04-edited/_STAGE_COMPLETE` antes de continuar.
 Lee `agents/supervisor-final.md`.
 Lee los artículos de `04-edited/`.
-Genera los aprobados finales en `05-wordpress-ready/` y el archivo `05-wordpress-ready/wordpress-ready-index.json`.
+IMPORTANTE: Valida y guarda los artículos de UNO EN UNO. Valida el artículo 1, guárdalo en `05-wordpress-ready/articulo_001_wordpress_ready.md`, luego el artículo 2, luego el artículo 3. No proceses los 3 en un solo bloque de texto.
+Genera el archivo `05-wordpress-ready/wordpress-ready-index.json` solo cuando los 3 estén procesados.
 Actualiza `run-manifest.json`.
 Crea `05-wordpress-ready/_STAGE_COMPLETE`.
 
