@@ -41,8 +41,8 @@
     "fecha_publicacion": "2026-05-01",
     "run_id": "2026-05-01T0714_pragmawire_be87",
     "quality_score": 91,
-    "url": "",
-    "wp_post_id": null,
+    "url": "https://www.pragmawire.com/?p=968",
+    "wp_post_id": 968,
     "entidades": [
       "Wi-Fi 6",
       "Wi-Fi 7",
@@ -53,8 +53,7 @@
       "ASUS",
       "fibra óptica"
     ],
-    "estado": "wordpress_draft_pending",
-    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
+    "estado": "wordpress_draft"
   },
   {
     "title": "Pantallas y sueño: cómo el móvil afecta tu descanso y qué hacer esta noche",
@@ -74,8 +73,8 @@
     "fecha_publicacion": "2026-05-01",
     "run_id": "2026-05-01T0714_pragmawire_be87",
     "quality_score": 90,
-    "url": "",
-    "wp_post_id": null,
+    "url": "https://www.pragmawire.com/?p=969",
+    "wp_post_id": 969,
     "entidades": [
       "luz azul",
       "melatonina",
@@ -86,8 +85,7 @@
       "iOS",
       "Android"
     ],
-    "estado": "wordpress_draft_pending",
-    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
+    "estado": "wordpress_draft"
   },
   {
     "title": "Estafas por WhatsApp en 2026: las más frecuentes y cómo detectarlas",
@@ -107,8 +105,8 @@
     "fecha_publicacion": "2026-05-01",
     "run_id": "2026-05-01T0714_pragmawire_be87",
     "quality_score": 92,
-    "url": "",
-    "wp_post_id": null,
+    "url": "https://www.pragmawire.com/?p=970",
+    "wp_post_id": 970,
     "entidades": [
       "WhatsApp",
       "INCIBE",
@@ -118,7 +116,6 @@
       "smishing",
       "phishing"
     ],
-    "estado": "wordpress_draft_pending",
-    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
+    "estado": "wordpress_draft"
   }
 ]

@@ -2,14 +2,14 @@
   "run_id": "2026-05-01T0714_pragmawire_be87",
   "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-01T0714_pragmawire_be87",
   "created_at": "2026-05-01T07:14:31",
-  "updated_at": "2026-05-01T08:00:00",
+  "updated_at": "2026-05-01T08:05:00",
   "execution_mode": "PRODUCCION_DRAFT",
   "wordpress_destination": "WORDPRESS_DRAFT",
   "publish_allowed": false,
   "routine": "B",
-  "overall_status": "complete_with_warnings",
-  "current_stage": "07-memory-update",
-  "next_agent": "memory-updater",
+  "overall_status": "complete",
+  "current_stage": "07-complete",
+  "next_agent": null,
   "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
   "categorias_target": [
     "Recomendaciones Tecnológicas",
@@ -109,15 +109,18 @@
     },
     "06-wordpress-creation": {
       "agent": "post_to_wp",
-      "status": "error",
-      "stage_complete": false,
+      "status": "complete",
+      "stage_complete": true,
       "script": "scripts/post_to_wp.py",
-      "error": "ERROR_AUTH: 401 rest_not_logged_in",
-      "wp_drafts_created": 0,
-      "wp_drafts_failed": 3,
+      "wp_drafts_created": 3,
+      "wp_drafts_failed": 0,
       "log_path": "06-wordpress-creation-log.json",
-      "note": "Credenciales WP_APP_PASSWORD no válidas. Artículos listos en 05-wordpress-ready/ para carga manual o re-ejecución.",
-      "executed_at": "2026-05-01T07:58:00"
+      "wp_posts": {
+        "articulo_001": {"wp_id": 968, "url": "https://www.pragmawire.com/?p=968"},
+        "articulo_002": {"wp_id": 969, "url": "https://www.pragmawire.com/?p=969"},
+        "articulo_003": {"wp_id": 970, "url": "https://www.pragmawire.com/?p=970"}
+      },
+      "executed_at": "2026-05-01T08:05:00"
     }
   },
   "category_coverage": {
