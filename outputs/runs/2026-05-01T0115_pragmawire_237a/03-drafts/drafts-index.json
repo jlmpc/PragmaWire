@@ -1,0 +1,53 @@
+{
+  "run_id": "2026-05-01T0115_pragmawire_237a",
+  "stage": "03-drafts",
+  "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+  "total_briefings_recibidos": 3,
+  "total_articulos_redactados": 3,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Hogar Inteligente",
+      "tema": "Qué es el protocolo Matter y cómo simplifica el hogar inteligente",
+      "titulo_draft": "Qué es Matter: el estándar que hace que todos tus dispositivos inteligentes hablen el mismo idioma",
+      "palabra_clave_principal": "qué es Matter protocolo",
+      "slug_sugerido": "que-es-matter-protocolo-hogar-inteligente",
+      "orden_edicion": 1
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Inteligencia Artificial",
+      "tema": "Qué son los agentes de IA y en qué se diferencian de un chatbot normal",
+      "titulo_draft": "Agentes de IA: qué son, para qué sirven y en qué se diferencian de ChatGPT",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "slug_sugerido": "que-son-agentes-ia-diferencia-chatbot",
+      "orden_edicion": 2
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Productividad Digital",
+      "tema": "Por qué tener demasiadas apps de productividad te hace menos productivo",
+      "titulo_draft": "La trampa de las apps de productividad: por qué cuantas más usas, menos produces",
+      "palabra_clave_principal": "demasiadas apps de productividad",
+      "slug_sugerido": "demasiadas-apps-productividad-menos-mas",
+      "orden_edicion": 3
+    }
+  ],
+  "notas_globales": [
+    "Los 3 artículos están completos y listos para revisión del Agente Editor Estratégico",
+    "Datos pendientes de verificar marcados en cada artículo — revisar antes de publicar",
+    "Slugs y meta titles sugeridos en notas_para_editor de cada draft"
+  ],
+  "created_at": "2026-05-01T01:18:00"
+}

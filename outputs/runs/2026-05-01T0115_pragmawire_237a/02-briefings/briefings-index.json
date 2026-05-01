@@ -1,0 +1,64 @@
+{
+  "run_id": "2026-05-01T0115_pragmawire_237a",
+  "stage": "02-briefings",
+  "investigacion_status": "INVESTIGACION_COMPLETA",
+  "total_briefings": 3,
+  "total_aptos": 3,
+  "segunda_pasada": false,
+  "cobertura_categorias": {
+    "Hogar Inteligente": {"aptos": 1, "objetivo": 1, "minimo": 1, "estado": "OK"},
+    "Inteligencia Artificial": {"aptos": 1, "objetivo": 1, "minimo": 1, "estado": "OK"},
+    "Productividad Digital": {"aptos": 1, "objetivo": 1, "minimo": 1, "estado": "OK"}
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "categoria_secundaria": "Recomendaciones Tecnológicas",
+      "tema": "Qué es el protocolo Matter y cómo simplifica el hogar inteligente",
+      "titulo_provisional": "Qué es Matter: el estándar que hace que todos tus dispositivos inteligentes hablen el mismo idioma",
+      "palabra_clave_principal": "qué es Matter protocolo",
+      "score": 87,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "orden_redaccion": 1
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Qué son los agentes de IA y en qué se diferencian de un chatbot normal",
+      "titulo_provisional": "Agentes de IA: qué son, para qué sirven y por qué son diferentes a ChatGPT",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "score": 90,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "orden_redaccion": 2
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "tema": "Por qué tener demasiadas apps de productividad te hace menos productivo (y qué hacer)",
+      "titulo_provisional": "La trampa de las apps de productividad: por qué cuantas más usas, menos produces",
+      "palabra_clave_principal": "demasiadas apps de productividad",
+      "score": 85,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "orden_redaccion": 3
+    }
+  ],
+  "descartados": [],
+  "warnings": [
+    "Datos del estudio Atlassian 2025 (briefing_003) requieren verificación de fuente primaria",
+    "Precio de planes ChatGPT y Claude para agentes (briefing_002) puede haber cambiado",
+    "Número exacto de dispositivos Matter certificados (briefing_001) pendiente de confirmar en csa-iot.org"
+  ],
+  "created_at": "2026-05-01T01:16:30"
+}

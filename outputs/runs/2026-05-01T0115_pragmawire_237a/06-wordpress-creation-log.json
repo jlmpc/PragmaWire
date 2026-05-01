@@ -1,0 +1,43 @@
+{
+  "run_id": "2026-05-01T0115_pragmawire_237a",
+  "stage": "06-wordpress-creation",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 961,
+      "link": "https://www.pragmawire.com/?p=961",
+      "title": "Qué es Matter: el protocolo que une todos tus dispositivos del hogar inteligente",
+      "slug": "que-es-matter-protocolo-hogar-inteligente",
+      "categoria": "Hogar Inteligente",
+      "status": "ok",
+      "wp_status": "draft"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 962,
+      "link": "https://www.pragmawire.com/?p=962",
+      "title": "Agentes de IA: qué son, en qué se diferencian de un chatbot y cómo usarlos",
+      "slug": "que-son-agentes-ia-diferencia-chatbot",
+      "categoria": "Inteligencia Artificial",
+      "status": "ok",
+      "wp_status": "draft"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 963,
+      "link": "https://www.pragmawire.com/?p=963",
+      "title": "La trampa de las apps de productividad: cuantas más usas, menos produces",
+      "slug": "demasiadas-apps-productividad-menos-mas",
+      "categoria": "Productividad Digital",
+      "status": "ok",
+      "wp_status": "draft"
+    }
+  ],
+  "total": 3,
+  "success": 3,
+  "errors": 0,
+  "created_at": "2026-05-01T01:25:00"
+}

@@ -1,0 +1,132 @@
+{
+  "run_id": "2026-05-01T0115_pragmawire_237a",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-01T0115_pragmawire_237a",
+  "created_at": "2026-05-01T01:15:25",
+  "updated_at": "2026-05-01T01:30:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "routine": "A",
+  "overall_status": "complete",
+  "current_stage": "complete",
+  "next_agent": null,
+  "categoria_restriction": {
+    "active": true,
+    "categories": ["Hogar Inteligente", "Inteligencia Artificial", "Productividad Digital"],
+    "excluded": ["Recomendaciones Tecnológicas", "Salud y Bienestar Digital", "Seguridad Digital"],
+    "target_articles": 3,
+    "target_per_category": 1
+  },
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true,
+      "pipeline_status": "PIPELINE_READY_WITH_WARNINGS"
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "investigacion_status": "INVESTIGACION_COMPLETA",
+      "valid_outputs_count": 3
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "redaccion_status": "COMPLETA_CON_NOTAS",
+      "valid_outputs_count": 3
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "editor_batch_status": "COMPLETO",
+      "output_paths": [
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 3,
+      "quality_scores": {
+        "articulo_001": 91,
+        "articulo_002": 90,
+        "articulo_003": 89
+      }
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "supervisor_batch_status": "COMPLETO",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "quality_scores_supervisor": {
+        "articulo_001": 91,
+        "articulo_002": 90,
+        "articulo_003": 90
+      }
+    },
+    "06-wordpress-creation": {
+      "agent": "wordpress-api",
+      "status": "complete",
+      "stage_complete": true,
+      "wordpress_creation_status": "COMPLETO",
+      "total_drafts_created": 3,
+      "output_paths": [
+        "06-wordpress-creation-log.json"
+      ],
+      "wordpress_drafts": [
+        {
+          "articulo_id": "articulo_001",
+          "wp_id": 961,
+          "wp_link": "https://www.pragmawire.com/?p=961",
+          "titulo": "Qué es Matter: el protocolo que une todos tus dispositivos del hogar inteligente",
+          "slug": "que-es-matter-protocolo-hogar-inteligente",
+          "categoria": "Hogar Inteligente",
+          "wp_status": "draft"
+        },
+        {
+          "articulo_id": "articulo_002",
+          "wp_id": 962,
+          "wp_link": "https://www.pragmawire.com/?p=962",
+          "titulo": "Agentes de IA: qué son, en qué se diferencian de un chatbot y cómo usarlos",
+          "slug": "que-son-agentes-ia-diferencia-chatbot",
+          "categoria": "Inteligencia Artificial",
+          "wp_status": "draft"
+        },
+        {
+          "articulo_id": "articulo_003",
+          "wp_id": 963,
+          "wp_link": "https://www.pragmawire.com/?p=963",
+          "titulo": "La trampa de las apps de productividad: cuantas más usas, menos produces",
+          "slug": "demasiadas-apps-productividad-menos-mas",
+          "categoria": "Productividad Digital",
+          "wp_status": "draft"
+        }
+      ]
+    }
+  },
+  "category_coverage": {
+    "Hogar Inteligente": 1,
+    "Inteligencia Artificial": 1,
+    "Productividad Digital": 1
+  },
+  "errors": [],
+  "warnings": [
+    "Dato IKEA 21 productos Matter España — verificar con fuente oficial IKEA antes de publicar",
+    "Benchmark OSWorld 72,5% Claude — verificar blog.anthropic.com antes de publicar",
+    "Precios planes ChatGPT/Claude — verificar webs oficiales antes de publicar",
+    "Dato 23% Atlassian 2025 — verificar fuente primaria atlassian.com/blog antes de publicar"
+  ],
+  "blocked_reason": ""
+}

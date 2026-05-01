@@ -1,0 +1,63 @@
+{
+  "run_id": "2026-05-01T0115_pragmawire_237a",
+  "stage": "04-edited",
+  "editor_batch_status": "COMPLETO",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_a_redactor": 0,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados_verificacion": 0,
+  "edited_articles": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "draft_source": "articulo_001_draft.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "categoria_principal": "Hogar Inteligente",
+      "titulo_final": "Qué es Matter: el protocolo que une todos tus dispositivos del hogar inteligente",
+      "slug": "que-es-matter-protocolo-hogar-inteligente",
+      "focus_keyword": "qué es Matter protocolo",
+      "update_level": "bajo",
+      "obsolescence_risk": "bajo",
+      "veto_warnings": ["Dato IKEA 21 productos España pendiente verificación fuente oficial"],
+      "orden_wp": 1
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "draft_source": "articulo_002_draft.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 90,
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo_final": "Agentes de IA: qué son, en qué se diferencian de un chatbot y cómo usarlos",
+      "slug": "que-son-agentes-ia-diferencia-chatbot",
+      "focus_keyword": "qué son los agentes de IA",
+      "update_level": "medio",
+      "obsolescence_risk": "medio",
+      "veto_warnings": [
+        "Benchmark OSWorld 72,5% de fuente secundaria — verificar blog.anthropic.com",
+        "Precios ChatGPT/Claude verificar en webs oficiales antes de publicar"
+      ],
+      "orden_wp": 2
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "draft_source": "articulo_003_draft.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 89,
+      "categoria_principal": "Productividad Digital",
+      "titulo_final": "La trampa de las apps de productividad: cuantas más usas, menos produces",
+      "slug": "demasiadas-apps-productividad-menos-mas",
+      "focus_keyword": "demasiadas apps de productividad",
+      "update_level": "bajo",
+      "obsolescence_risk": "bajo",
+      "veto_warnings": [
+        "Dato 23% Atlassian 2025 citado vía fuente secundaria — verificar atlassian.com/blog"
+      ],
+      "orden_wp": 3
+    }
+  ],
+  "created_at": "2026-05-01T01:20:00"
+}

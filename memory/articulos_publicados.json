@@ -22,5 +22,100 @@
       "Microsoft"
     ],
     "estado": "ejemplo"
+  },
+  {
+    "title": "Qué es Matter: el protocolo que une todos tus dispositivos del hogar inteligente",
+    "slug": "que-es-matter-protocolo-hogar-inteligente",
+    "categoria": "Hogar Inteligente",
+    "palabra_clave_principal": "qué es Matter protocolo",
+    "palabras_clave_secundarias": [
+      "protocolo Matter hogar inteligente",
+      "Matter compatible dispositivos",
+      "Matter vs Zigbee vs Z-Wave",
+      "hogar inteligente sin hub",
+      "Matter Apple Home Google Home Alexa"
+    ],
+    "tema_principal": "protocolo Matter hogar inteligente",
+    "angulo_editorial": "explicación práctica del protocolo estándar para hogar inteligente con guía de compatibilidad",
+    "fecha_creacion_borrador": "2026-05-01",
+    "wp_id": 961,
+    "url": "https://www.pragmawire.com/?p=961",
+    "entidades": [
+      "Matter",
+      "CSA (Connectivity Standards Alliance)",
+      "Thread",
+      "Apple Home",
+      "Google Home",
+      "Amazon Alexa",
+      "Samsung SmartThings",
+      "IKEA",
+      "Aqara",
+      "Zigbee",
+      "Z-Wave"
+    ],
+    "run_id": "2026-05-01T0115_pragmawire_237a",
+    "estado": "wordpress_draft"
+  },
+  {
+    "title": "Agentes de IA: qué son, en qué se diferencian de un chatbot y cómo usarlos",
+    "slug": "que-son-agentes-ia-diferencia-chatbot",
+    "categoria": "Inteligencia Artificial",
+    "palabra_clave_principal": "qué son los agentes de IA",
+    "palabras_clave_secundarias": [
+      "agentes de inteligencia artificial para qué sirven",
+      "diferencia chatbot agente IA",
+      "ChatGPT agente modo autónomo",
+      "Claude Computer Use qué es",
+      "agentes IA ejemplos prácticos"
+    ],
+    "tema_principal": "agentes de IA diferencia chatbot",
+    "angulo_editorial": "explicación con analogía chatbot-vs-agente + guía práctica sin programar + sección de limitaciones honestas",
+    "fecha_creacion_borrador": "2026-05-01",
+    "wp_id": 962,
+    "url": "https://www.pragmawire.com/?p=962",
+    "entidades": [
+      "Agente de IA",
+      "ChatGPT Agent Mode",
+      "OpenAI",
+      "Claude Computer Use",
+      "Anthropic",
+      "Gemini Advanced",
+      "Google",
+      "n8n",
+      "CrewAI",
+      "LangChain"
+    ],
+    "run_id": "2026-05-01T0115_pragmawire_237a",
+    "estado": "wordpress_draft"
+  },
+  {
+    "title": "La trampa de las apps de productividad: cuantas más usas, menos produces",
+    "slug": "demasiadas-apps-productividad-menos-mas",
+    "categoria": "Productividad Digital",
+    "palabra_clave_principal": "demasiadas apps de productividad",
+    "palabras_clave_secundarias": [
+      "app fatiga productividad digital",
+      "cuántas apps de productividad necesito",
+      "sistema productividad minimalista",
+      "Notion vs Todoist",
+      "herramientas productividad menos es más"
+    ],
+    "tema_principal": "fatiga de herramientas digitales y productividad minimalista",
+    "angulo_editorial": "análisis crítico del fenómeno de acumulación de apps con sistema de 3 pilares como solución",
+    "fecha_creacion_borrador": "2026-05-01",
+    "wp_id": 963,
+    "url": "https://www.pragmawire.com/?p=963",
+    "entidades": [
+      "Notion (Notion Labs)",
+      "Todoist (Doist)",
+      "Obsidian (Obsidian.md)",
+      "ClickUp",
+      "Trello (Atlassian)",
+      "Google Calendar",
+      "Apple Notes",
+      "Atlassian"
+    ],
+    "run_id": "2026-05-01T0115_pragmawire_237a",
+    "estado": "wordpress_draft"
   }
 ]
