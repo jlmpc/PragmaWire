@@ -1,0 +1,39 @@
+{
+  "run_id": "2026-05-01T0714_pragmawire_be87",
+  "stage": "06-wordpress-creation",
+  "executed_at": "2026-05-01T07:58:00",
+  "script": "scripts/post_to_wp.py",
+  "wp_url": "https://pragmawire.com",
+  "total_articles": 3,
+  "success": 0,
+  "failed": 3,
+  "status": "ERROR_AUTH",
+  "error_summary": "WordPress REST API devuelve 401 rest_not_logged_in. Las credenciales WP_USER/WP_APP_PASSWORD del entorno no están autorizadas para crear entradas. Verificar Application Password en wp-admin → Usuarios → Seguridad → Contraseñas de aplicación, y que el usuario tenga rol Editor o superior.",
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "slug": "mejor-router-wifi-casa-2026",
+      "wp_id": null,
+      "link": null,
+      "status": "error",
+      "error": "401 rest_not_logged_in"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "slug": "pantallas-sueno-movil-dormir-mejor",
+      "wp_id": null,
+      "link": null,
+      "status": "error",
+      "error": "401 rest_not_logged_in"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "slug": "estafas-whatsapp-2026-como-detectarlas",
+      "wp_id": null,
+      "link": null,
+      "status": "error",
+      "error": "401 rest_not_logged_in"
+    }
+  ],
+  "next_action": "Regenerar Application Password en wp-admin y actualizar WP_APP_PASSWORD. Los 3 artículos están completos en 05-wordpress-ready/ y pueden subirse manualmente o re-ejecutando post_to_wp.py con credenciales correctas."
+}

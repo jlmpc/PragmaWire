@@ -22,5 +22,103 @@
       "Microsoft"
     ],
     "estado": "ejemplo"
+  },
+  {
+    "title": "Mejor router Wi-Fi para casa en 2026: guía para no equivocarte",
+    "slug": "mejor-router-wifi-casa-2026",
+    "categoria": "Recomendaciones Tecnológicas",
+    "palabra_clave_principal": "mejor router wifi para casa 2026",
+    "palabras_clave_secundarias": [
+      "router wifi doméstico",
+      "Wi-Fi 6",
+      "Wi-Fi 7",
+      "router recomendado 2026",
+      "velocidad wifi casa",
+      "mejor router fibra óptica"
+    ],
+    "tema_principal": "routers Wi-Fi domésticos",
+    "angulo_editorial": "guía de compra práctica con criterios técnicos explicados para usuarios no expertos",
+    "fecha_publicacion": "2026-05-01",
+    "run_id": "2026-05-01T0714_pragmawire_be87",
+    "quality_score": 91,
+    "url": "",
+    "wp_post_id": null,
+    "entidades": [
+      "Wi-Fi 6",
+      "Wi-Fi 7",
+      "Wi-Fi Alliance",
+      "802.11ax",
+      "802.11be",
+      "TP-Link",
+      "ASUS",
+      "fibra óptica"
+    ],
+    "estado": "wordpress_draft_pending",
+    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
+  },
+  {
+    "title": "Pantallas y sueño: cómo el móvil afecta tu descanso y qué hacer esta noche",
+    "slug": "pantallas-sueno-movil-dormir-mejor",
+    "categoria": "Salud y Bienestar Digital",
+    "palabra_clave_principal": "pantallas y sueño",
+    "palabras_clave_secundarias": [
+      "móvil antes de dormir",
+      "luz azul y sueño",
+      "cómo dormir mejor con el móvil",
+      "modo nocturno pantalla",
+      "filtro luz azul móvil",
+      "hábitos digitales antes de dormir"
+    ],
+    "tema_principal": "impacto de pantallas en el sueño",
+    "angulo_editorial": "guía práctica con base científica + configuración iOS y Android",
+    "fecha_publicacion": "2026-05-01",
+    "run_id": "2026-05-01T0714_pragmawire_be87",
+    "quality_score": 90,
+    "url": "",
+    "wp_post_id": null,
+    "entidades": [
+      "luz azul",
+      "melatonina",
+      "ritmo circadiano",
+      "National Sleep Foundation",
+      "AASM",
+      "Harvard Health Publishing",
+      "iOS",
+      "Android"
+    ],
+    "estado": "wordpress_draft_pending",
+    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
+  },
+  {
+    "title": "Estafas por WhatsApp en 2026: las más frecuentes y cómo detectarlas",
+    "slug": "estafas-whatsapp-2026-como-detectarlas",
+    "categoria": "Seguridad Digital",
+    "palabra_clave_principal": "estafas por WhatsApp",
+    "palabras_clave_secundarias": [
+      "timo WhatsApp 2026",
+      "fraude WhatsApp cómo detectarlo",
+      "estafa hijo en apuros WhatsApp",
+      "smishing WhatsApp",
+      "cómo evitar fraudes en WhatsApp",
+      "phishing por WhatsApp"
+    ],
+    "tema_principal": "estafas e ingeniería social en WhatsApp",
+    "angulo_editorial": "guía de reconocimiento con 5 patrones de fraude y señales de alerta concretas",
+    "fecha_publicacion": "2026-05-01",
+    "run_id": "2026-05-01T0714_pragmawire_be87",
+    "quality_score": 92,
+    "url": "",
+    "wp_post_id": null,
+    "entidades": [
+      "WhatsApp",
+      "INCIBE",
+      "OSI",
+      "Guardia Civil",
+      "ingeniería social",
+      "smishing",
+      "phishing"
+    ],
+    "estado": "wordpress_draft_pending",
+    "estado_nota": "Contenido validado por pipeline. WordPress draft no creado por error de autenticación API (ERROR_AUTH). Pendiente de subida manual o re-ejecución de post_to_wp.py con credenciales válidas."
   }
 ]

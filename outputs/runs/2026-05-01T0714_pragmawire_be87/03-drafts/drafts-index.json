@@ -1,0 +1,61 @@
+{
+  "run_id": "2026-05-01T0714_pragmawire_be87",
+  "stage": "03-drafts",
+  "generated_at": "2026-05-01T07:28:00",
+  "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+  "total_briefings_recibidos": 3,
+  "total_articulos_redactados": 3,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Guía para elegir el mejor router Wi-Fi para casa en 2026",
+      "titulo": "Cómo elegir el mejor router Wi-Fi para casa en 2026: guía práctica sin tecnicismos",
+      "palabra_clave_principal": "mejor router wifi para casa 2026",
+      "tipo_contenido": "Guía de compra con criterios de decisión",
+      "datos_pendientes_verificar": [
+        "Precios exactos actualizados de modelos en mayo 2026",
+        "Modo bridge operadores españoles 2026",
+        "Modelos Wi-Fi 7 disponibles en España por debajo de 150€"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Cómo afectan las pantallas al sueño y qué hacer para dormir mejor en la era digital",
+      "titulo": "Pantallas y sueño: por qué el móvil afecta a tu descanso y qué puedes hacer esta noche",
+      "palabra_clave_principal": "pantallas y sueño",
+      "tipo_contenido": "Guía práctica con base científica",
+      "datos_pendientes_verificar": [
+        "Confirmar pasos de configuración iOS 18",
+        "Confirmar nombre de función en fabricantes Android (Samsung, Xiaomi)",
+        "Datos de hábitos sueño en adultos españoles 2025-2026"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Las estafas por WhatsApp más habituales en 2026 y cómo detectarlas",
+      "titulo": "Estafas por WhatsApp en 2026: las más frecuentes y cómo detectarlas antes de caer",
+      "palabra_clave_principal": "estafas por WhatsApp",
+      "tipo_contenido": "Alerta de seguridad + guía práctica",
+      "datos_pendientes_verificar": [
+        "Estadísticas de fraude WhatsApp España 2025-2026 (INCIBE)",
+        "Variantes con IA generativa confirmadas y documentadas",
+        "Alertas recientes Policía Nacional / Guardia Civil 2026"
+      ]
+    }
+  ],
+  "next_agent": "agente-editor-estrategico"
+}

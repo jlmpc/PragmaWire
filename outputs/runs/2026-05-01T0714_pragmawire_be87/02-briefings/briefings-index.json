@@ -1,0 +1,81 @@
+{
+  "run_id": "2026-05-01T0714_pragmawire_be87",
+  "stage": "02-briefings",
+  "generated_at": "2026-05-01T07:18:00",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "total_briefings": 3,
+  "briefings_aptos": 3,
+  "briefings_descartados": 0,
+  "briefings_necesita_revision": 0,
+  "cobertura_por_categoria": {
+    "Recomendaciones Tecnológicas": {
+      "objetivo": 1,
+      "minimo": 1,
+      "aptos": 1,
+      "cubierta": true
+    },
+    "Salud y Bienestar Digital": {
+      "objetivo": 1,
+      "minimo": 1,
+      "aptos": 1,
+      "cubierta": true
+    },
+    "Seguridad Digital": {
+      "objetivo": 1,
+      "minimo": 1,
+      "aptos": 1,
+      "cubierta": true
+    }
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "categoria_secundaria": "Hogar Inteligente",
+      "tema": "Guía para elegir el mejor router Wi-Fi para casa en 2026",
+      "titulo_provisional": "Cómo elegir el mejor router Wi-Fi para casa en 2026: guía práctica sin tecnicismos",
+      "palabra_clave_principal": "mejor router wifi para casa 2026",
+      "score": 82,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion_final": "INVESTIGAR",
+      "intencion_busqueda": "commercial_investigation + practical_how_to",
+      "riesgo_obsolescencia": "MEDIO"
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Cómo afectan las pantallas al sueño y qué hacer para dormir mejor en la era digital",
+      "titulo_provisional": "Pantallas y sueño: por qué el móvil te roba el descanso y cómo solucionarlo esta noche",
+      "palabra_clave_principal": "pantallas y sueño",
+      "score": 85,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion_final": "INVESTIGAR",
+      "intencion_busqueda": "informational + practical_how_to",
+      "riesgo_obsolescencia": "BAJO"
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "categoria_secundaria": null,
+      "tema": "Las estafas por WhatsApp más habituales en 2026 y cómo detectarlas",
+      "titulo_provisional": "Estafas por WhatsApp en 2026: las más frecuentes y cómo no caer en ellas",
+      "palabra_clave_principal": "estafas por WhatsApp",
+      "score": 88,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion_final": "INVESTIGAR",
+      "intencion_busqueda": "informational + practical",
+      "riesgo_obsolescencia": "MEDIO"
+    }
+  ],
+  "temas_descartados": [],
+  "warnings": [],
+  "next_agent": "agente-redactor"
+}

@@ -1,0 +1,64 @@
+{
+  "run_id": "2026-05-01T0714_pragmawire_be87",
+  "stage": "04-edited",
+  "generated_at": "2026-05-01T07:42:00",
+  "editor_batch_status": "COMPLETO",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_a_redactor": 0,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados_verificacion": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 88,
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo_editado": "Cómo elegir el mejor router Wi-Fi para casa en 2026: guía sin tecnicismos",
+      "slug": "mejor-router-wifi-casa-2026",
+      "focus_keyword": "mejor router wifi para casa 2026",
+      "meta_title": "Mejor router Wi-Fi para casa en 2026: guía práctica",
+      "vetos_activos": false,
+      "notas_supervisor": [
+        "Verificar rangos de precio antes de publicar",
+        "Confirmar modo bridge con operadores españoles",
+        "Enlace interno a passkeys (que-son-passkeys) listo"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 90,
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo_editado": "Pantallas y sueño: cómo el móvil afecta tu descanso y qué hacer esta noche",
+      "slug": "pantallas-sueno-movil-dormir-mejor",
+      "focus_keyword": "pantallas y sueño",
+      "meta_title": "Pantallas y sueño: por qué el móvil afecta tu descanso",
+      "vetos_activos": false,
+      "notas_supervisor": [
+        "Verificar pasos de configuración en iOS 18 y Android 15 antes de publicar",
+        "Confirmar nombre de función en Samsung y Xiaomi (o añadir nota genérica)"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 92,
+      "categoria_principal": "Seguridad Digital",
+      "titulo_editado": "Estafas por WhatsApp en 2026: los tipos más frecuentes y cómo detectarlos",
+      "slug": "estafas-whatsapp-2026-como-detectarlas",
+      "focus_keyword": "estafas por WhatsApp",
+      "meta_title": "Estafas por WhatsApp en 2026: cómo detectarlas",
+      "vetos_activos": false,
+      "notas_supervisor": [
+        "Verificar disponibilidad del 017 de INCIBE y portal OSI",
+        "Revisar alertas recientes 2026 de Policía/Guardia Civil",
+        "Enlace interno a passkeys (que-son-passkeys) integrado en conclusión"
+      ]
+    }
+  ],
+  "next_agent": "supervisor-final"
+}

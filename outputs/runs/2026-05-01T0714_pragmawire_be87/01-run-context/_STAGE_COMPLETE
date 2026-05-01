@@ -1,0 +1,6 @@
+STAGE: 01-run-context
+AGENT: supervisor-inicial
+STATUS: complete
+COMPLETED_AT: 2026-05-01T07:15:00
+NEXT_AGENT: agente-investigador
+PIPELINE_STATUS: PIPELINE_READY_WITH_WARNINGS

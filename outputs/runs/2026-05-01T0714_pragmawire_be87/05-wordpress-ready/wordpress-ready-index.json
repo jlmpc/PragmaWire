@@ -1,0 +1,60 @@
+{
+  "run_id": "2026-05-01T0714_pragmawire_be87",
+  "stage": "05-wordpress-ready",
+  "agent": "supervisor-final",
+  "status": "SUPERVISION_FINAL_COMPLETA",
+  "completed_at": "2026-05-01T07:55:00",
+  "total_processed": 3,
+  "total_crear_wordpress_draft": 3,
+  "total_devueltos": 0,
+  "total_bloqueados": 0,
+  "articles": [
+    {
+      "id": "articulo_001",
+      "slug": "mejor-router-wifi-casa-2026",
+      "title": "Mejor router Wi-Fi para casa en 2026: guía para no equivocarte",
+      "category_primary": "Recomendaciones Tecnológicas",
+      "quality_score_final": 91,
+      "quality_score_editor": 88,
+      "editorial_loop_applied": true,
+      "editorial_loop_reason": "Score editor 88 < umbral 90. Loop autónomo aplicado: callout AEO añadido, ai_summary mejorado, nota obsolescencia explicitada.",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "file": "05-wordpress-ready/articulo_001_wordpress_ready.md"
+    },
+    {
+      "id": "articulo_002",
+      "slug": "pantallas-sueno-movil-dormir-mejor",
+      "title": "Pantallas y sueño: cómo el móvil afecta tu descanso y qué hacer esta noche",
+      "category_primary": "Salud y Bienestar Digital",
+      "quality_score_final": 90,
+      "quality_score_editor": 90,
+      "editorial_loop_applied": false,
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "file": "05-wordpress-ready/articulo_002_wordpress_ready.md"
+    },
+    {
+      "id": "articulo_003",
+      "slug": "estafas-whatsapp-2026-como-detectarlas",
+      "title": "Estafas por WhatsApp en 2026: las más frecuentes y cómo detectarlas",
+      "category_primary": "Seguridad Digital",
+      "quality_score_final": 92,
+      "quality_score_editor": 92,
+      "editorial_loop_applied": false,
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "file": "05-wordpress-ready/articulo_003_wordpress_ready.md"
+    }
+  ],
+  "supervisor_notes": "Batch procesado correctamente. Los 3 artículos superan el umbral de calidad (≥90). Artículo 001 requirió loop editorial autónomo (88→91). Artículos 002 y 003 aprobados directamente. Todos los vetos críticos en OK. Metadata SEO/AEO/GEO completa. Sin placeholders ni datos críticos pendientes en el cuerpo del artículo. publish_allowed: false confirmado."
+}
