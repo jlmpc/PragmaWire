@@ -357,18 +357,23 @@ Si necesitas una investigación amplia, marca el problema como pendiente y devue
 
 ---
 
-## LONGITUD RECOMENDADA POR TIPO DE CONTENIDO
+## LONGITUD RECOMENDADA
 
-Adapta la longitud al tipo de contenido indicado por el briefing.
+**Fuente primaria — briefing del Investigador:**
+Si el briefing incluye `Longitud objetivo recomendada`, úsala como referencia principal.
+Si incluye `Longitud de artículos competidores`, tenla en cuenta para calibrar.
+Mínimo absoluto para cualquier artículo: **1.000 palabras**.
+
+**Fuente secundaria — tabla por tipo de contenido** (aplica si el briefing no especifica):
 
 - Comparativa: 1200-1600 palabras.
 - Guía: 1700-2300 palabras.
 - Tutorial: 1400-2200 palabras.
 - Análisis: 1400-1900 palabras.
-- Noticia práctica: 800-1200 palabras.
+- Noticia práctica: 1000-1200 palabras.
 - Review: 1600-2200 palabras.
 - Tendencia: 1300-1800 palabras.
-- Alerta de seguridad: 900-1500 palabras.
+- Alerta de seguridad: 1000-1500 palabras.
 - Explicación evergreen: 1200-1800 palabras.
 - Recomendación tecnológica: 1200-1800 palabras.
 

@@ -791,6 +791,14 @@ NUEVO / EXISTE_SIMILAR / EXISTE_ANGULO_DIFERENTE / EXISTE_IDENTICO
 
 INVESTIGAR / DESCARTAR / RESERVAR
 
+## Longitud de artículos competidores
+
+[Rango de palabras de los 2-4 artículos mejor posicionados que encontraste. Ejemplo: "Posiciones 1-4: 1.400 / 1.900 / 2.200 / 1.600 palabras. Rango: 1.400-2.200."]
+
+## Longitud objetivo recomendada
+
+[Recomendación concreta basada en el rango competidor y el tipo de contenido. Ejemplo: "1.600-1.900 palabras. Mínimo absoluto: 1.000."]
+
 ## Notas para el Redactor
 
 [Instrucciones específicas para escribir sin inventar y con buen enfoque]
