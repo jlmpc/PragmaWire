@@ -71,53 +71,49 @@ Actualiza `run-manifest.json`.
 Crea `03-drafts/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: agente-editor-estrategico.
 
-PASO 4a — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 1
+PASO 4 — AGENTE EDITOR ESTRATÉGICO (sub-agente con contexto limpio)
 Verifica que existe `03-drafts/_STAGE_COMPLETE` antes de continuar.
-Lee `agents/agente-editor-estrategico.md`.
-Lee `03-drafts/articulo_001_draft.md` y el briefing correspondiente de `02-briefings/`.
-Edita ÚNICAMENTE el artículo 1 completo.
-Guárdalo con Write en `04-edited/articulo_001_edited.md`.
-Verifica con Read que `04-edited/articulo_001_edited.md` existe y no está vacío.
 
-PASO 4b — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 2
-Verifica con Read que existe `04-edited/articulo_001_edited.md`.
-Lee `03-drafts/articulo_002_draft.md` y el briefing correspondiente de `02-briefings/`.
-Edita ÚNICAMENTE el artículo 2 completo.
-Guárdalo con Write en `04-edited/articulo_002_edited.md`.
-Verifica con Read que `04-edited/articulo_002_edited.md` existe y no está vacío.
+Ejecuta en secuencia, uno a la vez:
 
-PASO 4c — AGENTE EDITOR ESTRATÉGICO: ARTÍCULO 3
-Verifica con Read que existe `04-edited/articulo_002_edited.md`.
-Lee `03-drafts/articulo_003_draft.md` y el briefing correspondiente de `02-briefings/`.
-Edita ÚNICAMENTE el artículo 3 completo.
-Guárdalo con Write en `04-edited/articulo_003_edited.md`.
-Verifica con Read que `04-edited/articulo_003_edited.md` existe y no está vacío.
+  Artículo 1:
+  Ejecuta: python scripts/run_subagent.py --agent editor --article 1
+  Verifica con Read que `04-edited/articulo_001_edited.md` existe y no está vacío.
+
+  Artículo 2:
+  Verifica con Read que existe `04-edited/articulo_001_edited.md`.
+  Ejecuta: python scripts/run_subagent.py --agent editor --article 2
+  Verifica con Read que `04-edited/articulo_002_edited.md` existe y no está vacío.
+
+  Artículo 3:
+  Verifica con Read que existe `04-edited/articulo_002_edited.md`.
+  Ejecuta: python scripts/run_subagent.py --agent editor --article 3
+  Verifica con Read que `04-edited/articulo_003_edited.md` existe y no está vacío.
+
 Genera `04-edited/edited-index.json`.
 Actualiza `run-manifest.json`.
 Crea `04-edited/_STAGE_COMPLETE`.
 Actualiza `outputs/current-run.json` → next_agent: supervisor-final.
 
-PASO 5a — SUPERVISOR FINAL: ARTÍCULO 1
+PASO 5 — SUPERVISOR FINAL (sub-agente con contexto limpio)
 Verifica que existe `04-edited/_STAGE_COMPLETE` antes de continuar.
-Lee `agents/supervisor-final.md`.
-Lee SOLO `04-edited/articulo_001_edited.md`.
-Valida y procesa ÚNICAMENTE ese artículo.
-Guárdalo con Write en `05-wordpress-ready/articulo_001_wordpress_ready.md`.
-Verifica con Read que `05-wordpress-ready/articulo_001_wordpress_ready.md` existe y no está vacío.
 
-PASO 5b — SUPERVISOR FINAL: ARTÍCULO 2
-Verifica con Read que existe `05-wordpress-ready/articulo_001_wordpress_ready.md`.
-Lee SOLO `04-edited/articulo_002_edited.md`.
-Valida y procesa ÚNICAMENTE ese artículo.
-Guárdalo con Write en `05-wordpress-ready/articulo_002_wordpress_ready.md`.
-Verifica con Read que `05-wordpress-ready/articulo_002_wordpress_ready.md` existe y no está vacío.
+Ejecuta en secuencia, uno a la vez:
 
-PASO 5c — SUPERVISOR FINAL: ARTÍCULO 3
-Verifica con Read que existe `05-wordpress-ready/articulo_002_wordpress_ready.md`.
-Lee SOLO `04-edited/articulo_003_edited.md`.
-Valida y procesa ÚNICAMENTE ese artículo.
-Guárdalo con Write en `05-wordpress-ready/articulo_003_wordpress_ready.md`.
-Verifica con Read que `05-wordpress-ready/articulo_003_wordpress_ready.md` existe y no está vacío.
+  Artículo 1:
+  Ejecuta: python scripts/run_subagent.py --agent supervisor --article 1
+  Verifica con Read que `05-wordpress-ready/articulo_001_wordpress_ready.md` existe y no está vacío.
+
+  Artículo 2:
+  Verifica con Read que existe `05-wordpress-ready/articulo_001_wordpress_ready.md`.
+  Ejecuta: python scripts/run_subagent.py --agent supervisor --article 2
+  Verifica con Read que `05-wordpress-ready/articulo_002_wordpress_ready.md` existe y no está vacío.
+
+  Artículo 3:
+  Verifica con Read que existe `05-wordpress-ready/articulo_002_wordpress_ready.md`.
+  Ejecuta: python scripts/run_subagent.py --agent supervisor --article 3
+  Verifica con Read que `05-wordpress-ready/articulo_003_wordpress_ready.md` existe y no está vacío.
+
 Genera `05-wordpress-ready/wordpress-ready-index.json`.
 Actualiza `run-manifest.json`.
 Crea `05-wordpress-ready/_STAGE_COMPLETE`.
