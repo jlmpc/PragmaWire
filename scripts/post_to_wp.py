@@ -51,7 +51,16 @@ def get_category_id(category_name: str) -> list:
 def parse_article(content: str) -> tuple:
     """Extrae metadatos y cuerpo del artículo."""
     meta = {"title": "", "slug": "", "excerpt": "", "category": "", "tags": []}
-    lines = content.split("\n")
+
+    # Si el output viene del supervisor (sub-agente), extraer solo WORDPRESS_DRAFT_VALIDADO
+    working = content
+    if "WORDPRESS_DRAFT_VALIDADO:" in content:
+        working = content.split("WORDPRESS_DRAFT_VALIDADO:", 1)[1].strip()
+        for end in ["NOTAS_PARA_REVISION_HUMANA:", "ESTADO_SUPERVISION_FINAL:"]:
+            if end in working:
+                working = working.split(end)[0].strip()
+
+    lines = working.split("\n")
 
     # Título: primera línea con #
     for line in lines:
@@ -78,15 +87,33 @@ def parse_article(content: str) -> tuple:
         elif "palabras clave" in key or "tags" in key or "etiquetas" in key:
             meta["tags"] = [t.strip() for t in re.split(r"[,;]", val) if t.strip()]
 
-    # Cuerpo: sección ARTICULO_FINAL_MARKDOWN o todo el contenido
-    body = content
-    for marker in ["## ARTICULO_FINAL_MARKDOWN", "## CONTENIDO_FINAL", "## CONTENIDO"]:
-        if marker in content:
-            body = content.split(marker, 1)[1].strip()
-            # Cortar en la siguiente sección ##
-            if "\n## " in body:
-                body = body.split("\n## ")[0].strip()
+    # Extraer suggested_featured_image para añadirlo al final del borrador
+    featured_image_note = ""
+    if "suggested_featured_image:" in working:
+        img_raw = working.split("suggested_featured_image:", 1)[1]
+        img_end = img_raw.find("\nARTICLE_MARKDOWN:")
+        if img_end == -1:
+            img_end = img_raw.find("\n## ARTICULO")
+        if img_end > 0:
+            img_raw = img_raw[:img_end]
+        img_raw = img_raw.strip()
+        if img_raw:
+            featured_image_note = f"\n\n---\n**🖼 Imagen destacada sugerida:**\n```\n{img_raw}\n```"
+
+    # Cuerpo: buscar ARTICLE_MARKDOWN (editor) o marcadores alternativos
+    body = working
+    for marker in ["ARTICLE_MARKDOWN:", "## ARTICULO_FINAL_MARKDOWN", "## CONTENIDO_FINAL", "## CONTENIDO"]:
+        if marker in working:
+            body = working.split(marker, 1)[1].strip()
+            # Cortar en la siguiente sección mayor (excepto FAQ que forma parte del artículo)
+            for end_section in ["\nFAQ_SCHEMA_CANDIDATES:", "\nupdate_level:", "\nobsolescence_risk:"]:
+                if end_section in body:
+                    body = body.split(end_section)[0].strip()
             break
+
+    # Añadir imagen sugerida al final del borrador (visible al editar, eliminar antes de publicar)
+    if featured_image_note:
+        body += featured_image_note
 
     return meta, body
 
