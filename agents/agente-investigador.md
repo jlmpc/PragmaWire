@@ -337,23 +337,52 @@ Debes comparar:
 - ángulo editorial;
 - fecha de publicación.
 
+#### Regla primaria obligatoria — test del lector
+
+Antes de asignar cualquier estado, hazte esta pregunta:
+
+> Si un lector busca en Google el tema del artículo nuevo, ¿encontraría el artículo ya publicado y le resolvería igual de bien la duda?
+
+Si la respuesta es **sí** → **EXISTE_IDENTICO**. No importa que el enfoque editorial sea diferente.
+
+Aplica también **EXISTE_IDENTICO** automáticamente si se cumple cualquiera de estas condiciones:
+
+1. **Solape de título**: El título provisional comparte 3 o más palabras de contenido (sustantivos, verbos, adjetivos — no preposiciones ni artículos) con el título de un artículo ya publicado.
+2. **Misma keyword principal**: La palabra clave principal coincide exactamente o es sinónimo directo de la keyword de un artículo publicado.
+3. **Misma pregunta base**: El artículo nuevo respondería exactamente la misma pregunta que ya responde uno publicado (aunque la respuesta esté redactada de forma diferente).
+
+**Ante cualquier duda entre EXISTE_ANGULO_DIFERENTE y EXISTE_IDENTICO, aplica siempre EXISTE_IDENTICO.**
+
+No permitas que la creatividad del enfoque editorial justifique publicar sobre lo mismo. El lector no nota el "ángulo"; nota el titular.
+
+---
+
 Estados de deduplicación:
 
 ### NUEVO
 
-No existe contenido equivalente.
+No existe contenido equivalente desde la perspectiva del lector.
 
 ### EXISTE_IDENTICO
 
-Ya existe contenido con la misma intención y ángulo. Descartar.
+Ya existe contenido que resuelve la misma duda al mismo lector. Descartar sin excepción. Este estado es irrecurrible.
 
 ### EXISTE_SIMILAR
 
-Existe contenido parecido. Solo puede avanzar si el nuevo artículo aporta un ángulo realmente distinto.
+Existe contenido parecido en tema o keyword. Solo puede avanzar si:
+- Los títulos no comparten 3+ palabras de contenido.
+- La intención de búsqueda es claramente distinta (no solo el enfoque).
+- Un lector que busca el tema nuevo NO encontraría el publicado como solución suficiente.
 
 ### EXISTE_ANGULO_DIFERENTE
 
-Existe contenido relacionado, pero el nuevo tema aporta enfoque claro y complementario. Puede avanzar con enlace interno sugerido.
+Existe contenido relacionado pero el nuevo artículo cubre un aspecto distinto para el que el publicado es insuficiente. Solo puede avanzar si:
+- El título nuevo no solapa con el publicado (máximo 2 palabras de contenido compartidas).
+- La intención de búsqueda es diferente (informational vs how-to, o keywords completamente distintas).
+- El nuevo artículo NO sustituye ni duplica al publicado desde el punto de vista del lector.
+- Si se incluyen ambos en la misma búsqueda de Google, serían complementarios, no competidores.
+
+Cuando uses este estado, justifica EXPLÍCITAMENTE por qué el lector necesitaría ambos artículos.
 
 ---
 
