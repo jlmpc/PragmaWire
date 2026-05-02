@@ -1,0 +1,62 @@
+{
+  "run_id": "2026-05-02T0102_pragmawire_d056",
+  "stage": "02-briefings",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "total_briefings": 3,
+  "aptos": 3,
+  "descartados": 0,
+  "necesitan_revision": 0,
+  "cobertura_objetivo": "3/3 categorías activas cubiertas",
+  "generated_at": "2026-05-02T01:10:00",
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria": "Hogar Inteligente",
+      "tema": "Matter y Thread: protocolos para hogar inteligente sin dramas de compatibilidad",
+      "palabra_clave_principal": "qué es Matter hogar inteligente",
+      "titulo_provisional": "Matter y Thread explicados: por qué son clave para tu hogar inteligente en 2026",
+      "score": 87,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1800-2200 palabras",
+      "orden_redaccion": 1
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria": "Inteligencia Artificial",
+      "tema": "Agentes de IA: qué son, cómo funcionan y cómo puede usarlos una persona normal",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "titulo_provisional": "Qué son los agentes de IA y para qué sirven realmente (sin tecnicismos)",
+      "score": 90,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1900-2200 palabras",
+      "orden_redaccion": 2
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria": "Productividad Digital",
+      "tema": "Automatizar tareas repetitivas con IA sin programar: Zapier, Make y n8n",
+      "palabra_clave_principal": "automatizar tareas repetitivas con IA sin programar",
+      "titulo_provisional": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+      "score": 88,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1800-2100 palabras",
+      "orden_redaccion": 3
+    }
+  ],
+  "cobertura_por_categoria": {
+    "Hogar Inteligente": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK"},
+    "Inteligencia Artificial": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK"},
+    "Productividad Digital": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK"}
+  },
+  "temas_descartados": []
+}

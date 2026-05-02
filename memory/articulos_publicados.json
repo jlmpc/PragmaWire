@@ -22,5 +22,100 @@
       "Microsoft"
     ],
     "estado": "ejemplo"
+  },
+  {
+    "title": "Matter y Thread explicados: qué son y por qué importan para tu hogar inteligente",
+    "slug": "que-es-matter-hogar-inteligente",
+    "categoria": "Hogar Inteligente",
+    "palabra_clave_principal": "qué es Matter hogar inteligente",
+    "palabras_clave_secundarias": [
+      "Matter protocolo domótica",
+      "qué es Thread smart home",
+      "dispositivos Matter compatibles",
+      "Matter vs Zigbee",
+      "hogar inteligente sin marca única",
+      "cómo elegir dispositivos domótica 2026"
+    ],
+    "tema_principal": "Matter y Thread (estándar de conectividad para hogar inteligente)",
+    "angulo_editorial": "explicación + guía práctica para usuario doméstico",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=997",
+    "wp_id": 997,
+    "entidades": [
+      "Matter",
+      "Thread",
+      "Connectivity Standards Alliance",
+      "Apple HomeKit",
+      "Google Home",
+      "Amazon Alexa",
+      "Samsung SmartThings"
+    ],
+    "estado": "wordpress_draft",
+    "run_id": "2026-05-02T0102_pragmawire_d056",
+    "quality_score": 91
+  },
+  {
+    "title": "Qué son los agentes de IA y para qué sirven realmente (sin tecnicismos)",
+    "slug": "que-son-agentes-ia",
+    "categoria": "Inteligencia Artificial",
+    "palabra_clave_principal": "qué son los agentes de IA",
+    "palabras_clave_secundarias": [
+      "agentes de IA para qué sirven",
+      "diferencia ChatGPT y agentes de IA",
+      "agentes IA sin programar",
+      "herramientas agentes IA 2026",
+      "OpenAI Operator usuario",
+      "IA que hace tareas por ti"
+    ],
+    "tema_principal": "agentes de IA para usuarios sin perfil técnico",
+    "angulo_editorial": "explicación práctica + casos de uso reales para no técnicos",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=998",
+    "wp_id": 998,
+    "entidades": [
+      "ChatGPT Tasks",
+      "OpenAI Operator",
+      "Claude",
+      "Gemini",
+      "Copilot",
+      "n8n",
+      "Zapier",
+      "Make"
+    ],
+    "estado": "wordpress_draft",
+    "run_id": "2026-05-02T0102_pragmawire_d056",
+    "quality_score": 90
+  },
+  {
+    "title": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+    "slug": "automatizar-tareas-repetitivas-ia-sin-programar",
+    "categoria": "Productividad Digital",
+    "palabra_clave_principal": "automatizar tareas repetitivas con IA sin programar",
+    "palabras_clave_secundarias": [
+      "Zapier qué es cómo funciona",
+      "Make automatización 2026",
+      "n8n para principiantes",
+      "automatización no-code IA",
+      "herramientas automatización sin código",
+      "cómo automatizar tareas cotidianas"
+    ],
+    "tema_principal": "automatización no-code con IA (Zapier, Make, n8n)",
+    "angulo_editorial": "guía práctica paso a paso para usuario doméstico sin conocimientos técnicos",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=999",
+    "wp_id": 999,
+    "entidades": [
+      "Zapier",
+      "Make",
+      "n8n",
+      "Gmail",
+      "Google Drive",
+      "Google Sheets",
+      "ChatGPT",
+      "OpenAI"
+    ],
+    "estado": "wordpress_draft",
+    "run_id": "2026-05-02T0102_pragmawire_d056",
+    "quality_score": 91
   }
 ]

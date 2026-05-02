@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 997,
+      "link": "https://www.pragmawire.com/?p=997",
+      "title": "Matter y Thread explicados: qué son y por qué importan para tu hogar inteligente",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 998,
+      "link": "https://www.pragmawire.com/?p=998",
+      "title": "Qué son los agentes de IA y para qué sirven realmente (sin tecnicismos)",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 999,
+      "link": "https://www.pragmawire.com/?p=999",
+      "title": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}

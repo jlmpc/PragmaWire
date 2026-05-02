@@ -1,0 +1,50 @@
+{
+  "run_id": "2026-05-02T0102_pragmawire_d056",
+  "stage": "05-wordpress-ready",
+  "agent": "supervisor-final",
+  "total_articles": 3,
+  "approved_for_wordpress_draft": 3,
+  "rejected": 0,
+  "completed_at": "2026-05-02T01:45:00",
+  "articles": [
+    {
+      "id": "articulo_001",
+      "file": "05-wordpress-ready/articulo_001_wordpress_ready.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "category": "Hogar Inteligente",
+      "title": "Matter y Thread explicados: qué son y por qué importan para tu hogar inteligente",
+      "slug": "que-es-matter-hogar-inteligente",
+      "status": "draft",
+      "publish": false
+    },
+    {
+      "id": "articulo_002",
+      "file": "05-wordpress-ready/articulo_002_wordpress_ready.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 90,
+      "category": "Inteligencia Artificial",
+      "title": "Qué son los agentes de IA y para qué sirven: guía práctica para no técnicos",
+      "slug": "que-son-agentes-ia-para-que-sirven",
+      "status": "draft",
+      "publish": false
+    },
+    {
+      "id": "articulo_003",
+      "file": "05-wordpress-ready/articulo_003_wordpress_ready.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "category": "Productividad Digital",
+      "title": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+      "slug": "automatizar-tareas-repetitivas-ia-sin-programar",
+      "status": "draft",
+      "publish": false
+    }
+  ],
+  "warnings": [
+    "Precios de Zapier/Make/n8n (articulo_003): verificar en webs oficiales antes de publicar",
+    "Enlace interno articulo_003 → articulo_002: activar cuando ambos estén publicados en WordPress",
+    "Riesgo de obsolescencia medio-alto en articulo_003: revisar en 3-4 meses",
+    "articulos_publicados.json contiene solo 1 artículo de ejemplo. Actualizar en PASO 7."
+  ]
+}

@@ -1,0 +1,9 @@
+STAGE: 02-briefings
+STATUS: COMPLETE
+AGENT: agente-investigador
+ESTADO_INVESTIGACION: INVESTIGACION_COMPLETA
+BRIEFINGS_APTOS: 3
+COBERTURA: Hogar Inteligente OK | Inteligencia Artificial OK | Productividad Digital OK
+SEGUNDA_PASADA: NO
+COMPLETED_AT: 2026-05-02T01:10:00
+NEXT_AGENT: agente-redactor

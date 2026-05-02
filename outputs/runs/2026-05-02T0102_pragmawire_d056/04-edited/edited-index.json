@@ -1,0 +1,58 @@
+{
+  "run_id": "2026-05-02T0102_pragmawire_d056",
+  "stage": "04-edited",
+  "editor_batch_status": "COMPLETO",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_a_redactor": 0,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados_verificacion": 0,
+  "generated_at": "2026-05-02T01:35:00",
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "draft_file": "articulo_001_draft.md",
+      "briefing_file": "briefing_001.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 88,
+      "categoria": "Hogar Inteligente",
+      "titulo_editado": "Matter y Thread explicados: qué son y por qué importan para tu hogar inteligente",
+      "slug": "que-es-matter-hogar-inteligente",
+      "focus_keyword": "qué es Matter hogar inteligente",
+      "update_level": "medio",
+      "obsolescence_risk": "medio",
+      "orden_supervisor": 1
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "draft_file": "articulo_002_draft.md",
+      "briefing_file": "briefing_002.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 90,
+      "categoria": "Inteligencia Artificial",
+      "titulo_editado": "Qué son los agentes de IA y para qué sirven realmente (sin tecnicismos)",
+      "slug": "que-son-agentes-ia",
+      "focus_keyword": "qué son los agentes de IA",
+      "update_level": "alto",
+      "obsolescence_risk": "alto",
+      "orden_supervisor": 2
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "draft_file": "articulo_003_draft.md",
+      "briefing_file": "briefing_003.md",
+      "estado_pipeline": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 89,
+      "categoria": "Productividad Digital",
+      "titulo_editado": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+      "slug": "automatizar-tareas-repetitivas-ia-sin-programar",
+      "focus_keyword": "automatizar tareas repetitivas con IA sin programar",
+      "update_level": "alto",
+      "obsolescence_risk": "medio-alto",
+      "orden_supervisor": 3
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "run_id": "2026-05-02T0102_pragmawire_d056",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-02T0102_pragmawire_d056",
+  "created_at": "2026-05-02T01:02:21",
+  "updated_at": "2026-05-02T01:50:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "routine": "A",
+  "overall_status": "complete",
+  "current_stage": "06-wordpress-creation",
+  "next_agent": null,
+  "active_categories": [
+    "Hogar Inteligente",
+    "Inteligencia Artificial",
+    "Productividad Digital"
+  ],
+  "ignored_categories": [
+    "Recomendaciones Tecnológicas",
+    "Salud y Bienestar Digital",
+    "Seguridad Digital"
+  ],
+  "target_articles": 3,
+  "minimum_articles": 3,
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true,
+      "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
+      "output_paths": [
+        "01-run-context/run-context.md",
+        "01-run-context/categorias_target.md",
+        "01-run-context/_STAGE_COMPLETE"
+      ],
+      "completed_at": "2026-05-02T01:03:00"
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "estado_investigacion": "INVESTIGACION_COMPLETA",
+      "segunda_pasada": false,
+      "output_paths": [
+        "02-briefings/briefing_001.md",
+        "02-briefings/briefing_002.md",
+        "02-briefings/briefing_003.md",
+        "02-briefings/briefings-index.json",
+        "02-briefings/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3,
+      "completed_at": "2026-05-02T01:10:00"
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "estado_redaccion": "REDACCION_BATCH_COMPLETA_CON_NOTAS",
+      "output_paths": [
+        "03-drafts/articulo_001_draft.md",
+        "03-drafts/articulo_002_draft.md",
+        "03-drafts/articulo_003_draft.md",
+        "03-drafts/drafts-index.json",
+        "03-drafts/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3,
+      "completed_at": "2026-05-02T01:20:00"
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "editor_batch_status": "COMPLETO",
+      "output_paths": [
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 3,
+      "quality_scores": {
+        "articulo_001": 88,
+        "articulo_002": 90,
+        "articulo_003": 89
+      },
+      "completed_at": "2026-05-02T01:35:00"
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "supervisor_batch_status": "COMPLETO",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "quality_scores": {
+        "articulo_001": 91,
+        "articulo_002": 90,
+        "articulo_003": 91
+      },
+      "completed_at": "2026-05-02T01:45:00"
+    },
+    "06-wordpress-creation": {
+      "agent": "wordpress-poster",
+      "status": "complete",
+      "stage_complete": true,
+      "output_paths": [
+        "06-wordpress-creation-log.json"
+      ],
+      "wordpress_drafts_created": 3,
+      "drafts": [
+        {"articulo_id": "articulo_001", "wp_id": 997, "link": "https://www.pragmawire.com/?p=997", "status": "draft"},
+        {"articulo_id": "articulo_002", "wp_id": 998, "link": "https://www.pragmawire.com/?p=998", "status": "draft"},
+        {"articulo_id": "articulo_003", "wp_id": 999, "link": "https://www.pragmawire.com/?p=999", "status": "draft"}
+      ],
+      "completed_at": "2026-05-02T01:50:00"
+    }
+  },
+  "category_coverage": {
+    "Hogar Inteligente": 1,
+    "Inteligencia Artificial": 1,
+    "Productividad Digital": 1
+  },
+  "wordpress_drafts_created": [997, 998, 999],
+  "errors": [],
+  "warnings": [
+    "articulos_publicados.json contiene solo 1 artículo de ejemplo. Enlazado interno limitado.",
+    "WordPress via script post_to_wp.py — credenciales deben estar en variables de entorno en PASO 6.",
+    "Precios de Zapier/Make/n8n y herramientas de IA DEBEN verificarse en webs oficiales antes de publicar."
+  ],
+  "blocked_reason": ""
+}

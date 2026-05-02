@@ -1,0 +1,48 @@
+{
+  "run_id": "2026-05-02T0102_pragmawire_d056",
+  "stage": "03-drafts",
+  "estado_redaccion": "REDACCION_BATCH_COMPLETA_CON_NOTAS",
+  "total_briefings": 3,
+  "total_redactados": 3,
+  "total_bloqueados": 0,
+  "total_devueltos_a_investigador": 0,
+  "generated_at": "2026-05-02T01:20:00",
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria": "Hogar Inteligente",
+      "titulo_draft": "Matter y Thread explicados: por qué son clave para tu hogar inteligente en 2026",
+      "palabra_clave_principal": "qué es Matter hogar inteligente",
+      "longitud_estimada": "~2050 palabras",
+      "datos_pendientes_verificar": 3,
+      "orden_edicion": 1
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria": "Inteligencia Artificial",
+      "titulo_draft": "Qué son los agentes de IA y para qué sirven realmente (sin tecnicismos)",
+      "palabra_clave_principal": "qué son los agentes de IA",
+      "longitud_estimada": "~2100 palabras",
+      "datos_pendientes_verificar": 3,
+      "orden_edicion": 2
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria": "Productividad Digital",
+      "titulo_draft": "Automatiza tus tareas repetitivas con IA sin programar: Zapier, Make y n8n explicados",
+      "palabra_clave_principal": "automatizar tareas repetitivas con IA sin programar",
+      "longitud_estimada": "~2000 palabras",
+      "datos_pendientes_verificar": 3,
+      "orden_edicion": 3
+    }
+  ]
+}
