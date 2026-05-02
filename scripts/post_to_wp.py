@@ -48,45 +48,94 @@ def get_category_id(category_name: str) -> list:
     return [1]
 
 
+def _parse_yaml_field(text: str, key: str) -> str:
+    """Extrae el valor de un campo YAML-like: 'key:\n[valor]'."""
+    m = re.search(rf"(?:^|\n){re.escape(key)}:\s*\n([^\n]+)", text)
+    return m.group(1).strip() if m else ""
+
+
 def parse_article(content: str) -> tuple:
     """Extrae metadatos y cuerpo del artículo."""
     meta = {"title": "", "slug": "", "excerpt": "", "category": "", "tags": []}
-    lines = content.split("\n")
 
-    # Título: primera línea con #
-    for line in lines:
-        if line.startswith("# ") and not meta["title"]:
-            meta["title"] = line[2:].strip()
-            break
+    # Si el output viene del supervisor (sub-agente), extraer solo WORDPRESS_DRAFT_VALIDADO
+    working = content
+    if "WORDPRESS_DRAFT_VALIDADO:" in content:
+        working = content.split("WORDPRESS_DRAFT_VALIDADO:", 1)[1].strip()
+        for end in ["NOTAS_PARA_REVISION_HUMANA:", "ESTADO_SUPERVISION_FINAL:"]:
+            if end in working:
+                working = working.split(end)[0].strip()
 
-    # Metadatos en formato **Campo:** valor
-    for line in lines:
+    # --- Metadatos formato YAML (key:\n[valor]) — formato nativo del editor ---
+    yaml_title = _parse_yaml_field(working, "title")
+    yaml_slug = _parse_yaml_field(working, "slug")
+    yaml_excerpt = _parse_yaml_field(working, "excerpt")
+    yaml_category = _parse_yaml_field(working, "category_primary")
+    yaml_tags_raw = _parse_yaml_field(working, "tags")
+
+    if yaml_title:
+        meta["title"] = yaml_title
+    if yaml_slug:
+        meta["slug"] = yaml_slug
+    if yaml_excerpt:
+        meta["excerpt"] = yaml_excerpt
+    if yaml_category:
+        meta["category"] = yaml_category
+    if yaml_tags_raw:
+        meta["tags"] = [t.strip() for t in re.split(r"[,;]", yaml_tags_raw) if t.strip()]
+
+    # --- Metadatos formato Markdown (**Campo:** valor) — compatibilidad con flujo anterior ---
+    for line in working.split("\n"):
         m = re.match(r"\*\*([^*]+)\*\*:?\s*(.*)", line)
         if not m:
             continue
         key = m.group(1).lower().strip()
         val = m.group(2).strip().strip("*").strip()
-        if "título" in key or "title" in key:
-            if val:
-                meta["title"] = val
-        elif "slug" in key:
+        if not val:
+            continue
+        if ("título" in key or "title" in key) and not meta["title"]:
+            meta["title"] = val
+        elif "slug" in key and not meta["slug"]:
             meta["slug"] = val
-        elif "excerpt" in key or "extracto" in key or "descripción" in key:
+        elif ("excerpt" in key or "extracto" in key or "descripción" in key) and not meta["excerpt"]:
             meta["excerpt"] = val
-        elif "categoría" in key or "categoria" in key:
+        elif ("categoría" in key or "categoria" in key) and not meta["category"]:
             meta["category"] = val
-        elif "palabras clave" in key or "tags" in key or "etiquetas" in key:
+        elif ("palabras clave" in key or "tags" in key or "etiquetas" in key) and not meta["tags"]:
             meta["tags"] = [t.strip() for t in re.split(r"[,;]", val) if t.strip()]
 
-    # Cuerpo: sección ARTICULO_FINAL_MARKDOWN o todo el contenido
-    body = content
-    for marker in ["## ARTICULO_FINAL_MARKDOWN", "## CONTENIDO_FINAL", "## CONTENIDO"]:
-        if marker in content:
-            body = content.split(marker, 1)[1].strip()
-            # Cortar en la siguiente sección ##
-            if "\n## " in body:
-                body = body.split("\n## ")[0].strip()
+    # --- Título fallback: primer H1 del artículo ---
+    if not meta["title"]:
+        for line in working.split("\n"):
+            if line.startswith("# "):
+                meta["title"] = line[2:].strip()
+                break
+
+    # --- Imagen destacada sugerida → nota al final del borrador ---
+    featured_image_note = ""
+    if "suggested_featured_image:" in working:
+        img_raw = working.split("suggested_featured_image:", 1)[1]
+        for img_end_marker in ["\nARTICLE_MARKDOWN:", "\n## ARTICULO", "\nupdate_level:"]:
+            idx = img_raw.find(img_end_marker)
+            if idx != -1:
+                img_raw = img_raw[:idx]
+                break
+        img_raw = img_raw.strip()
+        if img_raw:
+            featured_image_note = f"\n\n---\n**🖼 Imagen destacada sugerida:**\n```\n{img_raw}\n```"
+
+    # --- Cuerpo: ARTICLE_MARKDOWN o marcadores alternativos ---
+    body = working
+    for marker in ["ARTICLE_MARKDOWN:", "## ARTICULO_FINAL_MARKDOWN", "## CONTENIDO_FINAL", "## CONTENIDO"]:
+        if marker in working:
+            body = working.split(marker, 1)[1].strip()
+            for end_section in ["\nFAQ_SCHEMA_CANDIDATES:", "\nupdate_level:", "\nobsolescence_risk:", "\nsuggested_featured_image:"]:
+                if end_section in body:
+                    body = body.split(end_section)[0].strip()
             break
+
+    if featured_image_note:
+        body += featured_image_note
 
     return meta, body
 
