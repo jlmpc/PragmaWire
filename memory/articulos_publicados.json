@@ -22,5 +22,102 @@
       "Microsoft"
     ],
     "estado": "ejemplo"
+  },
+  {
+    "title": "Cargadores GaN: qué son y cómo elegir el correcto en 2026 (guía práctica)",
+    "slug": "cargadores-gan-usb-c-guia-practica",
+    "categoria": "Recomendaciones Tecnológicas",
+    "palabra_clave_principal": "cargador GaN USB-C",
+    "palabras_clave_secundarias": [
+      "qué es un cargador GaN",
+      "mejor cargador GaN 2026",
+      "cargador USB-C rápido",
+      "cuántos vatios para portátil USB-C",
+      "cargador GaN 65W recomendación"
+    ],
+    "tema_principal": "cargadores GaN",
+    "angulo_editorial": "guía de compra práctica con tabla de vatios y marcas",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=1012",
+    "wp_id": 1012,
+    "wp_status": "draft",
+    "entidades": [
+      "GaN",
+      "nitruro de galio",
+      "USB Power Delivery",
+      "USB PD",
+      "Anker",
+      "UGREEN",
+      "Baseus",
+      "USB-C"
+    ],
+    "run_id": "2026-05-02T0726_pragmawire_48cd",
+    "estado": "borrador_wordpress"
+  },
+  {
+    "title": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+    "slug": "tecnologia-dormir-mejor-wearables-apps-guia",
+    "categoria": "Salud y Bienestar Digital",
+    "palabra_clave_principal": "tecnología para dormir mejor",
+    "palabras_clave_secundarias": [
+      "apps para mejorar el sueño",
+      "wearable sueño funciona",
+      "smartwatch medir sueño",
+      "luz azul móvil dormir",
+      "modo nocturno sueño",
+      "ortosomnia qué es"
+    ],
+    "tema_principal": "tecnología y sueño",
+    "angulo_editorial": "guía basada en evidencia con checklist y errores comunes; concepto de ortosomnia",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=1013",
+    "wp_id": 1013,
+    "wp_status": "draft",
+    "entidades": [
+      "ortosomnia",
+      "Oura Ring",
+      "Apple Watch",
+      "Whoop",
+      "melatonina",
+      "luz azul",
+      "Harvard Medical School",
+      "JAMA Internal Medicine",
+      "Cochrane"
+    ],
+    "run_id": "2026-05-02T0726_pragmawire_48cd",
+    "estado": "borrador_wordpress"
+  },
+  {
+    "title": "Quishing: qué es la estafa del código QR y cómo protegerte",
+    "slug": "quishing-estafa-codigo-qr-como-protegerse",
+    "categoria": "Seguridad Digital",
+    "palabra_clave_principal": "quishing qué es",
+    "palabras_clave_secundarias": [
+      "estafas código QR",
+      "phishing QR cómo funciona",
+      "cómo protegerse quishing",
+      "escanear código QR seguro",
+      "QR falso estafa",
+      "quishing España 2026"
+    ],
+    "tema_principal": "quishing",
+    "angulo_editorial": "alerta de seguridad + protocolo de 5 pasos de protección",
+    "fecha_publicacion": "2026-05-02",
+    "url": "https://www.pragmawire.com/?p=1014",
+    "wp_id": 1014,
+    "wp_status": "draft",
+    "entidades": [
+      "quishing",
+      "código QR",
+      "phishing",
+      "smishing",
+      "INCIBE",
+      "Kaspersky",
+      "autenticación multifactor",
+      "MFA",
+      "passkeys"
+    ],
+    "run_id": "2026-05-02T0726_pragmawire_48cd",
+    "estado": "borrador_wordpress"
   }
 ]

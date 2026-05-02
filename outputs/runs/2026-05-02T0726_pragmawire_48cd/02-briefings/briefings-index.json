@@ -1,0 +1,76 @@
+{
+  "run_id": "2026-05-02T0726_pragmawire_48cd",
+  "estado_investigacion": "INVESTIGACION_COMPLETA_CON_WARNINGS",
+  "total_briefings": 3,
+  "briefings_aptos": 3,
+  "briefings_descartados": 0,
+  "segunda_pasada": false,
+  "cobertura_por_categoria": {
+    "Recomendaciones Tecnológicas": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTA"},
+    "Salud y Bienestar Digital": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTA"},
+    "Seguridad Digital": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTA"}
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "archivo": "02-briefings/briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Cargadores GaN USB-C: qué son, por qué son mejores y cómo elegir el correcto sin gastar de más",
+      "titulo_provisional": "Cargadores GaN: qué son y por qué deberías cambiarte ya (guía práctica para elegir bien)",
+      "palabra_clave_principal": "cargador GaN USB-C",
+      "tipo_contenido": "guía de compra práctica",
+      "intencion_busqueda": "commercial_investigation + practical_how_to",
+      "score": 83,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "BAJO",
+      "longitud_objetivo": "1500-1800 palabras",
+      "recomendacion": "INVESTIGAR"
+    },
+    {
+      "id": "briefing_002",
+      "archivo": "02-briefings/briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+      "titulo_provisional": "¿Tu móvil, smartwatch o app te está ayudando a dormir mejor… o peor? Lo que dice la ciencia",
+      "palabra_clave_principal": "tecnología para dormir mejor",
+      "tipo_contenido": "guía práctica con evidencia + errores comunes",
+      "intencion_busqueda": "informational + practical_how_to",
+      "score": 84,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "BAJO-MEDIO",
+      "longitud_objetivo": "1600-2000 palabras",
+      "recomendacion": "INVESTIGAR"
+    },
+    {
+      "id": "briefing_003",
+      "archivo": "02-briefings/briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Quishing: qué son las estafas con códigos QR, cómo funcionan y cómo protegerse antes de escanear",
+      "titulo_provisional": "Quishing: la estafa del código QR que no para de crecer (y cómo no caer en la trampa)",
+      "palabra_clave_principal": "quishing qué es",
+      "tipo_contenido": "alerta de seguridad práctica + guía de protección",
+      "intencion_busqueda": "informational + practical_how_to",
+      "score": 90,
+      "deduplicacion": "NUEVO",
+      "riesgo_obsolescencia": "MEDIO",
+      "longitud_objetivo": "1400-1700 palabras",
+      "recomendacion": "INVESTIGAR"
+    }
+  ],
+  "warnings": [
+    "Memoria de artículos publicados limitada (1 artículo) — enlaces internos escasos",
+    "Briefing 003 (Seguridad Digital): verificar alerta específica de INCIBE sobre quishing",
+    "Briefing 001 (Recomendaciones Tecnológicas): verificar precios actuales de modelos Anker/UGREEN en Amazon ES antes de publicar"
+  ],
+  "fuentes_consultadas": {
+    "tendencias": ["Google Search trends 2026", "búsquedas relacionadas"],
+    "medios_es": ["wwwhatsnew.com", "geeknetic.es", "xataka.com", "derechodelared.com", "Fast Company MX"],
+    "medios_en": ["The Verge (tendencias generales)", "gdwecent.com"],
+    "fuentes_oficiales": ["Harvard Medical School", "Cochrane", "JAMA Internal Medicine", "Kaspersky", "Trend Micro", "N26"],
+    "comunidades": []
+  },
+  "created_at": "2026-05-02T07:32:00"
+}

@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 1012,
+      "link": "https://www.pragmawire.com/?p=1012",
+      "title": "Cargadores GaN: qué son y cómo elegir el correcto en 2026 (guía práctica)",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 1013,
+      "link": "https://www.pragmawire.com/?p=1013",
+      "title": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 1014,
+      "link": "https://www.pragmawire.com/?p=1014",
+      "title": "Quishing: qué es la estafa del código QR y cómo protegerte",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}

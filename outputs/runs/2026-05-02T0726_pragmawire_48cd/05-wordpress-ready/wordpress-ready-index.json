@@ -1,0 +1,67 @@
+{
+  "stage": "05-wordpress-ready",
+  "run_id": "2026-05-02T0726_pragmawire_48cd",
+  "agent": "supervisor-final",
+  "completed_at": "2026-05-02T08:00:00",
+  "supervision_batch_status": "COMPLETA",
+  "total_articulos_recibidos": 3,
+  "total_crear_wordpress_draft": 3,
+  "total_devolver_a_editor": 0,
+  "total_devolver_a_investigador": 0,
+  "total_bloquear_draft": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "wordpress_ready_file": "05-wordpress-ready/articulo_001_wordpress_ready.md",
+      "categoria": "Recomendaciones Tecnológicas",
+      "titulo": "Cargadores GaN: qué son y cómo elegir el correcto en 2026 (guía práctica)",
+      "slug": "cargadores-gan-usb-c-guia-practica",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 90,
+      "wordpress_action": {"create_draft": true, "publish": false},
+      "notas_revision_humana": [
+        "Verificar precios actuales Anker/UGREEN en Amazon ES",
+        "Confirmar wattage máximo USB PD del iPhone 17 si se quiere añadir especificidad"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "wordpress_ready_file": "05-wordpress-ready/articulo_002_wordpress_ready.md",
+      "categoria": "Salud y Bienestar Digital",
+      "titulo": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+      "slug": "tecnologia-dormir-mejor-wearables-apps-guia",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 90,
+      "wordpress_action": {"create_draft": true, "publish": false},
+      "notas_revision_humana": [
+        "Cláusula médica en Conclusión (insomnio crónico > 3 semanas) — mantener intacta",
+        "Evidencia Night Shift formulada de forma general y defensible — verificar si se quiere añadir cita específica"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "wordpress_ready_file": "05-wordpress-ready/articulo_003_wordpress_ready.md",
+      "categoria": "Seguridad Digital",
+      "titulo": "Quishing: qué es la estafa del código QR y cómo protegerte",
+      "slug": "quishing-estafa-codigo-qr-como-protegerse",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 94,
+      "wordpress_action": {"create_draft": true, "publish": false},
+      "notas_revision_humana": [
+        "Verificar estadística INCIBE quishing España si disponible",
+        "Verificar que slug que-son-passkeys existe en CMS antes de publicar"
+      ]
+    }
+  ],
+  "scores_validados": {
+    "articulo_001": 90,
+    "articulo_002": 90,
+    "articulo_003": 94,
+    "promedio": 91.3
+  },
+  "supervision_pipeline_notes": [
+    "Artículos 001 y 002 recibieron re-pass del Editor (score 89→90) antes de aprobación final del Supervisor",
+    "Artículo 003 aprobado directamente con score 94",
+    "Todos los artículos: create_draft=true, publish=false — destino WORDPRESS_DRAFT"
+  ]
+}

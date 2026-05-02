@@ -1,0 +1,96 @@
+{
+  "stage": "04-edited",
+  "run_id": "2026-05-02T0726_pragmawire_48cd",
+  "agent": "agente-editor-estrategico",
+  "completed_at": "2026-05-02T07:52:00",
+  "stage_status": "EDICION_COMPLETA",
+  "approved_count": 3,
+  "rejected_count": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "draft_file": "03-drafts/articulo_001_draft.md",
+      "edited_file": "04-edited/articulo_001_edited.md",
+      "categoria": "Recomendaciones Tecnológicas",
+      "titulo_publicacion": "Cargadores GaN: qué son y cómo elegir el correcto en 2026 (guía práctica)",
+      "slug": "cargadores-gan-usb-c-guia-practica",
+      "keyword_principal": "cargador GaN USB-C",
+      "quality_score": 89,
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "acciones_editor": [
+        "Título optimizado para CTR e intención de búsqueda 2026",
+        "Meta description bajo 160 chars con keyword + diferenciador",
+        "Precios reemplazados por rangos orientativos con caveat de verificación",
+        "Tabla de dispositivos y vatios revisada para escaneabilidad",
+        "Estructura H2/H3 verificada para AEO",
+        "5 FAQ schema candidates generados",
+        "Tags WordPress asignados (10)"
+      ],
+      "palabras_aprox": 1650,
+      "pendientes_verificacion": [
+        "Precios actuales Anker/UGREEN/Baseus en Amazon ES",
+        "Compatibilidad USB PD 3.1 con iPhone 17 Pro Max"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "draft_file": "03-drafts/articulo_002_draft.md",
+      "edited_file": "04-edited/articulo_002_edited.md",
+      "categoria": "Salud y Bienestar Digital",
+      "titulo_publicacion": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+      "slug": "tecnologia-dormir-mejor-wearables-apps-guia",
+      "keyword_principal": "tecnología para dormir mejor",
+      "quality_score": 89,
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "acciones_editor": [
+        "Nota interna de redactor sobre Night Shift reformulada como prosa editorial",
+        "Título mantenido: alto CTR por contraste implícito",
+        "Meta description ajustada para AEO con evidencia científica señalada",
+        "Tabla evidencia ✅/⚠️/❌ verificada para escaneabilidad",
+        "Estructura FAQ optimizada para fragmentos enriquecidos",
+        "5 FAQ schema candidates generados",
+        "Tags WordPress asignados (10)"
+      ],
+      "palabras_aprox": 1780,
+      "pendientes_verificacion": [
+        "Evidencia específica de Night Shift iOS vs estudios independientes",
+        "Precisión SPO2 Oura Ring Gen 4 vs estudios clínicos publicados 2025-2026"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "draft_file": "03-drafts/articulo_003_draft.md",
+      "edited_file": "04-edited/articulo_003_edited.md",
+      "categoria": "Seguridad Digital",
+      "titulo_publicacion": "Quishing: qué es la estafa del código QR y cómo protegerte",
+      "slug": "quishing-estafa-codigo-qr-como-protegerse",
+      "keyword_principal": "quishing qué es",
+      "quality_score": 94,
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "acciones_editor": [
+        "Anchor text enlace interno passkeys refinado para naturalidad editorial",
+        "Título optimizado: keyword exacta + beneficio accionable",
+        "Meta description incluye stat +400% como gancho de urgencia",
+        "Protocolo 5 pasos verificado para UX escaneabilidad",
+        "Enlace interno a que-son-passkeys integrado orgánicamente",
+        "5 FAQ schema candidates generados",
+        "Tags WordPress asignados (9)"
+      ],
+      "palabras_aprox": 1550,
+      "pendientes_verificacion": [
+        "Estadística INCIBE sobre incremento quishing en España (verificar fuente directa)"
+      ]
+    }
+  ],
+  "scores_resumen": {
+    "promedio": 90.7,
+    "minimo": 89,
+    "maximo": 94,
+    "umbral_aprobacion": 75
+  },
+  "warnings": [
+    "Artículo 001: precios GaN como rangos orientativos — verificar antes de publicar",
+    "Artículo 002: Night Shift reformulado sin mención a pendiente — verificar evidencia antes de publicar",
+    "Artículo 003: stat +400% quishing atribuida a fuentes secundarias — verificar INCIBE directamente"
+  ]
+}

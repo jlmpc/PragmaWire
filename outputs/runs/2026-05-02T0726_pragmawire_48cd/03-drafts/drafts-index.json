@@ -1,0 +1,47 @@
+{
+  "run_id": "2026-05-02T0726_pragmawire_48cd",
+  "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+  "total_briefings_recibidos": 3,
+  "total_articulos_redactados": 3,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "archivo": "03-drafts/articulo_001_draft.md",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "briefing_id": "briefing_001",
+      "categoria": "Recomendaciones Tecnológicas",
+      "titulo_draft": "Cargadores GaN: qué son y por qué deberías cambiarte ya (guía práctica para elegir bien)",
+      "palabra_clave_principal": "cargador GaN USB-C",
+      "longitud_estimada_palabras": 1650,
+      "tipo_contenido": "Guía de compra práctica",
+      "datos_pendientes": ["Precios actuales Anker/UGREEN en Amazon ES", "Wattage máximo iPhone 17 USB PD"]
+    },
+    {
+      "id": "articulo_002",
+      "archivo": "03-drafts/articulo_002_draft.md",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "briefing_id": "briefing_002",
+      "categoria": "Salud y Bienestar Digital",
+      "titulo_draft": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas",
+      "palabra_clave_principal": "tecnología para dormir mejor",
+      "longitud_estimada_palabras": 1780,
+      "tipo_contenido": "Guía práctica con evidencia + errores comunes",
+      "datos_pendientes": ["Evidencia específica Night Shift iPhone", "Precisión Oura Ring Gen 4 vs Apple Watch Series 10 (estudios independientes)"]
+    },
+    {
+      "id": "articulo_003",
+      "archivo": "03-drafts/articulo_003_draft.md",
+      "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+      "briefing_id": "briefing_003",
+      "categoria": "Seguridad Digital",
+      "titulo_draft": "Quishing: la estafa del código QR que no para de crecer (y cómo no caer en la trampa)",
+      "palabra_clave_principal": "quishing qué es",
+      "longitud_estimada_palabras": 1550,
+      "tipo_contenido": "Alerta de seguridad práctica + guía de protección",
+      "datos_pendientes": ["Estadística INCIBE sobre quishing España 2025-2026", "Funciones anti-quishing en Bitwarden/1Password"]
+    }
+  ],
+  "created_at": "2026-05-02T07:42:00"
+}

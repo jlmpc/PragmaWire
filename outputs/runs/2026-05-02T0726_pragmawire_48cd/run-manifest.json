@@ -1,0 +1,122 @@
+{
+  "run_id": "2026-05-02T0726_pragmawire_48cd",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-02T0726_pragmawire_48cd",
+  "created_at": "2026-05-02T07:26:38",
+  "updated_at": "2026-05-02T08:05:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "routine": "B",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "complete",
+  "current_stage": "complete",
+  "next_agent": null,
+  "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
+  "categorias_activas": [
+    "Recomendaciones Tecnológicas",
+    "Salud y Bienestar Digital",
+    "Seguridad Digital"
+  ],
+  "articulos_objetivo": 3,
+  "articulos_minimo": 3,
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-05-02T07:28:00",
+      "output_paths": [
+        "01-run-context/run-context.md",
+        "01-run-context/categorias_target.md",
+        "01-run-context/_STAGE_COMPLETE"
+      ]
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-05-02T07:32:00",
+      "estado_investigacion": "INVESTIGACION_COMPLETA_CON_WARNINGS",
+      "output_paths": [
+        "02-briefings/briefing_001.md",
+        "02-briefings/briefing_002.md",
+        "02-briefings/briefing_003.md",
+        "02-briefings/briefings-index.json",
+        "02-briefings/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3,
+      "briefings_aptos": 3,
+      "cobertura_completa": true
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-05-02T07:42:00",
+      "redaccion_batch_status": "COMPLETA_CON_NOTAS",
+      "output_paths": [
+        "03-drafts/articulo_001_draft.md",
+        "03-drafts/articulo_002_draft.md",
+        "03-drafts/articulo_003_draft.md",
+        "03-drafts/drafts-index.json",
+        "03-drafts/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-05-02T07:52:00",
+      "edicion_batch_status": "EDICION_COMPLETA",
+      "output_paths": [
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 3,
+      "scores": {"articulo_001": 89, "articulo_002": 89, "articulo_003": 94, "promedio": 90.7}
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "completed_at": "2026-05-02T08:00:00",
+      "supervision_batch_status": "COMPLETA",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "scores_validados": {"articulo_001": 90, "articulo_002": 90, "articulo_003": 94, "promedio": 91.3}
+    }
+  },
+  "category_coverage": {
+    "Recomendaciones Tecnológicas": 1,
+    "Salud y Bienestar Digital": 1,
+    "Seguridad Digital": 1
+  },
+  "drafts_summary": [
+    {"id": "articulo_001", "categoria": "Recomendaciones Tecnológicas", "titulo": "Cargadores GaN: qué son y por qué deberías cambiarte ya", "palabras_estimadas": 1650, "estado": "REDACCION_COMPLETA_CON_NOTAS"},
+    {"id": "articulo_002", "categoria": "Salud y Bienestar Digital", "titulo": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar", "palabras_estimadas": 1780, "estado": "REDACCION_COMPLETA_CON_NOTAS"},
+    {"id": "articulo_003", "categoria": "Seguridad Digital", "titulo": "Quishing: la estafa del código QR que no para de crecer", "palabras_estimadas": 1550, "estado": "REDACCION_COMPLETA_CON_NOTAS"}
+  ],
+  "warnings": [
+    "WordPress via script post_to_wp.py — vars de entorno WP_URL/WP_USER/WP_APP_PASSWORD requeridas",
+    "Artículo 001: verificar precios actuales Anker/UGREEN en Amazon ES antes de publicar",
+    "Artículo 002: verificar evidencia específica Night Shift y precisión Oura Ring Gen 4",
+    "Artículo 003: verificar estadística INCIBE sobre quishing España"
+  ],
+  "errors": [],
+  "blocked_reason": "",
+  "wordpress_drafts_created": [
+    {"id": "articulo_001", "wp_id": 1012, "link": "https://www.pragmawire.com/?p=1012", "titulo": "Cargadores GaN: qué son y cómo elegir el correcto en 2026 (guía práctica)", "slug": "cargadores-gan-usb-c-guia-practica", "status": "draft"},
+    {"id": "articulo_002", "wp_id": 1013, "link": "https://www.pragmawire.com/?p=1013", "titulo": "Tecnología y sueño: qué ayuda de verdad, qué no sirve y qué puede empeorar las cosas", "slug": "tecnologia-dormir-mejor-wearables-apps-guia", "status": "draft"},
+    {"id": "articulo_003", "wp_id": 1014, "link": "https://www.pragmawire.com/?p=1014", "titulo": "Quishing: qué es la estafa del código QR y cómo protegerte", "slug": "quishing-estafa-codigo-qr-como-protegerse", "status": "draft"}
+  ],
+  "run_completed_at": "2026-05-02T08:05:00"
+}
