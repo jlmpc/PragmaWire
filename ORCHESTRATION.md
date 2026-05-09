@@ -1,161 +1,44 @@
-# ORCHESTRATION — PragmaWire Agents Pipeline
+# ORCHESTRATION: El Contrato Operativo de PragmaWire
 
-Este archivo es el contrato operativo del sistema.
+Este documento es la "Constitución" del sistema. Define las reglas innegociables para que cada artículo publicado en PragmaWire.com cumpla con nuestros estándares de calidad, frescura y autoridad.
 
-## Regla principal
+## 1. Regla de Oro: Calidad sobre Cantidad
 
-Cada ejecución usa un `RUN_ID` único.
+Ningún artículo puede avanzar a la fase de WordPress si no cumple con el **ADN Editorial PragmaWire**. Preferimos cancelar una ejecución antes que publicar contenido que parezca generado por IA genérica.
 
-Los agentes solo pueden leer y escribir dentro de:
+-   **Umbral de Paso:** Solo artículos con un `QUALITY_SCORE >= 90` (asignado por el Supervisor Final) pueden ser convertidos en borradores de WordPress.
+-   **Veto de IA:** Cualquier rastro de tono robótico, frases de relleno o falta de utilidad práctica es motivo de rechazo inmediato.
 
-```text
-outputs/runs/[RUN_ID]/
-```
+## 2. Gestión de Ejecuciones (RUN_ID)
 
-El `RUN_ID` activo está en:
+Cada ejecución es aislada y se identifica por un `RUN_ID` único.
+-   **Ruta de Trabajo:** `outputs/runs/[RUN_ID]/`
+-   **Estado Activo:** Siempre se consulta `outputs/current-run.json`.
+-   **Prohibición:** Ningún agente puede leer o escribir fuera de su carpeta de ejecución activa, salvo para consultar la memoria histórica (`memory/articulos_publicados.json`) o los recursos globales (`resources/`).
 
-```text
-outputs/current-run.json
-```
+## 3. Segmentación por Rutinas (A/B)
 
----
+Para optimizar el consumo de recursos y la frecuencia de publicación, el pipeline se divide en dos flujos:
+-   **Rutina A:** Cubre *Hogar Inteligente*, *Inteligencia Artificial* y *Productividad Digital*.
+-   **Rutina B:** Cubre *Recomendaciones Tecnológicas*, *Salud y Bienestar Digital* y *Seguridad Digital*.
+-   **Consistencia:** Ambas rutinas utilizan los mismos agentes y reglas de calidad, asegurando que la voz de PragmaWire sea única en todas las categorías.
 
-## Flujo
+## 4. El Pipeline de Calidad en 6 Pasos
 
-```text
-Supervisor Inicial
-↓
-Agente Investigador
-↓
-Agente Redactor
-↓
-Agente Editor Estratégico
-↓
-Supervisor Final
-↓
-WordPress Draft
-```
+1.  **Supervisor Inicial:** Valida el contexto, define las categorías del run y asegura que los recursos estén actualizados.
+2.  **Agente Investigador:** Realiza el escaneo "Web-First" de actualidad. Su misión es encontrar la **oportunidad y el ángulo diferencial**. No busca temas, busca utilidad.
+3.  **Agente Redactor:** Escribe el borrador inyectando el ADN Editorial. Obligatorio: **Gancho Humano** y **Conclusión Accionable**.
+4.  **Agente Editor Estratégico:** Pulido editorial agresivo. Elimina la "huella de IA" y refina la narrativa para el lector humano.
+5.  **Supervisor Final:** Auditoría técnica y editorial. Asigna el `QUALITY_SCORE` final y decide si el artículo es digno de PragmaWire.
+6.  **WordPress Draft:** Conversión a HTML y subida como borrador. **PROHIBIDO PUBLICAR AUTOMÁTICAMENTE.**
 
----
+## 5. Recursos Obligatorios de Consulta
 
-## Carpetas por ejecución
-
-Cada ejecución crea:
-
-```text
-outputs/runs/[RUN_ID]/
-├── run-manifest.json
-├── 01-run-context/
-├── 02-briefings/
-├── 03-drafts/
-├── 04-edited/
-├── 05-wordpress-ready/
-└── logs/
-```
+Todos los agentes deben tener acceso y consultar activamente:
+-   `resources/adn-editorial-pragmawire.md`: Para el tono y estilo.
+-   `resources/categorias.md`: Para el enfoque dinámico por beneficio.
+-   `resources/fuentes-preferentes.md`: Para el protocolo de búsqueda de actualidad.
+-   `memory/articulos_publicados.json`: Para evitar la repetición de temas (Deduplicación).
 
 ---
-
-## Qué lee y escribe cada agente
-
-### 1. Supervisor Inicial
-
-Lee:
-
-```text
-resources/
-memory/articulos_publicados.json
-```
-
-Escribe:
-
-```text
-outputs/runs/[RUN_ID]/01-run-context/run-context.md
-outputs/runs/[RUN_ID]/01-run-context/_STAGE_COMPLETE
-```
-
-### 2. Agente Investigador
-
-Lee:
-
-```text
-outputs/runs/[RUN_ID]/01-run-context/run-context.md
-memory/articulos_publicados.json
-resources/
-```
-
-Escribe:
-
-```text
-outputs/runs/[RUN_ID]/02-briefings/briefing_001.md
-outputs/runs/[RUN_ID]/02-briefings/briefings-index.json
-outputs/runs/[RUN_ID]/02-briefings/_STAGE_COMPLETE
-```
-
-### 3. Agente Redactor
-
-Lee:
-
-```text
-outputs/runs/[RUN_ID]/02-briefings/
-```
-
-Escribe:
-
-```text
-outputs/runs/[RUN_ID]/03-drafts/articulo_001_draft.md
-outputs/runs/[RUN_ID]/03-drafts/drafts-index.json
-outputs/runs/[RUN_ID]/03-drafts/_STAGE_COMPLETE
-```
-
-### 4. Agente Editor Estratégico
-
-Lee:
-
-```text
-outputs/runs/[RUN_ID]/03-drafts/
-outputs/runs/[RUN_ID]/02-briefings/
-```
-
-Escribe:
-
-```text
-outputs/runs/[RUN_ID]/04-edited/articulo_001_edited.md
-outputs/runs/[RUN_ID]/04-edited/edited-index.json
-outputs/runs/[RUN_ID]/04-edited/_STAGE_COMPLETE
-```
-
-### 5. Supervisor Final
-
-Lee:
-
-```text
-outputs/runs/[RUN_ID]/04-edited/
-```
-
-Escribe:
-
-```text
-outputs/runs/[RUN_ID]/05-wordpress-ready/articulo_001_wordpress_ready.md
-outputs/runs/[RUN_ID]/05-wordpress-ready/wordpress-ready-index.json
-outputs/runs/[RUN_ID]/05-wordpress-ready/_STAGE_COMPLETE
-```
-
----
-
-## Regla `_STAGE_COMPLETE`
-
-El siguiente agente no debe arrancar si la fase anterior no tiene `_STAGE_COMPLETE`.
-
-## Regla WordPress
-
-Está prohibido publicar automáticamente.
-
-Solo se permite:
-
-```yaml
-WORDPRESS_ACTION:
-  create_draft: true
-  publish: false
-```
-
-Si aparece `publish: true`, el flujo debe bloquearse.
+**Nota de Seguridad:** Cualquier desviación de este contrato debe ser reportada como un error crítico del sistema.
