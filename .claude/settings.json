@@ -1,7 +1,35 @@
 {
   "sandbox": {
     "network": {
-      "allowedDomains": ["pragmawire.com", "www.pragmawire.com"]
+      "allowedDomains": [
+        "pragmawire.com",
+        "www.pragmawire.com",
+        "xataka.com",
+        "www.xataka.com",
+        "applesfera.com",
+        "www.applesfera.com",
+        "genbeta.com",
+        "www.genbeta.com",
+        "computerhoy.com",
+        "www.computerhoy.com",
+        "hipertextual.com",
+        "www.hipertextual.com",
+        "theverge.com",
+        "www.theverge.com",
+        "techcrunch.com",
+        "www.techcrunch.com",
+        "wired.com",
+        "www.wired.com",
+        "arstechnica.com",
+        "www.arstechnica.com",
+        "9to5mac.com",
+        "androidauthority.com",
+        "www.androidauthority.com",
+        "r.jina.ai",
+        "trends.google.com",
+        "reddit.com",
+        "www.reddit.com"
+      ]
     }
   }
 }
