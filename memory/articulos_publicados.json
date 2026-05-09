@@ -1,26 +1,86 @@
 [
   {
-    "title": "Qué son las passkeys y por qué importan",
+    "title": "5 trucos gratis con Meta Muse Spark: la nueva IA de Meta que ya supera a ChatGPT (y nadie te ha explicado cómo usarla)",
+    "slug": "5-trucos-nuevo-muse-spark",
+    "categoria": "Inteligencia artificial",
+    "fecha_publicacion": "2026-04-10",
+    "estado": "publicado"
+  },
+  {
+    "title": "ChatGPT, Claude o Gemini: cuál usar en 2026 según lo que necesitas",
+    "slug": "ia-agentica-para-2026",
+    "categoria": "Inteligencia artificial",
+    "fecha_publicacion": "2026-04-09",
+    "estado": "publicado"
+  },
+  {
+    "title": "Qué es un agente de IA y cómo configurar uno gratis con ChatGPT, Claude o Gemini",
+    "slug": "que-es-un-agente-de-ia",
+    "categoria": "Inteligencia artificial",
+    "fecha_publicacion": "2026-04-08",
+    "estado": "publicado"
+  },
+  {
+    "title": "Cargadores GaN: qué son y cómo elegir el correcto en 2026",
+    "slug": "cargadores-gan-guia-2026",
+    "categoria": "Recomendaciones tecnológicas",
+    "fecha_publicacion": "2026-04-07",
+    "estado": "publicado"
+  },
+  {
+    "title": "Mejor router WiFi para casa en 2026: cómo elegir bien entre WiFi 6, WiFi 7 o sistema mesh",
+    "slug": "mejor-router-wifi-2026",
+    "categoria": "Recomendaciones tecnológicas",
+    "fecha_publicacion": "2026-04-06",
+    "estado": "publicado"
+  },
+  {
+    "title": "La trampa de las apps de productividad: cuantas más usas, menos produces",
+    "slug": "trampa-apps-productividad",
+    "categoria": "Productividad digital",
+    "fecha_publicacion": "2026-04-05",
+    "estado": "publicado"
+  },
+  {
+    "title": "Cómo automatizar tareas repetitivas sin saber programar: Zapier, Make y n8n explicados",
+    "slug": "automatizar-tareas-sin-programar",
+    "categoria": "Productividad digital",
+    "fecha_publicacion": "2026-04-04",
+    "estado": "publicado"
+  },
+  {
+    "title": "Tecnología para dormir mejor: apps y hábitos que funcionan de verdad",
+    "slug": "tecnologia-que-mejora-tu-descanso",
+    "categoria": "Salud y bienestar",
+    "fecha_publicacion": "2026-04-03",
+    "estado": "publicado"
+  },
+  {
+    "title": "Quishing: qué es la estafa del código QR y cómo protegerte",
+    "slug": "quishing-estafa-qr-proteccion",
+    "categoria": "Seguridad digital",
+    "fecha_publicacion": "2026-04-02",
+    "estado": "publicado"
+  },
+  {
+    "title": "Cómo detectar estafas tecnológicas: 7 señales claras para evitar fraudes online",
+    "slug": "detectar-estafas-tecnologicas",
+    "categoria": "Seguridad digital",
+    "fecha_publicacion": "2026-04-01",
+    "estado": "publicado"
+  },
+  {
+    "title": "Qué es una Passkey y por qué puede sustituir a muchas contraseñas",
     "slug": "que-son-passkeys",
-    "categoria": "Seguridad Digital",
-    "palabra_clave_principal": "qué son las passkeys",
-    "palabras_clave_secundarias": [
-      "passkeys",
-      "contraseñas",
-      "seguridad digital"
-    ],
-    "tema_principal": "passkeys",
-    "angulo_editorial": "explicación práctica para usuarios no expertos",
-    "fecha_publicacion": "2026-04-28",
-    "url": "",
-    "entidades": [
-      "passkeys",
-      "contraseñas",
-      "autenticación",
-      "Apple",
-      "Google",
-      "Microsoft"
-    ],
-    "estado": "ejemplo"
+    "categoria": "Seguridad digital",
+    "fecha_publicacion": "2026-03-31",
+    "estado": "publicado"
+  },
+  {
+    "title": "Matter y Thread: qué son y por qué importan antes de comprar un dispositivo inteligente",
+    "slug": "matter-y-thread-guia",
+    "categoria": "Hogar inteligente",
+    "fecha_publicacion": "2026-03-30",
+    "estado": "publicado"
   }
 ]
