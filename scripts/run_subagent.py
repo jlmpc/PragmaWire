@@ -75,6 +75,11 @@ def main():
 
     system_prompt = instructions_path.read_text()
 
+    # Inyectar el ADN Editorial de PragmaWire en el system_prompt
+    adn_editorial_path = root / "resources" / "adn-editorial-pragmawire.md"
+    if adn_editorial_path.exists():
+        system_prompt += f"\n\n## ADN Editorial PragmaWire\n\n{adn_editorial_path.read_text()}"
+
     article_content = input_file.read_text()
     user_content = (
         "El contenido a procesar está incluido directamente a continuación. "

@@ -231,46 +231,31 @@ Si el destino no es `WORDPRESS_DRAFT`, bloquea.
 
 ---
 
-### FASE 2 — Descubrimiento amplio de ideas
+### FASE 2 — Descubrimiento de Tendencias y "Espionaje" Editorial
 
-Para cada categoría, busca ideas en varias capas.
+Para cada categoría, es **OBLIGATORIO** realizar una búsqueda de frescura extrema. No busques conceptos genéricos (ej: "qué es Matter"), busca **NOTICIAS DE LAS ÚLTIMAS 24-48 HORAS**.
 
-#### 1. Tendencias
+#### 1. Escaneo de Actualidad "Web-First"
 
-Usa, si están disponibles:
+Consulta el archivo `resources/fuentes-preferentes.md` y sigue el protocolo de escaneo. Tu primera tarea es identificar la agenda tecnológica del día.
 
-- Google Trends.
-- Búsquedas relacionadas de Google.
-- Autocompletado de Google.
-- Tendencias de YouTube.
-- Exploding Topics o herramientas equivalentes.
-- Noticias recientes.
+-   **Escaneo Global:** Empieza por los medios en inglés (*The Verge*, *TechCrunch*, etc.) para detectar primicias y tendencias que aún no han llegado con fuerza al mercado hispano.
+-   **Escaneo Local:** Cruza con medios en español (*Xataka*, *Applesfera*, etc.) para ver qué temas están saturados y dónde hay huecos de utilidad práctica.
 
-#### 2. Competencia y referentes
+**Tu misión:** No busques "temas", busca **"oportunidades de utilidad"** basadas en lo que está pasando hoy. Si un tema es tendencia pero nadie explica cómo usarlo de forma sencilla, ese es un tema PragmaWire.
 
-Analiza webs en español e inglés.
+#### 2. Validación de Tendencia Real
 
-Medios/referentes en español:
+Usa `WebSearch` para confirmar si el tema:
+-   Aparece en Google Trends (o tiene potencial de búsqueda creciente).
+-   Se está comentando en Reddit o X/Twitter en las últimas horas.
+-   Representa un cambio, lanzamiento o problema nuevo para el usuario.
 
-- Xataka.
-- Genbeta.
-- Applesfera.
-- Computer Hoy.
-- El Androide Libre.
-- Hipertextual.
-- medios tecnológicos equivalentes.
+#### 3. El Filtro de "Oportunidad y Ángulo Diferencial"
 
-Medios/referentes en inglés:
+No descartes temas por su nombre, sino por su falta de novedad. Si propones un tema recurrente (ej: Matter, IA generativa, seguridad en contraseñas), **DEBES JUSTIFICAR** qué ha cambiado en las últimas 48-72 horas que haga que este artículo sea necesario **HOY**.
 
-- The Verge.
-- TechCrunch.
-- Wired.
-- Ars Technica.
-- VentureBeat.
-- Engadget.
-- Android Authority.
-- 9to5Mac.
-- medios tecnológicos equivalentes.
+Si no hay una noticia, actualización, problema emergente o cambio significativo, el tema se considera "contenido de relleno" y debe ser descartado en favor de algo con mayor impacto y frescura. Buscamos el **ángulo PragmaWire**: utilidad real basada en la actualidad.
 
 No copies contenidos ni estructuras.
 
@@ -321,21 +306,13 @@ En temas técnicos, seguridad, salud o compatibilidad, las fuentes oficiales pes
 
 ---
 
-### FASE 3 — Deduplicación
+### FASE 3 — Deduplicación y "Veto de Repetición"
 
-Compara cada idea contra `articulos_publicados.json` y contra la lista de artículos conocidos.
+Compara cada idea contra `articulos_publicados.json`. Sé extremadamente estricto.
 
-Debes comparar:
+**Regla de Oro:** Si el tema principal o la intención de búsqueda ya existe en la web, el tema es **RECHAZADO** automáticamente, a menos que el nuevo artículo trate sobre una actualización crítica lanzada en las últimas 48 horas.
 
-- slug;
-- tema principal;
-- palabra clave principal;
-- palabras clave secundarias;
-- intención de búsqueda;
-- categoría;
-- entidades principales;
-- ángulo editorial;
-- fecha de publicación.
+No queremos "más de lo mismo". Queremos que cada nuevo artículo sea una razón para que el lector vuelva a la web.
 
 Estados de deduplicación:
 
@@ -357,22 +334,19 @@ Existe contenido relacionado, pero el nuevo tema aporta enfoque claro y compleme
 
 ---
 
-### FASE 4 — Validación y scoring
+### FASE 4 — Validación, Scoring y Categorización Dinámica
 
-Puntúa cada tema de 0 a 100.
+Puntúa cada tema de 0 a 100 y asígnalo a una de las categorías de `resources/categorias.md` basándote en el **beneficio principal** para el lector, no solo en palabras clave.
 
-Criterios:
+Criterios de Scoring:
 
-1. Utilidad para el lector: 0-15
-2. Oportunidad SEO: 0-15
-3. Oportunidad AEO: 0-10
-4. Oportunidad GEO / IA: 0-10
-5. Frescura o actualidad: 0-10
-6. Claridad de intención de búsqueda: 0-10
-7. Facilidad de verificación: 0-10
-8. Encaje con PragmaWire: 0-10
-9. Potencial de enlaces internos: 0-5
-10. Bajo riesgo de obsolescencia: 0-5
+1.  **Utilidad y Empoderamiento (0-20):** ¿Ayuda realmente al lector a resolver algo o decidir mejor?
+2.  **Oportunidad y Frescura (0-20):** ¿Es noticia hoy? ¿Es un ángulo nuevo sobre un tema recurrente?
+3.  **Diferenciación Editorial (0-15):** ¿Aporta algo que no está en *The Verge* o *Xataka*? (Ej: simplificación, guía paso a paso).
+4.  **Oportunidad SEO/AEO/GEO (0-15):** Potencial de búsqueda y respuesta por IA.
+5.  **Facilidad de Verificación y Confianza (0-10):** ¿Hay fuentes sólidas?
+6.  **Encaje con el ADN PragmaWire (0-10):** ¿Suena a nosotros?
+7.  **Potencial de Enlaces Internos (0-10):** ¿Conecta con nuestra memoria editorial?
 
 Interpretación:
 

@@ -301,21 +301,13 @@ Si falla cualquiera de los puntos críticos, no apruebes.
 
 ## UMBRALES DE QUALITY_SCORE
 
-Usa esta interpretación:
+Usa esta interpretación:-   **95-100: Excelente.** El artículo tiene una voz humana clara, resuelve un problema real y se siente 100% PragmaWire.
+-   **90-94: Aprobado.** Cumple todos los requisitos técnicos y editoriales.
+-   **85-89: Devolver al Editor.** El contenido es correcto pero suena "robótico" o le falta el "Gancho Humano".
+-   **70-84: Devolver.** Problemas graves de estructura, falta de utilidad o temas repetidos sin ángulo nuevo.
+-   **Menos de 70: Bloquear.**
 
-- 95-100: excelente. Puede pasar si no hay vetos.
-- 90-94: aprobado. Puede pasar si no hay vetos.
-- 85-89: devolver al Editor para mejora.
-- 70-84: devolver al Editor o Investigador según causa.
-- Menos de 70: bloquear o devolver según gravedad.
-
-Regla:
-
-`QUALITY_SCORE < 90` nunca puede crear WordPress Draft.
-
----
-
-## VETOS CRÍTICOS
+**Regla de Oro:** Si el artículo parece escrito por una IA genérica (frases de relleno, tono distante), el `QUALITY_SCORE` debe bajar de 90 automáticamente. No aprobamos "relleno".# VETOS CRÍTICOS
 
 Comprueba que el Editor haya marcado todos como `OK`.
 
