@@ -107,6 +107,24 @@ El Agente Investigador debe consultarlo al inicio de cada run para saber qué fu
 
 ---
 
+## Reglas de investigación
+
+Estas reglas aplican independientemente de la categoría o la fuente.
+
+**1. Prioridad a la novedad**
+Si un tema es tendencia en medios en inglés y aún no tiene cobertura en español con enfoque práctico, es una oportunidad de oro. Cúbrelo antes que la competencia hispanohablante.
+
+**2. Ángulo PragmaWire siempre**
+No se repite la noticia. Se busca la utilidad. Si The Verge dice "Apple lanza X", PragmaWire dice "Cómo usar X para ahorrar batería / ser más productivo / proteger tu privacidad". El hecho es la materia prima, no el producto final.
+
+**3. Veto de obsolescencia**
+No investigar temas puramente especulativos o basados en rumores sin fuente sólida, salvo que el rumor esté generando conversación masiva y documentable. En ese caso, el artículo cubre la conversación, no el rumor como hecho.
+
+**4. La fuente manda sobre la lista**
+Si una fuente nueva o un blog especializado tiene la mejor información sobre un tema concreto, úsala aunque no esté en esta lista. La calidad y la frescura tienen prioridad sobre seguir la lista al pie de la letra.
+
+---
+
 ## Notas editoriales
 
 **Todoist y Notion blog** (Productividad secundarias): Son blogs de producto con sesgo hacia sus propias herramientas. Útiles como inspiración de tema, no como referencia editorial neutral.
