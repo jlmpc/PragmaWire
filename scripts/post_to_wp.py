@@ -164,6 +164,68 @@ def post_article(article_path: Path, wp_url: str, wp_user: str, wp_password: str
     return False, resp.get("message") or resp.get("code") or result.stdout[:200]
 
 
+def update_memory(root: Path, run_id: str, articles_posted: list):
+    """Actualiza memory/articulos_publicados.json con los artículos subidos a WordPress."""
+    from datetime import date
+
+    memory_file = root / "memory" / "articulos_publicados.json"
+    try:
+        existing = json.loads(memory_file.read_text(encoding="utf-8")) if memory_file.exists() else []
+    except (json.JSONDecodeError, OSError):
+        existing = []
+
+    existing_slugs = {a.get("slug", "") for a in existing}
+
+    for item in articles_posted:
+        slug = item.get("slug", "")
+        if slug and slug in existing_slugs:
+            # Actualizar entrada existente con datos de WordPress
+            for entry in existing:
+                if entry.get("slug") == slug:
+                    entry["wp_id"] = item.get("wp_id")
+                    entry["wp_link"] = item.get("wp_link")
+                    entry["estado"] = "borrador_wp"
+                    break
+        else:
+            new_entry = {
+                "title": item.get("title", ""),
+                "slug": slug,
+                "categoria": item.get("categoria", ""),
+                "fecha_publicacion": date.today().isoformat(),
+                "estado": "borrador_wp",
+                "wp_id": item.get("wp_id"),
+                "wp_link": item.get("wp_link"),
+                "run_id": run_id,
+            }
+            existing.append(new_entry)
+            if slug:
+                existing_slugs.add(slug)
+
+    memory_file.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def update_run_history(root: Path, run_id: str, results: list, success: int):
+    """Actualiza memory/run-history.json con el resumen de esta ejecución."""
+    from datetime import date
+
+    history_file = root / "memory" / "run-history.json"
+    try:
+        history = json.loads(history_file.read_text(encoding="utf-8")) if history_file.exists() else []
+    except (json.JSONDecodeError, OSError):
+        history = []
+
+    entry = {
+        "run_id": run_id,
+        "fecha": date.today().isoformat(),
+        "articulos_enviados_wp": success,
+        "articulos_fallidos": len(results) - success,
+        "slugs": [r.get("slug", r.get("file", "")) for r in results if r.get("status") == "ok"],
+    }
+    history.append(entry)
+
+    history_file.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main():
     wp_url = os.environ.get("WP_URL", "").rstrip("/")
     wp_user = os.environ.get("WP_USER", "")
@@ -181,6 +243,7 @@ def main():
         sys.exit(1)
 
     current_run = json.loads(current_run_file.read_text())
+    run_id = current_run.get("active_run_id", "unknown")
     run_path = Path(current_run["active_run_path"])
     wp_ready_dir = run_path / "05-wordpress-ready"
 
@@ -199,13 +262,22 @@ def main():
 
     print(f"Publicando {len(articles)} borradores en WordPress...")
     results = []
+    memory_updates = []
     success = 0
 
     for article in articles:
+        meta, _ = parse_article(article.read_text(encoding="utf-8"))
         ok, data = post_article(article, wp_url, wp_user, wp_password)
         if ok:
             print(f"  OK {article.name} → ID {data['id']} | {data['link']}")
             results.append({"file": article.name, "wp_id": data["id"], "link": data["link"], "title": data["title"], "status": "ok"})
+            memory_updates.append({
+                "title": data["title"],
+                "slug": meta.get("slug", ""),
+                "categoria": meta.get("category", ""),
+                "wp_id": data["id"],
+                "wp_link": data["link"],
+            })
             success += 1
         else:
             print(f"  ERR {article.name} → {data}")
@@ -213,6 +285,18 @@ def main():
 
     log_path = run_path / "06-wordpress-creation-log.json"
     log_path.write_text(json.dumps({"results": results, "total": len(articles), "success": success}, ensure_ascii=False, indent=2))
+
+    if memory_updates:
+        try:
+            update_memory(root, run_id, memory_updates)
+            print(f"  Memoria actualizada: {len(memory_updates)} artículos registrados en articulos_publicados.json")
+        except Exception as e:
+            print(f"  AVISO: No se pudo actualizar articulos_publicados.json: {e}")
+
+        try:
+            update_run_history(root, run_id, results, success)
+        except Exception as e:
+            print(f"  AVISO: No se pudo actualizar run-history.json: {e}")
 
     print(f"\nResultado: {success}/{len(articles)} borradores creados")
     sys.exit(0 if success == len(articles) else 1)

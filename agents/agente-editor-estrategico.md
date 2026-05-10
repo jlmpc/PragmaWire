@@ -315,6 +315,13 @@ El título promete una cosa y el cuerpo responde otra.
 
 El artículo podría publicarse en cualquier blog porque no aporta el enfoque PragmaWire, ejemplos, utilidad, criterio o presenta frases de relleno, estructuras repetitivas o un tono robótico que delata la generación por IA.
 
+Activa este veto también si:
+- El artículo empieza describiendo qué es la tecnología/herramienta en vez de empezar desde el problema del lector.
+- La estructura del artículo replica la del artículo origen indicado en el `## Fuente Origen` del briefing (mismas secciones, mismo orden, mismo enfoque).
+- Los ejemplos, analogías o casos de uso son los mismos que los del artículo origen.
+
+Para comprobar: lee el campo `## Fuente Origen` del briefing y contrasta brevemente con el artículo. Si el lector que ya leyó la fuente no encuentra nada nuevo, activa el veto.
+
 ### VETO 9 — Clickbait
 
 El título o la introducción prometen más de lo que el artículo entrega.

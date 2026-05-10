@@ -196,6 +196,19 @@ Cada briefing puede incluir:
 
 ---
 
+## PASO 0 OBLIGATORIO: LEE EL ADN EDITORIAL ANTES DE ESCRIBIR
+
+Antes de abrir el briefing, debes leer el fichero de voz de PragmaWire:
+
+```
+Read("resources/adn-editorial-pragmawire.md")
+```
+
+No redactes una sola línea sin haber leído este fichero en la sesión actual.
+No uses tu conocimiento de entrenamiento sobre el estilo PragmaWire como sustituto: el fichero contiene decisiones editoriales específicas que pueden diferir de convenciones genéricas.
+
+---
+
 ## PASO PREVIO OBLIGATORIO: LECTURA DE LA FUENTE ORIGEN
 
 Antes de escribir cada artículo, debes leer el contenido del artículo origen indicado en el briefing.
@@ -221,6 +234,27 @@ El briefing incluye un bloque `## Fuente Origen` con la URL exacta del artículo
 - Si la fuente es en inglés, redacta íntegramente en español con ángulo para el lector hispanohablante.
 
 Si la URL de la fuente origen no es accesible (timeout, error), escríbelo en `NOTAS_PARA_EDITOR` y redacta usando exclusivamente los datos confirmados del briefing. No inventes.
+
+---
+
+## REGLAS DE DIFERENCIACIÓN RESPECTO A LA FUENTE ORIGEN
+
+Estas reglas aplican siempre, sin excepción:
+
+**1. Empieza desde el problema del lector, nunca desde la tecnología.**
+
+El artículo NO puede empezar describiendo qué es la herramienta, la actualización o el producto. Empieza desde el problema, la frustración o la necesidad del lector que ese hecho resuelve. La fuente origen ya explica qué es — tú explicas por qué importa a la persona.
+
+Mal: *"Google ha lanzado Gemini 2.5 Pro, su nuevo modelo de inteligencia artificial..."*
+Bien: *"Si pierdes horas resumiendo PDFs o buscando datos en documentos largos, hay una novedad que puede cambiar tu flujo de trabajo..."*
+
+**2. Tu estructura debe diferir conscientemente de la del artículo origen.**
+
+Antes de planificar los H2, revisa cómo está organizado el artículo origen (cuántas secciones tiene, en qué orden, qué ángulo adopta). Luego elige una estructura deliberadamente distinta. Si la fuente divide el artículo en "qué es / cómo funciona / conclusión", tú divide en "el problema / la solución práctica / cuándo usarlo y cuándo no / errores comunes". El lector que ya leyó la fuente debe sentir que PragmaWire añade algo nuevo.
+
+**3. Los datos son de la fuente; la historia es tuya.**
+
+Puedes y debes usar los datos factuales del artículo origen (versiones, fechas, nombres, cifras). Pero la narrativa, los ejemplos, las analogías y la perspectiva deben ser originales. Nunca parafrasees párrafos. Nunca adoptes los mismos ejemplos. Nunca uses el mismo ángulo.
 
 ---
 

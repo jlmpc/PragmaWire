@@ -558,6 +558,39 @@ Si no puedes verificar algo crítico, no apruebes.
 
 ---
 
+## ACTUALIZACIÓN OBLIGATORIA DE MEMORIA
+
+Cuando emitas `CREAR_WORDPRESS_DRAFT`, debes registrar el artículo en `memory/articulos_publicados.json` **antes de que se ejecute `post_to_wp.py`**.
+
+Esto garantiza que el Agente Investigador pueda deduplicar correctamente en el mismo run o en runs posteriores.
+
+**Protocolo:**
+
+1. Lee `memory/articulos_publicados.json`.
+2. Añade una entrada al array con los datos del artículo aprobado:
+
+```json
+{
+  "title": "[título del artículo]",
+  "slug": "[slug del artículo]",
+  "categoria": "[category_primary]",
+  "fecha_publicacion": "[fecha de hoy]",
+  "estado": "aprobado_draft_pendiente_wp",
+  "run_id": "[active_run_id]"
+}
+```
+
+3. Escribe el archivo actualizado con Write.
+4. Verifica con Read que la entrada fue añadida.
+
+Si el archivo no existe, créalo con un array que contenga la nueva entrada.
+
+Si el slug ya existe en el archivo (artículo duplicado), no añadas una entrada nueva — registra en `NOTAS_PARA_REVISION_HUMANA` que el slug ya existía.
+
+`post_to_wp.py` completará automáticamente la entrada con `wp_id` y `wp_link` tras la subida.
+
+---
+
 ## MICROCORRECCIONES PERMITIDAS
 
 Puedes corregir directamente:
@@ -688,6 +721,10 @@ publish: false
 WORDPRESS_DRAFT_VALIDADO:
 
 [Reproduce aquí el bloque WORDPRESS_DRAFT final validado, con microcorrecciones si las hubo.]
+
+MEMORIA_ACTUALIZADA:
+- articulos_publicados.json: OK / FAIL / SLUG_DUPLICADO
+- Entrada registrada con slug: [slug]
 
 NOTAS_PARA_REVISION_HUMANA:
 - [Nota breve si procede]
