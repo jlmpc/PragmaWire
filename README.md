@@ -36,15 +36,13 @@ WordPress Draft
 
 ## Objetivo por ejecución
 
-Objetivo ideal:
+Dos rutinas alternadas (A y B), cada una con 3 categorías:
 
-- 12 artículos por ejecución.
-- 2 artículos por cada categoría principal.
+- **Rutina A:** Hogar Inteligente, Inteligencia Artificial, Productividad Digital
+- **Rutina B:** Recomendaciones Tecnológicas, Salud y Bienestar Digital, Seguridad Digital
 
-Mínimo obligatorio:
-
-- 1 artículo apto por categoría.
-- 6 artículos aptos en total.
+Objetivo: **1 artículo por categoría activa = 3 artículos por run**.  
+Mínimo obligatorio: 1 artículo apto por cada categoría activa del run.
 
 ## Categorías
 
