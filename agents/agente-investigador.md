@@ -256,13 +256,34 @@ Objetivo: 15-20 candidatos antes de pasar a la Fase 2B.
 
 ---
 
-### FASE 2B — Selección del mejor artículo por categoría
+### FASE 2B — Deduplicación
 
-Para cada categoría activa del run, puntúa cada candidato relevante con estos criterios:
+Antes de puntuar, filtra los candidatos contra `memory/articulos_publicados.json`.
+
+Revisa:
+- slug / URL slug del candidato vs slugs publicados
+- tema principal vs temas ya cubiertos
+- intención de búsqueda vs artículos existentes
+- entidades principales (producto, herramienta, empresa)
+
+Estados:
+
+- **NUEVO**: no existe contenido equivalente → puede avanzar a puntuación
+- **EXISTE_IDENTICO**: mismo tema e intención → excluido automáticamente, no puntuar
+- **EXISTE_SIMILAR**: parecido, pero ángulo diferente → puede avanzar solo si el ángulo PragmaWire es claramente distinto
+- **EXISTE_ANGULO_DIFERENTE**: relacionado pero enfoque complementario → avanza con sugerencia de enlace interno
+
+Documenta cada exclusión por duplicado en la tabla de candidatos.
+
+---
+
+### FASE 2C — Puntuación y selección del mejor artículo por categoría
+
+Para cada categoría activa del run, puntúa cada candidato que pasó la deduplicación:
 
 #### Criterios de puntuación (0-100)
 
-**1. Relevancia a la categoría (0-30)**
+**1. Relevancia a la categoría (0-10)**
 
 ¿El artículo responde a la "pregunta clave" de la categoría?
 
@@ -275,39 +296,67 @@ Para cada categoría activa del run, puntúa cada candidato relevante con estos 
 | Salud y Bienestar Digital | ¿Cómo me ayuda esto a sentirme mejor físicamente y mentalmente? |
 | Seguridad Digital | ¿Cómo puedo navegar y usar mis apps sin miedo a ser hackeado o estafado? |
 
-- 25-30: alineación perfecta con la pregunta clave
-- 15-24: alineación clara, adaptación menor necesaria
-- 5-14: tangencial, requiere reenfoque considerable
-- 0-4: no alinea
+- 8-10: alineación perfecta con la pregunta clave
+- 5-7: alineación clara, adaptación menor necesaria
+- 2-4: tangencial, requiere reenfoque considerable
+- 0-1: no alinea
 
-**2. Frescura (0-25)**
-
-- <24h: 25 puntos
-- 24-48h: 18 puntos
-- 48-72h (ventana extendida): 10 puntos
-- >72h: 0 puntos
-
-**3. Potencial de ángulo PragmaWire (0-25)**
+**2. Potencial de ángulo PragmaWire (0-10)**
 
 ¿Se puede transformar en "cómo X ayuda a Y" en vez de repetir "qué es X"?
 
-- 20-25: el artículo origen es un anuncio técnico o "qué es" — enorme oportunidad de añadir ángulo práctico
-- 10-19: el artículo es ya algo práctico, PragmaWire puede mejorarlo
-- 0-9: el artículo ya tiene el ángulo PragmaWire — difícil diferenciarse
+- 8-10: el artículo origen es un anuncio técnico o "qué es" — enorme oportunidad de añadir ángulo práctico
+- 4-7: el artículo es ya algo práctico, PragmaWire puede mejorarlo
+- 0-3: el artículo ya tiene el ángulo PragmaWire — difícil diferenciarse
 
-**4. Utilidad para el lector no experto (0-20)**
+**3. Utilidad para el lector (0-15)**
 
 ¿El tema subyacente afecta a personas normales en su día a día?
 
-- 16-20: afecta a la mayoría de usuarios (ej: estafa en WhatsApp, función nueva en ChatGPT)
-- 10-15: afecta a un segmento significativo
-- 0-9: tema muy nicho
+- 12-15: afecta a la mayoría de usuarios (ej: estafa en WhatsApp, función nueva en ChatGPT)
+- 7-11: afecta a un segmento significativo
+- 0-6: tema muy nicho
+
+**4. Frescura o actualidad (0-15)**
+
+- <24h: 15 puntos
+- 24-48h: 11 puntos
+- 48-72h (ventana extendida): 6 puntos
+- >72h: 0 puntos
+
+**5. Oportunidad SEO (0-10)**
+
+¿Existe una palabra clave con volumen de búsqueda identificable y el artículo puede posicionarse?
+
+**6. Oportunidad AEO (0-10)**
+
+¿El artículo puede responder una pregunta directa en 40-60 palabras? ¿Hay potencial de featured snippet o FAQ?
+
+**7. Oportunidad GEO / IA (0-10)**
+
+¿Tiene entidades claras y frases citables? ¿Valor como fuente explicativa para sistemas de IA?
+
+**8. Claridad de intención de búsqueda (0-5)**
+
+¿La intención del usuario es clara (informacional, how-to, comparativa)?
+
+**9. Facilidad de verificación (0-5)**
+
+¿Los datos del artículo origen son verificables con fuentes oficiales o medios de referencia?
+
+**10. Encaje con PragmaWire (0-5)**
+
+¿El tema es coherente con la voz y el público de PragmaWire?
+
+**11. Potencial de enlaces internos (0-5)**
+
+¿Existen artículos ya publicados en PragmaWire que se puedan enlazar naturalmente?
 
 #### Umbral mínimo
 
-Un candidato debe alcanzar **60 puntos** para ser seleccionado.
+Un candidato debe alcanzar **70 puntos** para ser seleccionado.
 
-Si ningún candidato supera 60 para una categoría, amplía a ventana de 72h y repite el rastreo.
+Si ningún candidato supera 70 para una categoría, amplía a ventana de 72h y repite el rastreo.
 Si aun así no hay candidato válido, declara bloqueo parcial para esa categoría.
 
 #### Regla de selección
@@ -320,30 +369,7 @@ Documenta los descartados con el motivo (score bajo, duplicado, veto editorial).
 
 ---
 
-### FASE 3 — Deduplicación
-
-**Aplica este filtro ANTES de puntuar**, no después.
-
-Compara cada candidato contra `memory/articulos_publicados.json`.
-
-Revisa:
-- slug / URL slug del candidato vs slugs publicados
-- tema principal vs temas ya cubiertos
-- intención de búsqueda vs artículos existentes
-- entidades principales (producto, herramienta, empresa)
-
-Estados:
-
-- **NUEVO**: no existe contenido equivalente → puede avanzar
-- **EXISTE_IDENTICO**: mismo tema e intención → excluido automáticamente antes de puntuar
-- **EXISTE_SIMILAR**: parecido, pero ángulo diferente → puede avanzar solo si el ángulo PragmaWire es claramente distinto
-- **EXISTE_ANGULO_DIFERENTE**: relacionado pero enfoque complementario → avanza con sugerencia de enlace interno
-
-Documenta cada exclusión por duplicado en la tabla de candidatos.
-
----
-
-### FASE 4 — Traducción del ángulo PragmaWire
+### FASE 3 — Traducción del ángulo PragmaWire
 
 Para cada artículo seleccionado, define el briefing de encargo editorial:
 
@@ -364,7 +390,7 @@ Si la fuente es en inglés y no existe cobertura equivalente en español: marca 
 
 ---
 
-### FASE 5 — Construcción de briefings y archivos de salida
+### FASE 4 — Construcción de briefings y archivos de salida
 
 Genera un briefing por categoría activa, de UNO EN UNO:
 
@@ -593,10 +619,17 @@ NUEVO / EXISTE_SIMILAR / EXISTE_ANGULO_DIFERENTE / EXISTE_IDENTICO
 [0-100]
 
 ## Desglose del score
-- Relevancia a la categoría: [0-30]
-- Frescura: [0-25]
-- Potencial ángulo PragmaWire: [0-25]
-- Utilidad para lector no experto: [0-20]
+- Relevancia a la categoría: [0-10]
+- Potencial de ángulo PragmaWire: [0-10]
+- Utilidad para el lector: [0-15]
+- Frescura o actualidad: [0-15]
+- Oportunidad SEO: [0-10]
+- Oportunidad AEO: [0-10]
+- Oportunidad GEO / IA: [0-10]
+- Claridad de intención de búsqueda: [0-5]
+- Facilidad de verificación: [0-5]
+- Encaje con PragmaWire: [0-5]
+- Potencial de enlaces internos: [0-5]
 
 ## Justificación del score
 [Explicación en 2-3 líneas]

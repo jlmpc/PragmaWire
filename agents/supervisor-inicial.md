@@ -179,9 +179,8 @@ Ejemplos:
 
 - faltan algunos enlaces internos;
 - hay pocas referencias en `articulos_publicados.json`;
-- una fuente secundaria no está disponible;
-- alguna categoría tiene poca cobertura previa;
-- el flujo puede requerir más esfuerzo de investigación para llegar a 12 temas.
+- alguna fuente primaria de `fuentes-por-categoria.md` no está disponible;
+- alguna categoría puede requerir segunda pasada con fuentes secundarias.
 
 ### PIPELINE_BLOCKED
 
@@ -203,19 +202,18 @@ Ejemplos:
 
 Antes de lanzar al Agente Investigador, valida:
 
-1. Acceso a WordPress MCP.
-2. Acceso a Firecrawl, búsqueda web o sistema equivalente.
-3. Acceso a Google Trends o sistema equivalente de tendencias.
-4. Acceso a scraping o lectura de webs competidoras.
-5. Acceso a fuentes en español y en inglés.
-6. Acceso a memoria local o sistema de contexto persistente.
-7. Existencia y lectura de `articulos_publicados.json`.
-8. Existencia de categorías editoriales activas.
-9. Capacidad para guardar outputs del pipeline.
-10. Confirmación de que el destino es `WORDPRESS_DRAFT`.
-11. Existencia de una ruta clara para feedback entre agentes.
-12. Disponibilidad de criterios de deduplicación.
-13. Disponibilidad de reglas de calidad editorial.
+1. Acceso a WordPress REST API (variables de entorno WP_URL, WP_USER, WP_APP_PASSWORD definidas, solo necesario en modo PRODUCCION_DRAFT).
+2. Acceso a WebFetch con Jina Reader (`r.jina.ai`) para rastreo de webs de la competencia.
+3. Acceso a WebSearch para confirmar datos adicionales.
+4. Existencia de `resources/fuentes-por-categoria.md` con fuentes por categoría.
+5. Acceso a fuentes en español y en inglés (definidas en `resources/fuentes-por-categoria.md`).
+6. Existencia y lectura de `memory/articulos_publicados.json` para deduplicación.
+7. Existencia de categorías editoriales activas.
+8. Capacidad para guardar outputs del pipeline.
+9. Confirmación de que el destino es `WORDPRESS_DRAFT`.
+10. Existencia de una ruta clara para feedback entre agentes.
+11. Disponibilidad de criterios de deduplicación.
+12. Disponibilidad de reglas de calidad editorial.
 
 Si una validación crítica falla, detén el pipeline.
 
@@ -275,9 +273,8 @@ Si no se especifica modo, usa:
 
 Devuelve `PIPELINE_BLOCKED` si ocurre cualquiera de estos casos:
 
-- No hay acceso a WordPress MCP cuando el modo sea `PRODUCCION_DRAFT`.
-- No hay acceso a búsqueda, Firecrawl o sistema equivalente.
-- No hay acceso a Google Trends o fuente alternativa de tendencias.
+- No hay acceso a WordPress REST API cuando el modo sea `PRODUCCION_DRAFT` (variables WP_URL, WP_USER, WP_APP_PASSWORD no definidas).
+- No hay acceso a WebFetch o Jina Reader para rastrear fuentes de la competencia.
 - No se pueden analizar fuentes en español e inglés.
 - No se puede leer `articulos_publicados.json`.
 - No se pueden comprobar duplicados.
@@ -301,7 +298,7 @@ Devuelve `PIPELINE_READY_WITH_WARNINGS` si:
 - Hay fuentes parcialmente disponibles.
 - Hay pocas referencias recientes.
 - La memoria local está incompleta.
-- La tanda puede requerir más iteraciones para llegar a 12 temas.
+- Alguna categoría puede requerir segunda pasada con fuentes secundarias de `resources/fuentes-por-categoria.md`.
 - Alguna categoría está saturada y puede requerir más creatividad editorial.
 - Falta información no crítica, pero el pipeline puede continuar.
 
@@ -333,71 +330,22 @@ El Agente Investigador solo debe proponer temas que cumplan:
 
 ## FUENTES Y HERRAMIENTAS DE INVESTIGACIÓN
 
-El Agente Investigador debe usar una combinación amplia de fuentes.
+Las fuentes de investigación por categoría están definidas en `resources/fuentes-por-categoria.md`.
 
-### Tendencias
+Para cada categoría activa del run, el Agente Investigador consulta:
 
-- Google Trends
-- Exploding Topics, si está disponible
-- búsquedas sugeridas de Google
-- consultas relacionadas
-- tendencias de YouTube, si procede
-- tendencias en Reddit, X/Twitter, LinkedIn y Hacker News
+- **Fuentes primarias**: siempre, usando WebFetch con Jina Reader (`https://r.jina.ai/[URL]`).
+- **Fuentes secundarias**: solo si las primarias no generan candidato válido en 48h.
 
-### Medios en español
+Además de las fuentes por categoría, el Investigador puede usar como apoyo:
 
-- Xataka
-- Genbeta
-- Applesfera
-- Computer Hoy
-- El Androide Libre
-- Hipertextual
-- medios tecnológicos equivalentes
+- WebSearch para confirmar datos, verificar fechas o encontrar fuentes adicionales.
+- Google Trends para estimar relevancia de un tema si hay duda entre candidatos con score similar.
+- Documentación oficial de productos o blogs corporativos cuando sean la fuente de una noticia.
 
-### Medios en inglés
+Para Seguridad Digital: priorizar INCIBE, OSI, Bleeping Computer y Krebs on Security como fuentes de contraste antes de usar fuentes de vendors (Malwarebytes, Bitdefender).
 
-- The Verge
-- TechCrunch
-- Wired
-- Ars Technica
-- VentureBeat
-- Engadget
-- Android Authority
-- 9to5Mac
-- medios tecnológicos equivalentes
-
-### Fuentes oficiales
-
-- documentación oficial de productos;
-- blogs oficiales de empresas;
-- notas de prensa oficiales;
-- páginas de soporte;
-- documentación técnica;
-- organismos oficiales cuando proceda.
-
-### Seguridad digital
-
-- INCIBE
-- OSI
-- CISA
-- Kaspersky
-- ESET
-- Malwarebytes
-- Krebs on Security
-- blogs oficiales de seguridad
-
-### Competencia y referentes
-
-El Agente Investigador debe analizar webs competidoras y referentes para detectar:
-
-- temas que están funcionando;
-- huecos editoriales;
-- enfoques repetidos;
-- oportunidades de explicación más sencilla;
-- contenidos que se puedan mejorar con enfoque PragmaWire;
-- tendencias que aún no han sido bien aterrizadas para usuarios normales.
-
-No debe copiar estructura, enfoque ni contenido. Debe usar el análisis competitivo para detectar oportunidades.
+No copiar estructura ni enfoque de la competencia. Usar el rastreo para detectar oportunidades de ángulo PragmaWire.
 
 ---
 
@@ -435,34 +383,35 @@ Si un tema encaja en varias categorías, define:
 
 ## SCORING DE TEMAS
 
-Exige al Agente Investigador puntuar cada tema de 0 a 100.
+Exige al Agente Investigador puntuar cada artículo candidato de 0 a 100.
 
 Criterios:
 
-1. Utilidad para el lector: 0-15
-2. Oportunidad SEO: 0-15
-3. Oportunidad AEO: 0-10
-4. Oportunidad GEO / IA: 0-10
-5. Frescura o actualidad: 0-10
-6. Claridad de intención de búsqueda: 0-10
-7. Facilidad de verificación: 0-10
-8. Encaje con PragmaWire: 0-10
-9. Potencial de enlaces internos: 0-5
-10. Bajo riesgo de obsolescencia: 0-5
+1. Relevancia a la categoría: 0-10
+2. Potencial de ángulo PragmaWire: 0-10
+3. Utilidad para el lector: 0-15
+4. Frescura o actualidad: 0-15
+5. Oportunidad SEO: 0-10
+6. Oportunidad AEO: 0-10
+7. Oportunidad GEO / IA: 0-10
+8. Claridad de intención de búsqueda: 0-5
+9. Facilidad de verificación: 0-5
+10. Encaje con PragmaWire: 0-5
+11. Potencial de enlaces internos: 0-5
 
 Interpretación:
 
-- 85-100: tema excelente.
-- 75-84: tema apto.
-- 65-74: necesita revisión.
-- Menos de 65: descartar.
+- 85-100: candidato excelente.
+- 70-84: candidato apto.
+- 55-69: necesita revisión.
+- Menos de 55: descartar.
 
 Reglas:
 
-- No aceptar temas por debajo de 75 salvo justificación editorial muy sólida.
-- Cada categoría debe tener al menos 1 tema con score igual o superior a 75.
-- El objetivo normal es conseguir 1 tema apto por cada categoría activa del run.
-- Si una categoría no llega al mínimo, el Investigador debe ampliar búsqueda antes de cerrar la tanda.
+- No aceptar candidatos por debajo de 70 salvo justificación editorial muy sólida.
+- Cada categoría activa del run debe tener al menos 1 candidato con score igual o superior a 70.
+- El objetivo normal es conseguir 1 artículo origen apto por cada categoría activa del run.
+- Si una categoría no llega al mínimo, el Investigador debe ampliar la ventana a 72h y consultar fuentes secundarias de `resources/fuentes-por-categoria.md`.
 
 ---
 
@@ -547,70 +496,46 @@ Evita o bloquea temas que:
 
 ---
 
-## EXPANSIÓN OBLIGATORIA SI NO HAY SUFICIENTES TEMAS
+## EXPANSIÓN OBLIGATORIA SI NO HAY SUFICIENTES CANDIDATOS
 
-Si el Investigador no encuentra N temas aptos (1 por cada categoría activa del run) en la primera pasada, debe hacer una segunda pasada.
+Si el Investigador no encuentra 1 candidato válido por cada categoría activa del run tras la primera pasada (48h), debe hacer una segunda pasada:
 
-La segunda pasada debe ampliar:
+1. Ampliar la ventana temporal a 72h.
+2. Rastrear las **fuentes secundarias** de las categorías sin candidato (definidas en `resources/fuentes-por-categoria.md`).
+3. Rastrear secciones específicas de los sitios ya rastreados si las tienen (ej: `/inteligencia-artificial`, `/productividad`).
+4. Usar WebSearch para confirmar si hay eventos recientes no recogidos en las portadas.
 
-1. Fuentes en inglés.
-2. Consultas de Google Trends.
-3. Webs competidoras.
-4. Búsquedas relacionadas.
-5. Foros y comunidades.
-6. Documentación oficial.
-7. Ángulos prácticos para usuario normal.
-8. Variantes por categoría.
-9. Temas evergreen con oportunidad AEO/GEO.
-10. Temas de actualización de artículos previos.
-
-Si tras la segunda pasada no hay N temas aptos, puede entregar menos, pero nunca menos de 1 por categoría activa salvo bloqueo justificado.
+Si tras la segunda pasada no hay candidato válido para una categoría, declarar bloqueo parcial con documentación de:
+- qué fuentes se consultaron;
+- qué candidatos se encontraron y por qué no pasaron el umbral;
+- score de los candidatos descartados.
 
 ---
 
 ## OUTPUT ESPERADO DEL AGENTE INVESTIGADOR
 
-El Agente Investigador debe entregar hasta N briefings (1 por cada categoría activa del run).
+El Agente Investigador debe entregar 1 briefing por cada categoría activa del run.
 
-Cada briefing debe incluir:
+El formato completo de cada briefing está definido en `agents/agente-investigador.md`.
 
-1. ID del briefing.
-2. Estado:
-   - APTO
-   - DESCARTADO
-   - NECESITA_REVISION
-3. Categoría principal.
-4. Categoría secundaria.
-5. Tema propuesto.
-6. Ángulo editorial.
-7. Intención de búsqueda.
-8. Tipo de contenido recomendado.
-9. Palabra clave principal.
-10. Palabras clave secundarias.
-11. Entidades principales.
-12. Público objetivo.
-13. Problema real que resuelve.
-14. Por qué merece publicarse ahora.
-15. Respuesta corta esperada del artículo.
-16. Fuentes verificables.
-17. Idioma de las fuentes principales.
-18. Datos confirmados.
-19. Datos pendientes de verificar.
-20. Riesgo de obsolescencia.
-21. Nivel de actualización necesario.
-22. Oportunidad SEO.
-23. Oportunidad AEO.
-24. Oportunidad GEO / IA.
-25. Posibles enlaces internos.
-26. Estado de deduplicación.
-27. Artículos relacionados ya publicados.
-28. Score total de 0 a 100.
-29. Justificación del score.
-30. Recomendación final:
-    - INVESTIGAR
-    - DESCARTAR
-    - RESERVAR
-31. Notas para el Redactor.
+Campos obligatorios mínimos:
+
+- ID del briefing.
+- Estado: APTO / NECESITA_REVISION / DESCARTADO.
+- Categoría principal.
+- **Fuente Origen** (campo obligatorio): título original, URL exacta, fuente, fecha, idioma, score, nota de primicia.
+- Tema propuesto con ángulo PragmaWire.
+- Título provisional que responda a la pregunta clave de la categoría.
+- Intención de búsqueda y tipo de contenido.
+- Palabra clave principal y secundarias.
+- Problema real que resuelve.
+- Por qué merece publicarse ahora (referenciando el artículo origen).
+- Puntos clave que debe cubrir el Redactor.
+- Score total (0-100) con desglose de los 11 criterios.
+- Estado de deduplicación.
+- Notas para el Redactor.
+
+Un briefing sin `## Fuente Origen` con URL real es inválido y no cuenta para la cobertura mínima.
 
 ---
 
@@ -628,14 +553,11 @@ Explica en 3-5 líneas por qué el pipeline puede arrancar, puede arrancar con a
 
 ### VALIDACIONES_TECNICAS
 
-- WordPress MCP: OK / WARNING / FAIL
-- Firecrawl o búsqueda: OK / WARNING / FAIL
-- Google Trends o tendencias: OK / WARNING / FAIL
-- Scraping/análisis de competencia: OK / WARNING / FAIL
-- Fuentes ES/EN disponibles: OK / WARNING / FAIL
-- Memoria local: OK / WARNING / FAIL
+- WordPress REST API: OK / WARNING / FAIL
+- WebFetch + Jina Reader: OK / WARNING / FAIL
 - articulos_publicados.json: OK / WARNING / FAIL
-- Categorías editoriales: OK / WARNING / FAIL
+- fuentes-por-categoria.md: OK / WARNING / FAIL
+- categorias_target.md (si aplica): OK / WARNING / FAIL
 - Sistema de guardado de outputs: OK / WARNING / FAIL
 - Destino WordPress Draft: OK / WARNING / FAIL
 
@@ -656,38 +578,28 @@ Explica en 3-5 líneas por qué el pipeline puede arrancar, puede arrancar con a
 ```yaml
 execution_date:
 execution_mode:
-target_articles: 12
-minimum_articles: 6
+pipeline_routine:          # A (Hogar Inteligente, IA, Productividad) o B (Recomendaciones, Salud, Seguridad)
+target_articles_per_run: 3 # 1 por cada categoría activa del run
+minimum_articles_per_run: 3
+target_per_category: 1
 minimum_per_category: 1
-target_per_category: 2
 quality_over_quantity: true
 wordpress_destination: WORDPRESS_DRAFT
 
-target_categories:
-  - Hogar Inteligente
-  - Inteligencia Artificial
-  - Productividad Digital
-  - Recomendaciones Tecnológicas
-  - Salud y Bienestar Digital
-  - Seguridad Digital
+target_categories:         # Las 3 categorías de la Rutina A o B (ver categorias_target.md)
+  - [definidas en 01-run-context/categorias_target.md]
 
 category_distribution_target:
-  Hogar Inteligente: 2
-  Inteligencia Artificial: 2
-  Productividad Digital: 2
-  Recomendaciones Tecnológicas: 2
-  Salud y Bienestar Digital: 2
-  Seguridad Digital: 2
+  # Cada categoría activa: 1 artículo
 
 category_distribution_minimum:
-  Hogar Inteligente: 1
-  Inteligencia Artificial: 1
-  Productividad Digital: 1
-  Recomendaciones Tecnológicas: 1
-  Salud y Bienestar Digital: 1
-  Seguridad Digital: 1
+  # Cada categoría activa: 1 (mínimo obligatorio)
 
-minimum_topic_score: 75
+research_methodology: source_first
+research_window_hours: 48  # Ampliable a 72h en segunda pasada
+research_sources: see_resources/fuentes-por-categoria.md
+
+minimum_topic_score: 70
 
 accepted_topic_statuses:
   - NUEVO
@@ -706,44 +618,14 @@ required_search_intent:
   - explainer
 
 required_source_quality:
-  - official_sources_when_available
+  - real_published_article_with_url
   - reputable_tech_media
-  - recent_sources_for_high_freshness_topics
+  - published_within_48h
   - no_unverified_claims
-  - sources_in_spanish_and_english
 
 research_languages:
   - Spanish
   - English
-
-research_sources_required:
-  trends:
-    - Google Trends
-    - related_searches
-    - social_trends_when_relevant
-  spanish_media:
-    - Xataka
-    - Genbeta
-    - Applesfera
-    - Computer Hoy
-    - Hipertextual
-  english_media:
-    - The Verge
-    - TechCrunch
-    - Wired
-    - Ars Technica
-    - VentureBeat
-    - Engadget
-  communities:
-    - Reddit
-    - Hacker News
-    - LinkedIn
-    - X/Twitter
-  official_sources:
-    - product_documentation
-    - official_blogs
-    - support_pages
-    - security_advisories
 
 freshness_rules:
   low: evergreen_content
@@ -758,8 +640,10 @@ deduplication_rules:
   compare_search_intent: true
   compare_existing_articles: true
   compare_main_entities: true
+  apply_before_scoring: true
 
 forbidden_topics:
+  - topic_without_real_source_url
   - rumours_without_sources
   - medical_claims_without_authoritative_sources
   - financial_promises
@@ -771,12 +655,12 @@ forbidden_topics:
 
 output_required:
   format: briefing_markdown
-  count: up_to_12
-  target_count: 12
-  minimum_count: 6
+  count: 3
+  target_count: 3
+  minimum_count: 3
   require_minimum_one_per_category: true
-  allow_less_than_12_if_quality_low: true
-  require_second_research_pass_if_less_than_12: true
+  require_fuente_origen_url: true
+  require_second_research_pass_if_any_category_empty: true
   include_topic_score: true
   include_deduplication_status: true
   include_sources: true
@@ -789,7 +673,6 @@ stop_conditions:
   - cannot_verify_duplicates
   - cannot_save_outputs
   - wordpress_destination_is_not_draft
-  - fewer_than_6_valid_topics_found
   - any_category_without_valid_topic_after_expansion
   - high_risk_unverifiable_topics_only
 ```
@@ -811,9 +694,9 @@ Entrega una instrucción clara y completa para el Agente Investigador usando el 
 
 Debe empezar así:
 
-> Busca y valida temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT y el archivo `01-run-context/categorias_target.md` si existe. El objetivo es conseguir 1 tema apto por cada categoría activa del run (mínimo obligatorio también de 1 por categoría activa). No rellenes con temas mediocres: si no llegas al objetivo en la primera pasada, amplía fuentes, idiomas, tendencias y competencia antes de cerrar la tanda.
+> Rastrea las webs de la competencia asignadas a las categorías activas de este run (definidas en `01-run-context/categorias_target.md`), usando la metodología SOURCE-FIRST y las fuentes de `resources/fuentes-por-categoria.md`. El objetivo es encontrar 1 artículo real publicado en las últimas 48h por cada categoría activa, y construir 1 briefing anclado a ese artículo con el campo `## Fuente Origen` obligatorio. No generes temas sin URL real verificada.
 
-Después debe incluir los requisitos exactos de briefing.
+Después debe incluir los requisitos del briefing con el campo `fuente_origen` obligatorio.
 
 ### STOP_CONDITIONS
 
@@ -825,72 +708,48 @@ Lista las condiciones que obligan a detener el pipeline.
 
 Cuando el pipeline esté listo, entrega al Agente Investigador esta instrucción:
 
-Busca y valida temas para PragmaWire.com siguiendo estrictamente el RUN_CONTEXT y el archivo `01-run-context/categorias_target.md` si existe.
+Rastrea las webs de la competencia asignadas a las categorías activas de este run. Las categorías activas son las definidas en `01-run-context/categorias_target.md`; si ese archivo no existe, son las 3 categorías de la Rutina A o B según el run.
 
-El objetivo es conseguir 1 tema apto por cada categoría activa del run. Las categorías activas son las definidas en `categorias_target.md` si ese archivo existe; si no existe, son las 6 categorías principales.
+**Metodología obligatoria**: SOURCE-FIRST. Cada briefing debe estar anclado a un artículo real publicado en las últimas 48h. Sin URL real verificada con WebFetch, el briefing no es válido.
 
-Mínimo obligatorio: 1 tema apto por categoría activa.
+**Paso 1** — Lee `resources/fuentes-por-categoria.md` para conocer las fuentes asignadas a cada categoría activa.
 
-Debes investigar en español e inglés, usando tendencias, competencia, medios tecnológicos, documentación oficial, comunidades y fuentes especializadas.
+**Paso 2** — Para cada categoría activa, haz WebFetch con Jina Reader de las fuentes primarias, de una en una:
+`WebFetch("https://r.jina.ai/[URL de la fuente]")`
 
-No copies enfoques de competidores. Úsalos para detectar oportunidades, huecos y formas de explicarlo mejor para usuarios normales.
+**Paso 3** — Deduplica los candidatos contra `memory/articulos_publicados.json` **antes de puntuar**.
 
-Por cada tema, entrega un briefing con:
+**Paso 4** — Puntúa cada candidato (0-100) con el sistema de 11 criterios del RUN_CONTEXT. Umbral mínimo: 70 puntos.
 
-1. ID del briefing.
-2. Estado: APTO / DESCARTADO / NECESITA_REVISION.
-3. Categoría principal.
-4. Categoría secundaria.
-5. Tema propuesto.
-6. Ángulo editorial.
-7. Intención de búsqueda.
-8. Tipo de contenido recomendado.
-9. Palabra clave principal.
-10. Palabras clave secundarias.
-11. Entidades principales.
-12. Público objetivo.
-13. Problema real que resuelve.
-14. Por qué merece publicarse ahora.
-15. Respuesta corta esperada del artículo.
-16. Fuentes verificables.
-17. Idioma de las fuentes principales.
-18. Datos confirmados.
-19. Datos pendientes de verificar.
-20. Riesgo de obsolescencia.
-21. Nivel de actualización necesario.
-22. Oportunidad SEO.
-23. Oportunidad AEO.
-24. Oportunidad GEO / IA.
-25. Posibles enlaces internos.
-26. Estado de deduplicación.
-27. Artículos relacionados ya publicados.
-28. Score total de 0 a 100.
-29. Justificación del score.
-30. Recomendación final: INVESTIGAR / DESCARTAR / RESERVAR.
-31. Notas para el Redactor.
+**Paso 5** — Para cada categoría activa, selecciona el candidato de mayor score.
 
-Si no encuentras N temas aptos (1 por cada categoría activa del run) en la primera pasada, realiza una segunda pasada obligatoria ampliando:
+**Paso 6** — Construye 1 briefing por categoría activa. El campo `## Fuente Origen` es obligatorio.
 
-- fuentes en inglés;
-- Google Trends;
-- búsquedas relacionadas;
-- webs competidoras;
-- documentación oficial;
-- Reddit;
-- Hacker News;
-- LinkedIn;
-- X/Twitter;
-- temas evergreen con oportunidad AEO/GEO;
-- actualizaciones de artículos existentes con ángulo nuevo.
+Por cada categoría activa, el briefing debe incluir al menos:
 
-No cierres la tanda con menos de 1 tema apto por categoría.
+- **Fuente Origen**: título original, URL exacta, fuente, fecha, idioma, score, nota de primicia.
+- Tema propuesto con ángulo PragmaWire (no el título del artículo origen).
+- Título provisional que responda a la pregunta clave de la categoría.
+- Intención de búsqueda y tipo de contenido recomendado.
+- Palabra clave principal y secundarias.
+- Entidades principales.
+- Problema real que resuelve.
+- Por qué merece publicarse ahora (referenciando directamente el artículo origen).
+- Puntos clave que debe cubrir el Redactor.
+- Score total (0-100) con desglose de los 11 criterios.
+- Estado de deduplicación.
+- Notas para el Redactor (incluye instrucción de no empezar explicando "qué es X").
 
-Si tras ampliar la búsqueda una categoría sigue sin tema apto, informa el bloqueo y explica:
+Si no hay candidato válido (≥70 puntos) para una categoría en 48h:
 
+1. Declara SEGUNDA_PASADA_ACTIVA.
+2. Amplía la ventana a 72h.
+3. Consulta las fuentes secundarias de esa categoría en `resources/fuentes-por-categoria.md`.
+
+Si tras la segunda pasada una categoría sigue sin candidato, declara bloqueo parcial con:
 - categoría afectada;
 - fuentes consultadas;
-- por qué los temas encontrados no eran aptos;
-- qué haría falta para desbloquearla.
+- candidatos encontrados y por qué no pasaron el umbral.
 
 ---
 
