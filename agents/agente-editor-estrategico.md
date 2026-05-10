@@ -982,6 +982,7 @@ FINAL_CHECKLIST:
 - Imagen sugerida: Sí/No
 
 [Pipeline]
+- adn-editorial-pragmawire.md leído en esta sesión: Sí/No
 - expertise-seo-aeo-geo-copywriting.md leído en esta sesión: Sí/No
 - No se reescribieron secciones (solo correcciones quirúrgicas): Sí/No
 - Listo para Supervisor Final: Sí/No
