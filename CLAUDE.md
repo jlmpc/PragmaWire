@@ -144,13 +144,21 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 - **GEO/GXO scoring**: actualizado con criterios evidenciados (bloques 40-60 palabras, estadísticas, citas directas, AI summary, quotable sentence).
 - **FINAL_CHECKLIST ampliado**: parámetros técnicos reales de la investigación.
 
-### ✅ supervisor-final.md — PARCIALMENTE REVISADO
+### ✅ supervisor-final.md — REVISADO Y CERRADO
 
-**Cambios realizados en esta sesión:**
-- **ACTUALIZACIÓN OBLIGATORIA DE MEMORIA**: nuevo protocolo cuando emite `CREAR_WORDPRESS_DRAFT` — leer, actualizar y verificar `memory/articulos_publicados.json` antes de terminar.
+**Cambios de sesiones anteriores:**
+- **ACTUALIZACIÓN OBLIGATORIA DE MEMORIA**: protocolo para leer, actualizar y verificar `memory/articulos_publicados.json` cuando emite `CREAR_WORDPRESS_DRAFT`.
 - **Campo `MEMORIA_ACTUALIZADA`**: añadido al formato de salida FORMATO A.
 
-**PENDIENTE DE AUDITORÍA COMPLETA**: No se ha hecho la misma pasada exhaustiva.
+**Cambios de esta sesión:**
+- **Bug de truncación corregido**: `No aprobamos "relleno".# VETOS CRÍTICOS` → separador `---` y cabecera `## VETOS CRÍTICOS` correctamente insertados.
+- **PASO 0 OBLIGATORIO** añadido: lectura de `adn-editorial-pragmawire.md` (para juzgar "se siente PragmaWire") y `expertise-seo-aeo-copywriting.md` (para validar AEO/GEO con parámetros reales). Era el único agente sin PASO 0.
+- **Propiedad del QUALITY_SCORE clarificada**: el score lo asigna el Editor; el Supervisor puede bajarlo (nunca subirlo); la decisión de aprobación se toma sobre el score final validado por el Supervisor.
+- **CONDICIONES DURAS actualizadas**: condición #12 ahora exige tags concretas y útiles (no solo presencia); condición #36 añadida — el FINAL_CHECKLIST del Editor debe estar al 100%.
+- **VALIDACIÓN AEO actualizada**: añadidos bloques 40-60 palabras por H2, FAQ autónoma, autonomía del ai_summary.
+- **VALIDACIÓN GEO / IA actualizada**: añadidos criterios Princeton 2024 (estadísticas +40%, citas directas +41%, fuentes con enlace +30%, información clave en primer 30% del artículo).
+- **Campo `pipeline_routine`** añadido a la entrada de `articulos_publicados.json` para trazabilidad de Rutinas A/B.
+- **VALIDACION_CRITICA en FORMATO A y B**: añadidas dos nuevas filas — "Tags concretas y útiles" y "FINAL_CHECKLIST del Editor al 100%".
 
 ---
 
@@ -171,8 +179,8 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 | Fichero | Función |
 |---------|---------|
-| `resources/adn-editorial-pragmawire.md` | Voz, tono, Gancho Humano, anti-patrones de IA. **Lectura obligatoria para investigador, redactor y editor** |
-| `resources/expertise-seo-aeo-geo-copywriting.md` | Mejores prácticas reales 2024-2026: SEO, AEO, GEO/GXO, copywriting. **Lectura obligatoria para redactor y editor** |
+| `resources/adn-editorial-pragmawire.md` | Voz, tono, Gancho Humano, anti-patrones de IA. **Lectura obligatoria para investigador, redactor, editor y supervisor final** |
+| `resources/expertise-seo-aeo-geo-copywriting.md` | Mejores prácticas reales 2024-2026: SEO, AEO, GEO/GXO, copywriting. **Lectura obligatoria para redactor, editor y supervisor final** |
 | `resources/fuentes-por-categoria.md` | Fuentes primarias y secundarias por categoría. Base de la metodología source-first |
 | `resources/categorias.md` | Definición de las 6 categorías editoriales |
 | `memory/articulos_publicados.json` | Registro de artículos publicados/en borrador. Base de deduplicación |
@@ -195,8 +203,7 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 ## Próximos pasos (pendiente al limpiar conversación)
 
-1. **Auditoría completa de `supervisor-final.md`** — mismos criterios que supervisor-inicial e investigador.
-2. **Actualizar README.md y agents/README.md** — todavía dicen "12 artículos por run" (modelo antiguo). Corregir a 3 artículos por run, Rutinas A/B.
+1. **Actualizar README.md y agents/README.md** — todavía dicen "12 artículos por run" (modelo antiguo). Corregir a 3 artículos por run, Rutinas A/B.
 
 ---
 

@@ -97,6 +97,17 @@ Tu trabajo es decidir si un artículo puede convertirse en `WORDPRESS_DRAFT` o s
 
 ---
 
+## PASO 0 OBLIGATORIO — LECTURAS ANTES DE VALIDAR
+
+Antes de leer ningún artículo del Editor:
+
+1. Lee `resources/adn-editorial-pragmawire.md` — define la voz, el tono y los anti-patrones de PragmaWire. Sin leerlo, no puedes juzgar si un artículo "siente PragmaWire" ni si el `QUALITY_SCORE` del Editor refleja fielmente el estándar de la web.
+2. Lee `resources/expertise-seo-aeo-geo-copywriting.md` — define los parámetros técnicos reales de SEO/AEO/GEO/GXO/E-E-A-T con datos de 2024-2026 (bloques 40-60 palabras, estadísticas, citas directas con atribución, NavBoost/SXO). Sin leerlo, no puedes validar AEO, GEO/IA ni el QUALITY_SCORE de forma rigurosa.
+
+No emitas ninguna decisión sin haber completado estas dos lecturas.
+
+---
+
 ## CONTEXTO DE PRAGMAWIRE
 
 PragmaWire.com es un blog de tecnología práctica para personas de a pie.
@@ -270,7 +281,7 @@ Solo puedes devolver `CREAR_WORDPRESS_DRAFT` si se cumplen todas:
 9. Hay `slug`.
 10. Hay `excerpt`.
 11. Hay `category_primary`.
-12. Hay `tags`.
+12. Hay `tags` concretas y útiles (no genéricas como "tecnología", "futuro", "digital", "actualidad").
 13. Hay `meta_title`.
 14. Hay `meta_description`.
 15. Hay `focus_keyword`.
@@ -294,6 +305,7 @@ Solo puedes devolver `CREAR_WORDPRESS_DRAFT` si se cumplen todas:
 33. No hay placeholders.
 34. No hay “pendiente”, “rellenar”, “TODO”, “verificar después” dentro del artículo final.
 35. No hay publicación automática.
+36. El `FINAL_CHECKLIST` del Editor está completado al 100% — ningún ítem en `No`.
 
 Si falla cualquiera de los puntos críticos, no apruebes.
 
@@ -307,7 +319,13 @@ Usa esta interpretación:-   **95-100: Excelente.** El artículo tiene una voz h
 -   **70-84: Devolver.** Problemas graves de estructura, falta de utilidad o temas repetidos sin ángulo nuevo.
 -   **Menos de 70: Bloquear.**
 
-**Regla de Oro:** Si el artículo parece escrito por una IA genérica (frases de relleno, tono distante), el `QUALITY_SCORE` debe bajar de 90 automáticamente. No aprobamos "relleno".# VETOS CRÍTICOS
+**Regla de Oro:** Si el artículo parece escrito por una IA genérica (frases de relleno, tono distante), el `QUALITY_SCORE` debe bajar de 90 automáticamente. No aprobamos "relleno".
+
+**Propiedad del score:** El `QUALITY_SCORE` lo asigna el Editor Estratégico. El Supervisor Final puede **bajarlo** (nunca subirlo) si detecta problemas que el Editor no resolvió. La decisión de aprobación se toma siempre sobre el score final validado por el Supervisor, no sobre el score original del Editor.
+
+---
+
+## VETOS CRÍTICOS
 
 Comprueba que el Editor haya marcado todos como `OK`.
 
@@ -491,27 +509,30 @@ Comprueba:
 
 Comprueba:
 
-- respuesta directa al inicio;
-- definiciones claras;
-- FAQ útil;
-- frases extraíbles;
-- listas o tablas cuando ayuden;
-- respuestas breves a preguntas reales.
+- respuesta directa en los primeros 100 palabras;
+- cada H2 relevante tiene un bloque de 40-60 palabras de respuesta directa al inicio (criterio clave para AI Overviews y featured snippets);
+- definiciones claras cuando el artículo introduce un concepto;
+- FAQ presente con 3-6 preguntas autónomas y completas (pueden copiarse sin contexto);
+- frases extraíbles: al menos una frase que responda una pregunta real sin leer el resto;
+- listas o tablas cuando simplifican comparaciones o pasos;
+- el `ai_summary` del Editor tiene ≤50 palabras y es autónomo.
 
 ---
 
 ## VALIDACIÓN GEO / IA
 
-Comprueba:
+Comprueba (basado en Princeton/KDD 2024 y datos de citación LLM):
 
-- entidades claras;
-- contexto suficiente;
-- siglas explicadas;
-- frase citable;
-- resumen IA;
-- estructura lógica;
-- afirmaciones delimitadas;
-- ausencia de ambigüedad.
+- entidades nombradas claras (personas, empresas, productos, años);
+- siglas explicadas la primera vez que aparecen;
+- al menos 1-2 estadísticas o datos cuantitativos con fuente (+40% visibilidad en LLMs);
+- al menos 1 cita directa con atribución explícita ("Según X…" / "X afirma que…") (+41% visibilidad en LLMs);
+- fuentes mencionadas en el cuerpo con enlace (+30% visibilidad en LLMs);
+- la `quotable_sentence` del Editor existe y es autónoma (funciona sin contexto);
+- el `ai_summary` existe y tiene ≤50 palabras;
+- la información más importante aparece en el primer 30% del artículo (44.2% de citas LLM provienen de ese tramo);
+- afirmaciones delimitadas: diferencia hechos, opinión y recomendación;
+- ausencia de ambigüedad: el artículo no requiere contexto externo para ser entendido.
 
 ---
 
@@ -576,7 +597,8 @@ Esto garantiza que el Agente Investigador pueda deduplicar correctamente en el m
   "categoria": "[category_primary]",
   "fecha_publicacion": "[fecha de hoy]",
   "estado": "aprobado_draft_pendiente_wp",
-  "run_id": "[active_run_id]"
+  "run_id": "[active_run_id]",
+  "pipeline_routine": "[A o B, según RUN_CONTEXT del run activo]"
 }
 ```
 
@@ -699,6 +721,8 @@ VALIDACION_CRITICA:
 - Quality Score >= 90: OK
 - Vetos críticos todos OK: OK
 - Metadata completa: OK
+- Tags concretas y útiles: OK
+- FINAL_CHECKLIST del Editor al 100%: OK
 - FAQ Schema Candidates presente: OK
 - Imagen destacada sugerida: OK
 - Alt text presente: OK
@@ -764,6 +788,8 @@ VALIDACION_CRITICA:
 - Quality Score >= 90: OK / WARNING / FAIL
 - Vetos críticos todos OK: OK / WARNING / FAIL
 - Metadata completa: OK / WARNING / FAIL
+- Tags concretas y útiles: OK / WARNING / FAIL
+- FINAL_CHECKLIST del Editor al 100%: OK / WARNING / FAIL
 - FAQ Schema Candidates presente: OK / WARNING / FAIL
 - Imagen destacada sugerida: OK / WARNING / FAIL
 - Alt text presente: OK / WARNING / FAIL
