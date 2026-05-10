@@ -5,6 +5,7 @@ Este documento es la "Constitución" y el "Manual Técnico" del sistema. Define 
 ## 1. Regla de Oro: Calidad sobre Cantidad
 - **Umbral de Paso:** Solo artículos con un `QUALITY_SCORE >= 90` pueden ser convertidos en borradores de WordPress.
 - **ADN Editorial:** Es obligatorio cumplir con el `resources/adn-editorial-pragmawire.md`.
+- **Expertise SEO/AEO/GEO:** Redactor, Editor y Supervisor Final deben leer `resources/expertise-seo-aeo-geo-copywriting.md` antes de ejecutar (definido en el PASO 0 de cada agente).
 
 ## 2. Gestión de Ejecuciones (RUN_ID)
 Cada ejecución usa un `RUN_ID` único. Los agentes solo operan dentro de:
@@ -25,19 +26,19 @@ Cada ejecución usa un `RUN_ID` único. Los agentes solo operan dentro de:
 - **Misión:** Escaneo "Web-First" de actualidad y detección de oportunidades.
 
 ### 3.3. Agente Redactor
-- **Lee:** `02-briefings/`, `resources/adn-editorial-pragmawire.md`.
+- **Lee:** `02-briefings/`, `resources/adn-editorial-pragmawire.md`, `resources/expertise-seo-aeo-geo-copywriting.md`.
 - **Escribe:** `03-drafts/articulo_001_draft.md`, `03-drafts/drafts-index.json`, `03-drafts/_STAGE_COMPLETE`.
 - **Misión:** Redacción humana con **Gancho Humano** y **Conclusión Accionable**.
 
 ### 3.4. Agente Editor Estratégico
-- **Lee:** `03-drafts/`, `02-briefings/`, `resources/adn-editorial-pragmawire.md`.
+- **Lee:** `03-drafts/`, `02-briefings/`, `resources/adn-editorial-pragmawire.md`, `resources/expertise-seo-aeo-geo-copywriting.md`.
 - **Escribe:** `04-edited/articulo_001_edited.md`, `04-edited/edited-index.json`, `04-edited/_STAGE_COMPLETE`.
-- **Misión:** Pulido editorial agresivo y eliminación de la "huella de IA".
+- **Misión:** Pulido editorial agresivo y eliminación de la "huella de IA". Asigna el `QUALITY_SCORE`.
 
 ### 3.5. Supervisor Final
-- **Lee:** `04-edited/`, `resources/adn-editorial-pragmawire.md`.
+- **Lee:** `04-edited/`, `resources/adn-editorial-pragmawire.md`, `resources/expertise-seo-aeo-geo-copywriting.md`.
 - **Escribe:** `05-wordpress-ready/articulo_001_wordpress_ready.md`, `05-wordpress-ready/wordpress-ready-index.json`, `05-wordpress-ready/_STAGE_COMPLETE`.
-- **Misión:** Auditoría final y asignación de `QUALITY_SCORE`.
+- **Misión:** Auditoría final y validación del `QUALITY_SCORE` (asignado por el Editor; el Supervisor puede bajarlo, nunca subirlo).
 
 ### 3.6. WordPress Draft
 - **Lee:** `05-wordpress-ready/`.

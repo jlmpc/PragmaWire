@@ -37,7 +37,7 @@ python scripts/validate_run.py
 
 ## 4. Reglas Innegociables
 
-1.  **ADN Editorial:** El contenido debe seguir siempre `resources/adn-editorial-pragmawire.md`.
+1.  **ADN Editorial:** El contenido debe seguir siempre `resources/adn-editorial-pragmawire.md` y `resources/expertise-seo-aeo-geo-copywriting.md`. Ambos son lectura obligatoria para Redactor, Editor y Supervisor Final (vía PASO 0 en cada agente).
 2.  **No Publicar:** El sistema tiene terminantemente prohibido publicar artículos. Solo crea borradores (`status: draft`).
 3.  **Deduplicación:** El sistema consulta automáticamente `memory/articulos_publicados.json` para no repetir temas.
 

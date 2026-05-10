@@ -135,10 +135,14 @@ Lee `06-wordpress-creation-log.json` y registra los IDs y URLs de los borradores
 
 Si no hay artículos con CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 
-PASO 7 — ACTUALIZAR MEMORIA Y COMMIT
-Añade a `memory/articulos_publicados.json` cada artículo enviado a WordPress Draft en este run (título, slug, categoría, palabras clave, fecha, estado: "wordpress_draft").
+PASO 7 — COMMIT Y CIERRE
+La memoria ya ha sido actualizada automáticamente:
+- El Supervisor Final escribe en `memory/articulos_publicados.json` al aprobar cada artículo.
+- `post_to_wp.py` actualiza `memory/articulos_publicados.json` y `memory/run-history.json` tras publicar en WordPress.
+No modificar estos archivos manualmente.
+
 Ejecuta los siguientes comandos git:
-  git add memory/articulos_publicados.json
+  git add memory/
   git add outputs/runs/[active_run_id]/
   git commit -m "run-B: [active_run_id] — [N] borradores creados en WordPress (Routine B)"
   git push origin HEAD
@@ -147,6 +151,6 @@ REGLAS ABSOLUTAS:
 - publish: false siempre. Solo create_draft: true. Nunca publicar directamente.
 - No continuar al siguiente paso si falta el _STAGE_COMPLETE del paso anterior.
 - No leer ni escribir en carpetas de ejecuciones anteriores.
-- No modificar articulos_publicados.json con artículos que no hayan llegado a WordPress Draft.
+- La memoria (articulos_publicados.json, run-history.json) se gestiona automáticamente. No modificar manualmente.
 - Este run cubre SOLO Recomendaciones Tecnológicas, Salud y Bienestar Digital y Seguridad Digital.
 ```
