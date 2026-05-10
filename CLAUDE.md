@@ -203,7 +203,7 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 ## Próximos pasos (pendiente al limpiar conversación)
 
-1. **Actualizar README.md y agents/README.md** — todavía dicen "12 artículos por run" (modelo antiguo). Corregir a 3 artículos por run, Rutinas A/B.
+Todos los agentes han sido auditados y cerrados. No hay pendientes de refactorización conocidos.
 
 ---
 
