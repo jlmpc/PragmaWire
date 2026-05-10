@@ -199,30 +199,27 @@ Si el destino no es `WORDPRESS_DRAFT`, bloquea.
 Las webs de la competencia son JavaScript-heavy y no devuelven contenido legible con WebFetch directo.
 **Debes usar Jina Reader**: prefija cada URL con `https://r.jina.ai/` para obtener el contenido en markdown limpio.
 
+Ejemplo: `WebFetch("https://r.jina.ai/https://www.xatakahome.com/")`
+
 #### Protocolo de rastreo obligatorio
 
-Visita estas URLs en este orden. Haz WebFetch de cada una:
+**Paso 0 — Lee las fuentes asignadas a este run**
 
-**Fuentes en español:**
+Lee `resources/fuentes-por-categoria.md` para conocer qué fuentes corresponden a cada categoría activa del run.
 
-| Fuente | URL para WebFetch |
-|---|---|
-| Xataka | `https://r.jina.ai/https://www.xataka.com/` |
-| Applesfera | `https://r.jina.ai/https://www.applesfera.com/` |
-| Genbeta | `https://r.jina.ai/https://www.genbeta.com/` |
-| Computer Hoy | `https://r.jina.ai/https://www.computerhoy.com/` |
-| Hipertextual | `https://r.jina.ai/https://hipertextual.com/` |
+Cada categoría tiene **fuentes primarias** (siempre se rastrean) y **fuentes secundarias** (solo si las primarias no generan candidato válido en 48h).
 
-**Fuentes en inglés:**
+Rastrear únicamente las fuentes de las **categorías activas del run** (definidas en `categorias_target.md`). No rastrear fuentes de categorías que no sean objetivo de este run.
 
-| Fuente | URL para WebFetch |
-|---|---|
-| The Verge | `https://r.jina.ai/https://www.theverge.com/` |
-| TechCrunch | `https://r.jina.ai/https://techcrunch.com/` |
-| Wired | `https://r.jina.ai/https://www.wired.com/` |
-| Ars Technica | `https://r.jina.ai/https://arstechnica.com/` |
-| 9to5Mac | `https://r.jina.ai/https://9to5mac.com/` |
-| Android Authority | `https://r.jina.ai/https://www.androidauthority.com/` |
+**Paso 1 — Rastreo de fuentes primarias**
+
+Para cada categoría activa, haz WebFetch con Jina Reader de cada una de sus fuentes primarias:
+
+```
+WebFetch("https://r.jina.ai/[URL de la fuente primaria]")
+```
+
+Haz los fetches de uno en uno. No en paralelo, para evitar errores de timeout.
 
 #### Qué extraer de cada fuente
 
@@ -238,7 +235,7 @@ Solo son candidatos los artículos publicados en las últimas **48 horas**.
 
 Si un artículo no tiene fecha visible o el indicador de tiempo es ambiguo, márcalo como "candidato condicional" y haz WebFetch directo al artículo para confirmar su fecha antes de incluirlo.
 
-Si tras escanear todas las fuentes con la ventana de 48h no tienes 1 candidato por cada categoría activa, declara **VENTANA_EXTENDIDA_72H** y amplía el filtro a 72 horas.
+Si tras escanear todas las fuentes primarias con la ventana de 48h no tienes 1 candidato por cada categoría activa, declara **VENTANA_EXTENDIDA_72H**, amplía el filtro a 72 horas y rastrea también las **fuentes secundarias** de esa categoría definidas en `resources/fuentes-por-categoria.md`.
 
 #### Qué hacer si una fuente falla
 
@@ -391,9 +388,9 @@ Si tras el primer rastreo no tienes 1 candidato válido por cada categoría acti
 
 1. Declara **SEGUNDA_PASADA_ACTIVA** en tu output.
 2. Amplía la ventana de tiempo a 72h.
-3. Haz WebFetch de fuentes no alcanzadas en el primer escaneo.
-4. Añade fuentes adicionales: secciones específicas de los sitios rastreados (ej: `r.jina.ai/https://www.xataka.com/inteligencia-artificial`), secciones de seguridad, secciones de gadgets, etc.
-5. Si aún así una categoría no tiene candidato válido, declara bloqueo parcial con documentación completa.
+3. Rastrea las **fuentes secundarias** de las categorías sin candidato, definidas en `resources/fuentes-por-categoria.md`.
+4. Añade también secciones específicas de los sitios ya rastreados si las tienen (ej: `r.jina.ai/https://www.xataka.com/inteligencia-artificial`, `r.jina.ai/https://www.genbeta.com/categoria/productividad`).
+5. Si aún así una categoría no tiene candidato válido, declara bloqueo parcial con documentación completa: qué fuentes consultaste, qué encontraste y por qué no pasaron el umbral.
 
 ---
 

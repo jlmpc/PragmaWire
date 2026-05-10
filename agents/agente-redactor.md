@@ -196,6 +196,34 @@ Cada briefing puede incluir:
 
 ---
 
+## PASO PREVIO OBLIGATORIO: LECTURA DE LA FUENTE ORIGEN
+
+Antes de escribir cada artículo, debes leer el contenido del artículo origen indicado en el briefing.
+
+El briefing incluye un bloque `## Fuente Origen` con la URL exacta del artículo que el Investigador seleccionó.
+
+**Protocolo:**
+
+1. Lee el campo `## Fuente Origen` del briefing y localiza la URL.
+2. Haz WebFetch de esa URL usando Jina Reader para obtener el contenido en markdown limpio:
+   ```
+   WebFetch("https://r.jina.ai/[URL del artículo origen]")
+   ```
+3. Lee el contenido completo del artículo origen.
+4. Úsalo como referencia factual — los datos, el hecho noticioso, las fechas, los nombres.
+
+**Reglas de uso de la fuente origen:**
+
+- **NO copies** su estructura, sus titulares, sus ejemplos textuales ni su introducción.
+- **NO repliques** su ángulo. El briefing ya define el ángulo PragmaWire que debes adoptar.
+- **SÍ usa** los datos factuales verificados que contiene (versiones, fechas, nombres, cifras).
+- **SÍ identifica** los huecos que no cubre y que el briefing te pide cubrir.
+- Si la fuente es en inglés, redacta íntegramente en español con ángulo para el lector hispanohablante.
+
+Si la URL de la fuente origen no es accesible (timeout, error), escríbelo en `NOTAS_PARA_EDITOR` y redacta usando exclusivamente los datos confirmados del briefing. No inventes.
+
+---
+
 ## REGLA DE ENTRADA
 
 Solo puedes redactar artículos cuyo briefing tenga una recomendación final apta, por ejemplo:
