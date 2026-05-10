@@ -177,6 +177,22 @@ No puedes completar la investigación con garantías:
 
 ---
 
+## PASO 0 OBLIGATORIO: LEE EL ADN EDITORIAL ANTES DE INVESTIGAR
+
+Antes de rastrear ninguna fuente, lee:
+
+```
+Read("resources/adn-editorial-pragmawire.md")
+```
+
+Este fichero define qué es el "ángulo PragmaWire" que debes aplicar a cada briefing: voz cercana, empática y experta; Gancho Humano desde el problema del lector; anti-patrones de IA que debes evitar en tus instrucciones al Redactor.
+
+El campo `## Ángulo editorial` de cada briefing — el encargo más importante que entregas al Redactor — debe reflejar esta guía. Sin leerla, estarás definiendo el ángulo PragmaWire según intuición de entrenamiento, no según las decisiones editoriales específicas de este proyecto.
+
+No redactes ningún campo de ángulo, título provisional ni notas para el Redactor sin haber leído este fichero en la sesión actual.
+
+---
+
 ## MÉTODO DE INVESTIGACIÓN — 5 FASES
 
 ---
@@ -252,7 +268,7 @@ Al terminar el rastreo, construye esta tabla con todos los artículos encontrado
 | # | Título | URL | Fuente | Fecha/Indicador | Categoría PragmaWire aparente |
 ```
 
-Objetivo: 15-20 candidatos antes de pasar a la Fase 2B.
+Objetivo operativo: al menos **3-5 candidatos por cada categoría activa** antes de pasar a la Fase 2B. Con 3 categorías activas, el mínimo funcional son 9 candidatos. Si alguna categoría tiene menos de 3 candidatos tras el rastreo primario, añade una fuente adicional de esa categoría antes de continuar — no entres a deduplicar y puntuar con un único candidato por categoría porque no hay margen si ese candidato es descartado.
 
 ---
 
@@ -303,11 +319,13 @@ Para cada categoría activa del run, puntúa cada candidato que pasó la dedupli
 
 **2. Potencial de ángulo PragmaWire (0-10)**
 
-¿Se puede transformar en "cómo X ayuda a Y" en vez de repetir "qué es X"?
+¿Cuánto espacio deja el artículo origen para que PragmaWire lo transforme en algo más práctico y diferenciado?
 
-- 8-10: el artículo origen es un anuncio técnico o "qué es" — enorme oportunidad de añadir ángulo práctico
-- 4-7: el artículo es ya algo práctico, PragmaWire puede mejorarlo
-- 0-3: el artículo ya tiene el ángulo PragmaWire — difícil diferenciarse
+La lógica es: **a mayor espacio de diferenciación disponible, mayor puntuación**.
+
+- 8-10: el artículo origen es un anuncio corporativo, nota de prensa o pieza técnica ("qué es X", "empresa Y lanza Z"). PragmaWire puede transformarlo completamente en un "cómo afecta esto a tu vida diaria". Máximo espacio de diferenciación.
+- 4-7: el artículo ya tiene algo de enfoque práctico, pero PragmaWire puede añadir ejemplos locales, contexto para no expertos o estructura más accionable.
+- 0-3: el artículo origen ya tiene el ángulo PragmaWire (cercano, práctico, para usuarios normales). Poco espacio para diferenciarse — solo vale si el tema tiene muy alto score en otros criterios.
 
 **3. Utilidad para el lector (0-15)**
 
@@ -502,8 +520,10 @@ si hubo segunda pasada, oportunidades principales, riesgos]
 |---|---:|---|---|
 
 ## CANDIDATOS_DESCARTADOS
-| Título | Fuente | Motivo | Score | Deduplicación |
-|---|---|---|---:|---|
+| Título | Fuente | Tipo_Descarte | Motivo_Detallado | Score |
+|---|---|---|---|---:|
+
+Tipo_Descarte: DUPLICADO / VETO_EDITORIAL / SCORE_BAJO / FUERA_VENTANA_TEMPORAL / SIN_URL_VERIFICADA
 ```
 
 ---
@@ -639,7 +659,7 @@ NUEVO / EXISTE_SIMILAR / EXISTE_ANGULO_DIFERENTE / EXISTE_IDENTICO
 Si no: "No disponible en este rastreo."]
 
 ## Longitud objetivo recomendada
-[Recomendación concreta. Mínimo siempre: 900 palabras.]
+[Recomendación concreta. Mínimo absoluto: 1.000 palabras (alineado con el mínimo del Agente Redactor).]
 
 ## Notas para el Redactor
 [Instrucciones específicas de tono, estructura y qué evitar]
@@ -659,6 +679,7 @@ cubre este ángulo antes que la competencia hispanohablante.
 ```json
 [
   {
+    "run_id": "[active_run_id del run-manifest.json]",
     "briefing_id": "briefing_001",
     "status": "APTO",
     "categoria": "Inteligencia Artificial",

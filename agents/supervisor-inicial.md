@@ -151,7 +151,7 @@ El Agente Investigador no debe abandonar una categoría activa tras una búsqued
 
 El objetivo no es rellenar por rellenar.
 
-Pero dado que el Agente Investigador debe consultar Google Trends, fuentes en español, fuentes en inglés, webs competidoras, medios tecnológicos, Reddit, LinkedIn, X/Twitter, Hacker News, documentación oficial y herramientas de tendencia, se espera que encuentre suficientes ideas de calidad.
+Dado que el Agente Investigador rastrea las fuentes primarias de cada categoría activa (definidas en `resources/fuentes-por-categoria.md`) usando WebFetch con Jina Reader, y puede ampliar con fuentes secundarias si es necesario, se espera que encuentre suficientes candidatos de calidad sin inventar ni recurrir a redes sociales como fuente primaria.
 
 Regla práctica:
 
@@ -188,8 +188,8 @@ El pipeline no puede arrancar.
 
 Ejemplos:
 
-- no hay acceso a WordPress MCP;
-- no hay sistema de búsqueda;
+- no hay acceso a WordPress REST API (modo PRODUCCION_DRAFT) o variables de entorno no definidas;
+- no hay sistema de búsqueda (WebFetch + Jina Reader inaccesible);
 - no se puede leer `articulos_publicados.json`;
 - no se pueden comprobar artículos ya publicados;
 - no está claro el destino WordPress;
@@ -306,25 +306,24 @@ Devuelve `PIPELINE_READY_WITH_WARNINGS` si:
 
 ## CRITERIOS DE CALIDAD PARA TEMAS
 
-El Agente Investigador solo debe proponer temas que cumplan:
+### Vetos editoriales del Supervisor (descarte automático)
 
-1. Utilidad clara para una persona normal.
-2. Intención de búsqueda identificable.
-3. Valor práctico real.
-4. Potencial SEO.
-5. Potencial AEO.
-6. Potencial GEO / IA.
-7. Fuentes verificables.
-8. Baja probabilidad de ser contenido duplicado.
-9. Ángulo editorial claro.
-10. Posibilidad de enlazado interno.
-11. No depender de rumores.
-12. No requerir datos imposibles de verificar.
-13. No ser una noticia irrelevante con vida útil ridícula.
-14. No ser contenido puramente genérico.
-15. No ser un tema que pueda dañar la confianza de PragmaWire.
-16. Poder explicarse con claridad a una persona no experta.
-17. Tener una promesa editorial concreta.
+El Supervisor bloquea cualquier tema que incumpla estas condiciones, con independencia del score:
+
+- Sin URL de artículo origen verificada con WebFetch → inválido por diseño.
+- Basado en rumores sin fuente oficial.
+- Requiere datos médicos, legales o financieros que no pueden verificarse.
+- Depende de información imposible de verificar en el momento del run.
+- Es contenido puramente genérico sin ángulo editorial concreto.
+- Tiene vida útil ridícula (noticia irrelevante en menos de 24h).
+- Puede dañar la confianza o reputación de PragmaWire.
+- No puede explicarse con claridad a una persona no experta.
+
+### Sistema de scoring (puntuación positiva)
+
+El scoring lo aplica el Agente Investigador para cada candidato. El sistema de 11 criterios (0-100, umbral 70) está definido en `SCORING DE TEMAS` más abajo y en `agents/agente-investigador.md`.
+
+Los vetos son independientes del score: un tema con score 85 que no tenga URL real es igualmente inválido.
 
 ---
 
