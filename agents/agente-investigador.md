@@ -249,9 +249,9 @@ De cada página, extrae los artículos que encuentres e identifica:
 
 Solo son candidatos los artículos publicados en las últimas **48 horas**.
 
-Si un artículo no tiene fecha visible o el indicador de tiempo es ambiguo, márcalo como "candidato condicional" y haz WebFetch directo al artículo para confirmar su fecha antes de incluirlo.
+Si un artículo no tiene fecha visible o el indicador de tiempo es ambiguo, márcalo como "candidato condicional" y haz WebFetch directo al artículo para confirmar su fecha antes de incluirlo. Cuando hagas este WebFetch individual, aprovecha también para estimar la longitud del artículo (número aproximado de palabras) y registrarla — es la única oportunidad real de obtener el dato para el campo `## Longitud de artículos competidores` del briefing.
 
-Si tras escanear todas las fuentes primarias con la ventana de 48h no tienes 1 candidato por cada categoría activa, declara **VENTANA_EXTENDIDA_72H**, amplía el filtro a 72 horas y rastrea también las **fuentes secundarias** de esa categoría definidas en `resources/fuentes-por-categoria.md`.
+Si tras escanear todas las fuentes primarias con la ventana de 48h no tienes 1 candidato por cada categoría activa, declara **SEGUNDA_PASADA_ACTIVA**, amplía el filtro a 72 horas y rastrea también las **fuentes secundarias** de esa categoría definidas en `resources/fuentes-por-categoria.md`.
 
 #### Qué hacer si una fuente falla
 
@@ -563,7 +563,13 @@ APTO / NECESITA_REVISION / DESCARTADO
 [Qué enfoque debe tener el artículo y por qué es diferente al artículo origen]
 
 ## Lo que el artículo origen NO responde y el Redactor DEBE cubrir
-[Lista concreta de los huecos que PragmaWire debe llenar]
+[Lista concreta de los huecos que PragmaWire debe llenar: la parte práctica para el usuario no experto, las implicaciones reales, los pasos accionables, el contexto local hispanohablante]
+
+## Lo que el Redactor NO debe copiar del artículo origen
+- **Estructura:** [¿Cómo está organizado el artículo origen? — nombra sus H2 o secciones principales para que el Redactor los evite]
+- **Ángulo:** [¿Cuál es el enfoque del artículo origen? — ej: "anuncia el lanzamiento técnico", "lista de funciones", "comparativa de modelos"]
+- **Ejemplos:** [¿Qué ejemplos concretos usa el artículo origen y que NO deben repetirse?]
+- **Inicio:** [¿Cómo empieza el artículo origen? — para que el Redactor arranque de forma radicalmente distinta]
 
 ## Intención de búsqueda
 [informational / commercial_investigation / practical_how_to / explainer / mixed]
@@ -680,6 +686,7 @@ cubre este ángulo antes que la competencia hispanohablante.
 [
   {
     "run_id": "[active_run_id del run-manifest.json]",
+    "pipeline_routine": "A",
     "briefing_id": "briefing_001",
     "status": "APTO",
     "categoria": "Inteligencia Artificial",

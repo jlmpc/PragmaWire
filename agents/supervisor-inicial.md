@@ -221,27 +221,16 @@ Si una validación crítica falla, detén el pipeline.
 
 ## VALIDACIONES EDITORIALES INICIALES
 
-Antes de arrancar, define:
+Antes de arrancar, confirma que los siguientes parámetros son coherentes con el run actual. Todos están definidos y hardcodeados en el `RUN_CONTEXT` YAML del formato de salida — no los redefinas, solo verifica que tienen sentido para el run:
 
-1. Fecha de ejecución.
-2. Modo de ejecución.
-3. Número objetivo de artículos.
-4. Número mínimo de artículos.
-5. Categorías objetivo.
-6. Distribución ideal por categoría.
-7. Cobertura mínima por categoría.
-8. Nivel mínimo de calidad.
-9. Fuentes permitidas.
-10. Fuentes preferentes.
-11. Idiomas de investigación.
-12. Webs competidoras o referentes a analizar.
-13. Temas prohibidos.
-14. Reglas de frescura.
-15. Reglas de deduplicación.
-16. Riesgo máximo de obsolescencia.
-17. Criterio mínimo de utilidad práctica.
-18. Scoring mínimo para aceptar temas.
-19. Condiciones de parada.
+- Fecha de ejecución y modo (SIMULACION / PRODUCCION_DRAFT / AUDITORIA).
+- Categorías activas del run y su distribución (extraídas de `categorias_target.md` si existe).
+- Objetivo y mínimo de artículos (siempre N categorías activas = N artículos objetivo = N mínimo).
+- Scoring mínimo: 70. Ventana de investigación: 48h (ampliable a 72h en segunda pasada).
+- Fuentes: las definidas en `resources/fuentes-por-categoria.md`.
+- Deduplicación activa contra `memory/articulos_publicados.json`.
+
+Si algún parámetro del RUN_CONTEXT no encaja con la realidad del run (ej: categorias_target.md define solo 2 categorías y el YAML dice 3), corrígelo en el YAML antes de emitir el output.
 
 ---
 
@@ -311,13 +300,16 @@ Devuelve `PIPELINE_READY_WITH_WARNINGS` si:
 El Supervisor bloquea cualquier tema que incumpla estas condiciones, con independencia del score:
 
 - Sin URL de artículo origen verificada con WebFetch → inválido por diseño.
-- Basado en rumores sin fuente oficial.
-- Requiere datos médicos, legales o financieros que no pueden verificarse.
+- Basado en rumores o especulaciones sin fuente oficial que lo respalde.
+- Requiere datos médicos, legales o financieros que no pueden verificarse con fuentes autorizadas.
+- Depende de precios, especificaciones o compatibilidades sin fuente de verificación disponible.
 - Depende de información imposible de verificar en el momento del run.
-- Es contenido puramente genérico sin ángulo editorial concreto.
-- Tiene vida útil ridícula (noticia irrelevante en menos de 24h).
+- Es contenido puramente genérico sin ángulo editorial concreto para el lector de PragmaWire.
+- Tiene vida útil ridícula (noticia irrelevante en menos de 24h o trend de redes sociales sin sustancia).
+- Está basado únicamente en opinión de redes sociales, sin respaldo periodístico o de fuente oficial.
+- Es demasiado técnico para explicarlo con claridad a una persona no experta en un artículo de PragmaWire.
+- Usa miedo artificial o promete resultados garantizados (clickbait de seguridad, salud o finanzas).
 - Puede dañar la confianza o reputación de PragmaWire.
-- No puede explicarse con claridad a una persona no experta.
 
 ### Sistema de scoring (puntuación positiva)
 
@@ -473,25 +465,6 @@ Contenido sensible a cambios recientes.
 Ejemplo: precios, lanzamientos, ciberataques, novedades de IA, compatibilidades, legislación o productos.
 
 Para temas de frescura alta, exige fuentes recientes y verificación clara.
-
----
-
-## TEMAS PROHIBIDOS O DE ALTO RIESGO
-
-Evita o bloquea temas que:
-
-- dependan de rumores;
-- incluyan consejos médicos no verificados;
-- incluyan recomendaciones financieras agresivas;
-- prometan resultados garantizados;
-- usen miedo artificial;
-- dependan de precios sin verificación;
-- hablen de seguridad digital sin fuentes sólidas;
-- parezcan clickbait;
-- sean demasiado técnicos para el público objetivo;
-- no puedan explicarse de forma práctica;
-- estén basados únicamente en opinión de redes sociales;
-- puedan dañar la confianza de PragmaWire.
 
 ---
 
@@ -689,13 +662,13 @@ Si no hay advertencias, escribe:
 
 ### INSTRUCCION_PARA_AGENTE_INVESTIGADOR
 
-Entrega una instrucción clara y completa para el Agente Investigador usando el RUN_CONTEXT.
+Incluye la instrucción completa definida en la sección `## INSTRUCCIÓN COMPLETA PARA EL AGENTE INVESTIGADOR` de este fichero, sustituyendo los placeholders con los valores del run actual:
 
-Debe empezar así:
+- `[categorías activas]` → las categorías del run (de `categorias_target.md` si existe, o las 3 de la Rutina A/B)
+- `[run_id]` → el `active_run_id` del run actual
+- `[rutina]` → A o B
 
-> Rastrea las webs de la competencia asignadas a las categorías activas de este run (definidas en `01-run-context/categorias_target.md`), usando la metodología SOURCE-FIRST y las fuentes de `resources/fuentes-por-categoria.md`. El objetivo es encontrar 1 artículo real publicado en las últimas 48h por cada categoría activa, y construir 1 briefing anclado a ese artículo con el campo `## Fuente Origen` obligatorio. No generes temas sin URL real verificada.
-
-Después debe incluir los requisitos del briefing con el campo `fuente_origen` obligatorio.
+No reescribas la instrucción completa desde cero en cada run. Úsala como plantilla y personaliza solo los valores del run.
 
 ### STOP_CONDITIONS
 
