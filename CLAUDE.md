@@ -119,21 +119,30 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 ### ✅ agente-redactor.md — REVISADO Y CERRADO
 
-**Cambios realizados en esta sesión:**
-- **PASO 0 OBLIGATORIO**: leer `adn-editorial-pragmawire.md` antes de escribir. Explícito: no usar conocimiento de entrenamiento como sustituto.
-- **REGLAS DE DIFERENCIACIÓN** (3 reglas): (1) Empieza desde el problema del lector, nunca desde la tecnología — con ejemplos mal/bien. (2) Estructura consciente y diferente al artículo origen. (3) Datos de la fuente, historia propia.
-- **Auto-auditoría obligatoria antes de entregar**: 3 preguntas que el Redactor debe responder antes de generar el output. Si alguna falla, debe reescribir.
-- **Campo `AUDITORIA_DIFERENCIACION`** en el formato de salida: 4 dimensiones con justificación en línea (inicio desde problema, estructura distinta, ejemplos propios, voz PragmaWire).
-- **CHECKLIST_REDACCION** ampliado: 5 nuevos ítems (ADN leído, fuente leída, intro desde problema, estructura distinta, ejemplos originales).
-- **3 truncaciones de texto preexistentes corregidas** (líneas OBJETIVO/ANTI-PATRONES/POSITIVOS estaban cortadas por concatenación incorrecta).
+**Cambios de sesiones anteriores:**
+- PASO 0 (ADN editorial). Reglas de diferenciación (3). Auto-auditoría. AUDITORIA_DIFERENCIACION. CHECKLIST ampliado. 3 truncaciones corregidas.
 
-### ✅ agente-editor-estrategico.md — PARCIALMENTE REVISADO
+**Cambios de esta sesión:**
+- **PASO 0 ampliado**: lectura obligatoria de `expertise-seo-aeo-geo-copywriting.md` además del ADN editorial.
+- **REGLAS TÉCNICAS DE ESCRITURA** (nueva sección con 8 reglas basadas en investigación primaria 2024-2026): bloque 40-60 palabras por H2, párrafos ≤90 palabras, visual break cada 70 palabras, estadísticas obligatorias, citas directas con atribución, fuentes en texto con enlace, idea importante primero en cada párrafo, eliminación de marcadores de IA.
+- **SEO/AEO/GEO/E-E-A-T**: 4 secciones extensas comprimidas en 1 concisa. El Redactor escribe bien para humanos; el Editor hace la optimización técnica.
+- **Nota sobre metadata**: FAQ, imagen y frase citable son sugerencias para el Editor, no outputs definitivos.
+- **CHECKLIST_REDACCION**: completamente rehecho con todos los parámetros técnicos nuevos.
 
-**Cambios realizados en esta sesión:**
-- **Veto 8 reforzado**: se activa también si el artículo empieza describiendo tecnología (no el problema del lector), si replica la estructura del artículo origen, o si los ejemplos/analogías son los mismos.
-- **ENTRADA QUE RECIBIRÁS**: añadido campo `AUDITORIA_DIFERENCIACION`. Si no viene en el output del Redactor, el Editor aplica Veto 8 con mayor escrutinio.
+### ✅ agente-editor-estrategico.md — REVISADO Y CERRADO
 
-**PENDIENTE DE AUDITORÍA COMPLETA**: No se ha hecho la misma pasada exhaustiva que en supervisor-inicial e investigador. Hay que revisarlo con los mismos criterios.
+**Cambios de sesiones anteriores:**
+- Veto 8 reforzado. Campo `AUDITORIA_DIFERENCIACION` añadido.
+
+**Cambios de esta sesión:**
+- **3 bugs de truncación corregidos**: ROL, CONTEXTO y CUÁNDO CORREGIR estaban cortados con contenido fundido entre secciones.
+- **PASO 0 OBLIGATORIO**: leer `expertise-seo-aeo-geo-copywriting.md` antes de auditar.
+- **ROL redefinido con 3 dimensiones**: auditoría editorial / metadata exclusiva / correcciones quirúrgicas.
+- **Regla absoluta de no-reescritura del cuerpo**: si el cuerpo necesita reescritura → DEVOLVER_A_REDACTOR con feedback concreto.
+- **CUÁNDO CORREGIR DIRECTAMENTE**: redefinido como correcciones quirúrgicas a escala de oración/párrafo. Metadata como dominio exclusivo del Editor.
+- **CUÁNDO DEVOLVER AL REDACTOR**: criterios concretos de cuándo el problema requiere reescritura.
+- **GEO/GXO scoring**: actualizado con criterios evidenciados (bloques 40-60 palabras, estadísticas, citas directas, AI summary, quotable sentence).
+- **FINAL_CHECKLIST ampliado**: parámetros técnicos reales de la investigación.
 
 ### ✅ supervisor-final.md — PARCIALMENTE REVISADO
 
@@ -162,7 +171,8 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 | Fichero | Función |
 |---------|---------|
-| `resources/adn-editorial-pragmawire.md` | Voz, tono, Gancho Humano, anti-patrones de IA. **Lectura obligatoria para investigador y redactor** |
+| `resources/adn-editorial-pragmawire.md` | Voz, tono, Gancho Humano, anti-patrones de IA. **Lectura obligatoria para investigador, redactor y editor** |
+| `resources/expertise-seo-aeo-geo-copywriting.md` | Mejores prácticas reales 2024-2026: SEO, AEO, GEO/GXO, copywriting. **Lectura obligatoria para redactor y editor** |
 | `resources/fuentes-por-categoria.md` | Fuentes primarias y secundarias por categoría. Base de la metodología source-first |
 | `resources/categorias.md` | Definición de las 6 categorías editoriales |
 | `memory/articulos_publicados.json` | Registro de artículos publicados/en borrador. Base de deduplicación |
@@ -185,9 +195,8 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 ## Próximos pasos (pendiente al limpiar conversación)
 
-1. **Auditoría completa de `agente-editor-estrategico.md`** — mismos criterios que supervisor-inicial e investigador (buscar contradicciones, residuales, diseño deficiente, missing pieces).
-2. **Auditoría completa de `supervisor-final.md`** — mismo proceso.
-3. **Actualizar README.md y agents/README.md** — todavía dicen "12 artículos por run" (modelo antiguo). Corregir a 3 artículos por run, Rutinas A/B.
+1. **Auditoría completa de `supervisor-final.md`** — mismos criterios que supervisor-inicial e investigador.
+2. **Actualizar README.md y agents/README.md** — todavía dicen "12 artículos por run" (modelo antiguo). Corregir a 3 artículos por run, Rutinas A/B.
 
 ---
 
