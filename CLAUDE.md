@@ -150,7 +150,7 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 - **ACTUALIZACIÓN OBLIGATORIA DE MEMORIA**: protocolo para leer, actualizar y verificar `memory/articulos_publicados.json` cuando emite `CREAR_WORDPRESS_DRAFT`.
 - **Campo `MEMORIA_ACTUALIZADA`**: añadido al formato de salida FORMATO A.
 
-**Cambios de esta sesión:**
+**Cambios de sesión 1:**
 - **Bug de truncación corregido**: `No aprobamos "relleno".# VETOS CRÍTICOS` → separador `---` y cabecera `## VETOS CRÍTICOS` correctamente insertados.
 - **PASO 0 OBLIGATORIO** añadido: lectura de `adn-editorial-pragmawire.md` (para juzgar "se siente PragmaWire") y `expertise-seo-aeo-copywriting.md` (para validar AEO/GEO con parámetros reales). Era el único agente sin PASO 0.
 - **Propiedad del QUALITY_SCORE clarificada**: el score lo asigna el Editor; el Supervisor puede bajarlo (nunca subirlo); la decisión de aprobación se toma sobre el score final validado por el Supervisor.
@@ -159,6 +159,13 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 - **VALIDACIÓN GEO / IA actualizada**: añadidos criterios Princeton 2024 (estadísticas +40%, citas directas +41%, fuentes con enlace +30%, información clave en primer 30% del artículo).
 - **Campo `pipeline_routine`** añadido a la entrada de `articulos_publicados.json` para trazabilidad de Rutinas A/B.
 - **VALIDACION_CRITICA en FORMATO A y B**: añadidas dos nuevas filas — "Tags concretas y útiles" y "FINAL_CHECKLIST del Editor al 100%".
+
+**Cambios de sesión 2 (auditoría exhaustiva definitiva):**
+- **Bug operativo crítico corregido en FORMATO A**: `WORDPRESS_DRAFT_VALIDADO` ahora incluye campos explícitos `ARTICLE_MARKDOWN:` y `FAQ_SCHEMA_CANDIDATES:`. `post_to_wp.py` (líneas 57-112) busca `ARTICLE_MARKDOWN:` dentro de `WORDPRESS_DRAFT_VALIDADO:` para extraer el cuerpo; sin él, el script publicaba el bloque de metadata como cuerpo del artículo.
+- **Bug de formato en UMBRALES**: falta de salto de línea entre "interpretación:" y el primer bullet. Corregido.
+- **UMBRALES "70-84" clarificado**: ahora especifica "Editor o Investigador según la causa" en lugar del genérico "Devolver".
+- **VALIDACIÓN DEL ARTÍCULO ítem 4**: "Párrafos breves" → "Párrafos de máximo 90 palabras" (consistente con Redactor y Editor).
+- **Validación de longitud mínima**: VALIDACIÓN DEL ARTÍCULO ítem #21 y CONDICIÓN DURA #37 — mínimo 1.000 palabras (consistente con el mandato del Redactor).
 
 ---
 
