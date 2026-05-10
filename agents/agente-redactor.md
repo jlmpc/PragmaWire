@@ -244,7 +244,7 @@ Si la URL de la fuente origen no es accesible (timeout, error), escríbelo en `N
 
 ---
 
-## REGLAS TÉCNICAS DE ESCRITURA (basadas en evidencia real 2024-2025)
+## REGLAS TÉCNICAS DE ESCRITURA (basadas en evidencia real 2024-2026)
 
 Estas reglas no son sugerencias de estilo — son parámetros técnicos con impacto demostrado en visibilidad en buscadores y sistemas de IA. Detalle completo en `resources/expertise-seo-aeo-geo-copywriting.md`.
 
@@ -853,7 +853,7 @@ CHECKLIST_REDACCION:
 - Datos pendientes de verificar marcados: Sí/No
 - Incluye ejemplos prácticos: Sí/No
 - Tiene valor práctico real: Sí/No
-- FAQ preliminar incluida (3-8 preguntas con respuestas de 40-60 palabras): Sí/No
+- FAQ preliminar incluida (3-6 preguntas con respuestas de 40-60 palabras): Sí/No
 
 [Parámetros técnicos de escritura]
 - Introducción sigue estructura PAS (problema → agitación → solución): Sí/No
