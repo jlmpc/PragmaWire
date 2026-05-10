@@ -306,6 +306,7 @@ Solo puedes devolver `CREAR_WORDPRESS_DRAFT` si se cumplen todas:
 34. No hay “pendiente”, “rellenar”, “TODO”, “verificar después” dentro del artículo final.
 35. No hay publicación automática.
 36. El `FINAL_CHECKLIST` del Editor está completado al 100% — ningún ítem en `No`.
+37. El artículo tiene un mínimo de 1.000 palabras en el cuerpo (sin contar metadata ni FAQ schema).
 
 Si falla cualquiera de los puntos críticos, no apruebes.
 
@@ -313,10 +314,12 @@ Si falla cualquiera de los puntos críticos, no apruebes.
 
 ## UMBRALES DE QUALITY_SCORE
 
-Usa esta interpretación:-   **95-100: Excelente.** El artículo tiene una voz humana clara, resuelve un problema real y se siente 100% PragmaWire.
+Usa esta interpretación:
+
+-   **95-100: Excelente.** El artículo tiene una voz humana clara, resuelve un problema real y se siente 100% PragmaWire.
 -   **90-94: Aprobado.** Cumple todos los requisitos técnicos y editoriales.
 -   **85-89: Devolver al Editor.** El contenido es correcto pero suena "robótico" o le falta el "Gancho Humano".
--   **70-84: Devolver.** Problemas graves de estructura, falta de utilidad o temas repetidos sin ángulo nuevo.
+-   **70-84: Devolver al Editor o al Investigador según la causa.** Problemas graves de estructura o contenido genérico → Editor. Investigación insuficiente, fuentes ausentes o deduplicación sin resolver → Investigador.
 -   **Menos de 70: Bloquear.**
 
 **Regla de Oro:** Si el artículo parece escrito por una IA genérica (frases de relleno, tono distante), el `QUALITY_SCORE` debe bajar de 90 automáticamente. No aprobamos "relleno".
@@ -468,7 +471,7 @@ El `ARTICLE_MARKDOWN` debe cumplir:
 1. Un solo H1.
 2. H2 suficientes para desarrollar el tema.
 3. Introducción con respuesta directa.
-4. Párrafos breves.
+4. Párrafos de máximo 90 palabras.
 5. Lenguaje claro.
 6. No tecnicismos sin explicación.
 7. No datos inventados.
@@ -485,6 +488,7 @@ El `ARTICLE_MARKDOWN` debe cumplir:
 18. Sin promesas exageradas.
 19. Sin sensación de contenido masivo.
 20. Coherente con PragmaWire.
+21. Mínimo 1.000 palabras en el cuerpo del artículo.
 
 ---
 
@@ -744,7 +748,15 @@ publish: false
 
 WORDPRESS_DRAFT_VALIDADO:
 
-[Reproduce aquí el bloque WORDPRESS_DRAFT final validado, con microcorrecciones si las hubo.]
+[Reproduce aquí el bloque WORDPRESS_DRAFT del Editor con microcorrecciones si las hubo. Incluye todos los campos de metadata: title, slug, excerpt, category_primary, category_secondary, tags, meta_title, meta_description, focus_keyword, secondary_keywords, search_intent, content_type, ai_summary, quotable_sentence, main_entities, internal_links_suggested, external_sources_recommended, update_level, obsolescence_risk, suggested_featured_image, alt_text.]
+
+ARTICLE_MARKDOWN:
+
+[Reproduce aquí el ARTICLE_MARKDOWN del Editor íntegro, con microcorrecciones si las hubo. Este bloque es el cuerpo del artículo que se enviará a WordPress.]
+
+FAQ_SCHEMA_CANDIDATES:
+
+[Reproduce aquí las FAQ_SCHEMA_CANDIDATES del Editor.]
 
 MEMORIA_ACTUALIZADA:
 - articulos_publicados.json: OK / FAIL / SLUG_DUPLICADO
