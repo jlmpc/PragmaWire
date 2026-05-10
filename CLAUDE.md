@@ -49,8 +49,7 @@ El pipeline se ejecuta en dos rutinas alternadas:
 | B | Recomendaciones Tecnológicas, Salud y Bienestar Digital, Seguridad Digital |
 
 **Objetivo por run:** 1 artículo por categoría activa = **3 artículos por run**.  
-**Mínimo obligatorio:** 1 artículo apto por cada categoría activa del run.  
-**El README y agents/README están desactualizados** — todavía dicen "12 artículos" (modelo antiguo). No tomar como referencia.
+**Mínimo obligatorio:** 1 artículo apto por cada categoría activa del run.
 
 ### Metodología SOURCE-FIRST
 
@@ -136,7 +135,7 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 **Cambios de esta sesión:**
 - **3 bugs de truncación corregidos**: ROL, CONTEXTO y CUÁNDO CORREGIR estaban cortados con contenido fundido entre secciones.
-- **PASO 0 OBLIGATORIO**: leer `expertise-seo-aeo-geo-copywriting.md` antes de auditar.
+- **PASO 0 OBLIGATORIO**: leer `adn-editorial-pragmawire.md` y `expertise-seo-aeo-geo-copywriting.md` antes de auditar.
 - **ROL redefinido con 3 dimensiones**: auditoría editorial / metadata exclusiva / correcciones quirúrgicas.
 - **Regla absoluta de no-reescritura del cuerpo**: si el cuerpo necesita reescritura → DEVOLVER_A_REDACTOR con feedback concreto.
 - **CUÁNDO CORREGIR DIRECTAMENTE**: redefinido como correcciones quirúrgicas a escala de oración/párrafo. Metadata como dominio exclusivo del Editor.
@@ -152,7 +151,7 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 **Cambios de sesión 1:**
 - **Bug de truncación corregido**: `No aprobamos "relleno".# VETOS CRÍTICOS` → separador `---` y cabecera `## VETOS CRÍTICOS` correctamente insertados.
-- **PASO 0 OBLIGATORIO** añadido: lectura de `adn-editorial-pragmawire.md` (para juzgar "se siente PragmaWire") y `expertise-seo-aeo-copywriting.md` (para validar AEO/GEO con parámetros reales). Era el único agente sin PASO 0.
+- **PASO 0 OBLIGATORIO** añadido: lectura de `adn-editorial-pragmawire.md` (para juzgar "se siente PragmaWire") y `expertise-seo-aeo-geo-copywriting.md` (para validar AEO/GEO con parámetros reales). Era el único agente sin PASO 0.
 - **Propiedad del QUALITY_SCORE clarificada**: el score lo asigna el Editor; el Supervisor puede bajarlo (nunca subirlo); la decisión de aprobación se toma sobre el score final validado por el Supervisor.
 - **CONDICIONES DURAS actualizadas**: condición #12 ahora exige tags concretas y útiles (no solo presencia); condición #36 añadida — el FINAL_CHECKLIST del Editor debe estar al 100%.
 - **VALIDACIÓN AEO actualizada**: añadidos bloques 40-60 palabras por H2, FAQ autónoma, autonomía del ai_summary.
@@ -179,6 +178,35 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 - **`main()`**: captura `meta` de `parse_article()`, construye `memory_updates`, llama a ambas funciones tras publicar (con try/except para no romper si falla).
 
 **Antes de este cambio:** `articulos_publicados.json` NUNCA se actualizaba automáticamente tras las publicaciones. Bug crítico de deduplicación.
+
+---
+
+## Estado de prompts y documentos de soporte
+
+### ✅ PROMPT_ROUTINE.md — REVISADO Y CERRADO
+### ✅ PROMPT_ROUTINE_A.md — REVISADO Y CERRADO
+### ✅ PROMPT_ROUTINE_B.md — REVISADO Y CERRADO
+
+**Cambios en los tres archivos (PASO 7):**
+- **Triple escritura eliminada**: la instrucción manual de actualizar `memory/articulos_publicados.json` era redundante — ya lo hacen el Supervisor Final y `post_to_wp.py` automáticamente.
+- **PASO 7 renombrado** a `COMMIT Y CIERRE` con nota explícita de que la memoria es automática.
+- **`git add memory/articulos_publicados.json`** → **`git add memory/`**: ampliado para incluir también `memory/run-history.json`, que `post_to_wp.py` escribe y antes quedaba sin commitear.
+- **REGLA ABSOLUTA final** reescrita: deja claro que la memoria es gestionada automáticamente y no debe modificarse manualmente.
+
+### ✅ PROMPT_MAESTRO_RUN_ID.md — SIN CAMBIOS
+
+Los agentes gestionan su propio PASO 0 internamente. El prompt maestro no necesita listar recursos explícitamente.
+
+### ✅ ORCHESTRATION.md — REVISADO Y CERRADO
+
+- **Sección 1 (Regla de Oro)**: añadido `expertise-seo-aeo-geo-copywriting.md` como recurso global obligatorio para Redactor, Editor y Supervisor Final.
+- **Sección 3.3 (Redactor)**: `expertise-seo-aeo-geo-copywriting.md` añadido a la lista de lectura.
+- **Sección 3.4 (Editor)**: ídem + misión actualizada para incluir "Asigna el `QUALITY_SCORE`".
+- **Sección 3.5 (Supervisor Final)**: ídem + misión corregida de "asignación" a "validación del `QUALITY_SCORE` (asignado por el Editor; el Supervisor puede bajarlo, nunca subirlo)".
+
+### ✅ PIPELINE_RUNNER.md — REVISADO Y CERRADO
+
+- **Regla #1**: ampliada para incluir `expertise-seo-aeo-geo-copywriting.md` junto a `adn-editorial-pragmawire.md` como lectura obligatoria.
 
 ---
 
@@ -210,7 +238,9 @@ Unificado en supervisor-inicial.md y agente-investigador.md:
 
 ## Próximos pasos (pendiente al limpiar conversación)
 
-Todos los agentes han sido auditados y cerrados. No hay pendientes de refactorización conocidos.
+Todo el pipeline ha sido auditado y cerrado: 5 agentes, 2 scripts, 4 prompts y 2 documentos de soporte. No hay pendientes de refactorización conocidos.
+
+El pipeline está listo para ejecutar Routine A o Routine B.
 
 ---
 
