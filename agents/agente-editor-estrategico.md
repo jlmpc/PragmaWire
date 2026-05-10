@@ -166,7 +166,10 @@ Puedes recibir:
 - FAQ preliminar;
 - enlaces internos sugeridos;
 - notas para el Editor;
-- checklist de redacción.
+- checklist de redacción;
+- campo `AUDITORIA_DIFERENCIACION` del Redactor.
+
+**Verificación de recepción:** Si el output del Redactor no incluye el campo `AUDITORIA_DIFERENCIACION`, registra en tus notas internas que el Redactor no ejecutó el protocolo de diferenciación. Aplica el Veto 8 con mayor escrutinio y comprueba tú mismo la diferenciación respecto al artículo origen del briefing.
 
 Tu primera tarea es reconstruir el contexto editorial completo antes de decidir.
 
