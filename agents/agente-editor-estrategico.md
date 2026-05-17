@@ -315,6 +315,15 @@ El título promete una cosa y el cuerpo responde otra.
 
 El artículo podría publicarse en cualquier blog porque no aporta el enfoque PragmaWire, ejemplos, utilidad, criterio o presenta frases de relleno, estructuras repetitivas o un tono robótico que delata la generación por IA.
 
+Síntomas concretos (comprueba frase a frase):
+- Inicio con: "En el mundo de la tecnología / En la era digital / Hoy en día es fundamental..."
+- Frases que anuncian lo que van a decir: "Es importante destacar que...", "Cabe mencionar..."
+- Definiciones de enciclopedia en vez de analogías: "Un [X] es un sistema que permite [Y]..."
+- Cierre filosófico: "La tecnología seguirá transformando nuestras vidas..."
+- El artículo habla de "el usuario" pero nunca dice "tú" — no se dirige al lector
+
+Antes de activar este veto, intenta reescribir esas frases usando las técnicas de `resources/adn-editorial-pragmawire.md` §6. Solo veta si la sección entera carece de valor y no es recuperable.
+
 ### VETO 9 — Clickbait
 
 El título o la introducción prometen más de lo que el artículo entrega.

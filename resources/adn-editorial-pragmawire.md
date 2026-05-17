@@ -58,3 +58,32 @@ Para evitar el "sabor a IA", los agentes deben evitar activamente:
 Para guiar a los agentes, se les proporcionará un ejemplo de artículo que encarna perfectamente el ADN Editorial de PragmaWire. Este artículo servirá como modelo de tono, estructura y profundidad. Los agentes deberán analizarlo y emular su calidad, no solo su formato.
 
 ---
+
+## 6. Técnicas activas de humanización
+
+Estas técnicas complementan la guía de voz del §1 y los anti-patrones del §4.
+Aplicarlas activamente en redacción y edición.
+
+**Arranques directos:** empieza en el problema, no en el contexto.
+- ❌ "En los últimos años, la inteligencia artificial ha experimentado un gran avance..."
+- ✅ "¿Tu móvil te malinterpreta cuando dictas un mensaje? Este modelo lo soluciona."
+
+**Admisiones honestas:** la honestidad genera confianza.
+- ❌ "Esta solución ofrece una experiencia óptima para todos los usuarios."
+- ✅ "No es la opción más barata, pero es la más fiable para uso diario."
+
+**Contraste realidad vs. teoría:**
+- ❌ "La compatibilidad Matter garantiza la interoperabilidad entre dispositivos."
+- ✅ "En teoría, Matter hace que todo funcione junto. En la práctica, depende de qué marcas tengas."
+
+**Ritmo alternado:** frase larga de contexto → frase corta que remata.
+- "Configurar esto desde cero puede parecer complicado si nunca lo has hecho. No lo es."
+
+**Cierre accionable:** no filosófico, no genérico.
+- ❌ "La tecnología seguirá transformando nuestras vidas cotidianas."
+- ✅ "Si vas a comprarlo esta semana, mira primero la compatibilidad con tu router."
+
+**Prueba de voz (aplicar antes de entregar):**
+Lee el primer párrafo y el último en voz alta.
+¿Hay frases que no dirías hablando? Reescríbelas.
+¿El cierre da al lector un paso concreto? Si no, cámbialo.
