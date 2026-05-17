@@ -1,0 +1,46 @@
+{
+  "run_id": "2026-05-17T0315_pragmawire_97c1",
+  "stage": "03-drafts",
+  "agent": "agente-redactor",
+  "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+  "generated_at": "2026-05-17T03:35:00",
+  "total_articulos": 3,
+  "completos": 3,
+  "bloqueados": 0,
+  "devueltos_investigador": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_origen": "briefing_001",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo": "Auriculares con cancelación de ruido: la guía honesta para no tirar el dinero en 2026",
+      "palabra_clave_principal": "auriculares con cancelación de ruido 2026",
+      "longitud_estimada_palabras": 1700,
+      "notas_editor": "Actualizar precios de modelos antes de publicar. Verificar disponibilidad en España."
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_origen": "briefing_002",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo": "Tus ojos también se cansan de las pantallas: qué es el Síndrome Visual Informático y cómo frenarlo hoy",
+      "palabra_clave_principal": "síndrome visual informático",
+      "longitud_estimada_palabras": 1600,
+      "notas_editor": "Verificar cifras de prevalencia con fuente primaria. Mantener tono honesto sobre evidencia limitada de filtros de luz azul."
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_origen": "briefing_003",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Seguridad Digital",
+      "titulo": "Te llama tu hijo pidiendo dinero urgente, pero no es él: la estafa de voz con IA que ya alerta el INCIBE",
+      "palabra_clave_principal": "estafa voz clonada IA",
+      "longitud_estimada_palabras": 1600,
+      "notas_editor": "Verificar alertas INCIBE actuales en incibe.es para enlace directo. Añadir enlace internos a quishing y estafas genéricas."
+    }
+  ]
+}

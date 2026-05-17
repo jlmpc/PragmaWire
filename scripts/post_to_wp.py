@@ -87,6 +87,31 @@ def parse_article(content: str) -> tuple:
         elif "palabras clave" in key or "tags" in key or "etiquetas" in key:
             meta["tags"] = [t.strip() for t in re.split(r"[,;]", val) if t.strip()]
 
+    # Metadatos en formato plain-text (clave:\nvalor) usado por supervisor-final
+    # Solo aplica si el bloque WORDPRESS_DRAFT: está presente
+    if "WORDPRESS_DRAFT:" in working:
+        draft_block = working.split("WORDPRESS_DRAFT:", 1)[1]
+        if "ARTICLE_MARKDOWN:" in draft_block:
+            draft_block = draft_block.split("ARTICLE_MARKDOWN:", 1)[0]
+        draft_lines = draft_block.split("\n")
+        i = 0
+        while i < len(draft_lines) - 1:
+            key_line = draft_lines[i].strip().rstrip(":")
+            val_line = draft_lines[i + 1].strip() if i + 1 < len(draft_lines) else ""
+            key_lower = key_line.lower()
+            if key_line and val_line and not val_line.startswith("#"):
+                if key_lower in ("title",) and not meta["title"]:
+                    meta["title"] = val_line
+                elif key_lower == "slug" and not meta["slug"]:
+                    meta["slug"] = val_line
+                elif key_lower == "excerpt" and not meta["excerpt"]:
+                    meta["excerpt"] = val_line
+                elif key_lower in ("category_primary", "categoría_principal", "categoria_principal") and not meta["category"]:
+                    meta["category"] = val_line
+                elif key_lower == "tags" and not meta["tags"]:
+                    meta["tags"] = [t.strip() for t in re.split(r"[,;]", val_line) if t.strip()]
+            i += 1
+
     # Extraer suggested_featured_image para añadirlo al final del borrador
     featured_image_note = ""
     if "suggested_featured_image:" in working:

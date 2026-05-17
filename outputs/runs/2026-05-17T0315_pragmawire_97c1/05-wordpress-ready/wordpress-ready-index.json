@@ -1,0 +1,68 @@
+{
+  "run_id": "2026-05-17T0315_pragmawire_97c1",
+  "stage": "05-wordpress-ready",
+  "agent": "supervisor-final",
+  "supervisor_batch_status": "COMPLETO",
+  "generated_at": "2026-05-17T04:10:00",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_bloqueados": 0,
+  "publish_allowed": false,
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_wordpress_ready.md",
+      "edited_origen": "articulo_001_edited.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "title": "Auriculares con cancelación de ruido: guía honesta para elegir bien en 2026",
+      "slug": "auriculares-cancelacion-ruido-guia-2026",
+      "focus_keyword": "auriculares con cancelación de ruido 2026",
+      "vetos_abiertos": "ninguno",
+      "warnings_pendientes": ["Verificar precios actuales de modelos antes de publicar"],
+      "bloqueante_para_draft": false
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_wordpress_ready.md",
+      "edited_origen": "articulo_002_edited.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 92,
+      "categoria_principal": "Salud y Bienestar Digital",
+      "title": "Síndrome Visual Informático: qué es y cómo proteger los ojos de las pantallas",
+      "slug": "sindrome-visual-informatico-proteger-ojos-pantallas",
+      "focus_keyword": "síndrome visual informático",
+      "vetos_abiertos": "ninguno",
+      "warnings_pendientes": [
+        "Verificar cifra de prevalencia 66-74% con fuente primaria antes de publicar",
+        "Verificar dato 5-7 parpadeos/minuto en fuente primaria antes de publicar"
+      ],
+      "bloqueante_para_draft": false
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_wordpress_ready.md",
+      "edited_origen": "articulo_003_edited.md",
+      "decision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score": 93,
+      "categoria_principal": "Seguridad Digital",
+      "title": "Estafa de voz clonada con IA: cómo detectarla y protegerte (alerta INCIBE 2026)",
+      "slug": "estafa-voz-clonada-ia-como-detectar-protegerte",
+      "focus_keyword": "estafa voz clonada IA",
+      "vetos_abiertos": "ninguno",
+      "warnings_pendientes": [
+        "Añadir enlace directo a alerta INCIBE en incibe.es antes de publicar",
+        "Verificar cifra 85% precisión/3 segundos de audio en fuente primaria antes de publicar"
+      ],
+      "bloqueante_para_draft": false
+    }
+  ],
+  "pipeline_warnings": [
+    "Precios de modelos de auriculares pendientes de verificación antes de publicar",
+    "Cifras de prevalencia SVI pendientes de verificar con fuente primaria",
+    "Enlace directo a alerta INCIBE pendiente de añadir en artículo 003"
+  ],
+  "next_stage": "06-wordpress-upload"
+}

@@ -82,5 +82,38 @@
     "categoria": "Hogar inteligente",
     "fecha_publicacion": "2026-03-30",
     "estado": "publicado"
+  },
+  {
+    "title": "Auriculares con cancelación de ruido: guía honesta para elegir bien en 2026",
+    "slug": "auriculares-cancelacion-ruido-guia-2026",
+    "categoria": "Recomendaciones tecnológicas",
+    "fecha_publicacion": "2026-05-17",
+    "estado": "borrador_wordpress",
+    "wp_id": 1157,
+    "wp_link": "https://www.pragmawire.com/?p=1157",
+    "run_id": "2026-05-17T0315_pragmawire_97c1",
+    "quality_score": 91
+  },
+  {
+    "title": "Síndrome Visual Informático: qué es y cómo proteger los ojos de las pantallas",
+    "slug": "sindrome-visual-informatico-proteger-ojos-pantallas",
+    "categoria": "Salud y bienestar digital",
+    "fecha_publicacion": "2026-05-17",
+    "estado": "borrador_wordpress",
+    "wp_id": 1158,
+    "wp_link": "https://www.pragmawire.com/?p=1158",
+    "run_id": "2026-05-17T0315_pragmawire_97c1",
+    "quality_score": 92
+  },
+  {
+    "title": "Estafa de voz clonada con IA: cómo detectarla y protegerte (alerta INCIBE 2026)",
+    "slug": "estafa-voz-clonada-ia-como-detectar-protegerte",
+    "categoria": "Seguridad digital",
+    "fecha_publicacion": "2026-05-17",
+    "estado": "borrador_wordpress",
+    "wp_id": 1159,
+    "wp_link": "https://www.pragmawire.com/?p=1159",
+    "run_id": "2026-05-17T0315_pragmawire_97c1",
+    "quality_score": 93
   }
 ]

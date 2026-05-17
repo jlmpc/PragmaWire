@@ -1,0 +1,50 @@
+{
+  "run_id": "2026-05-17T0315_pragmawire_97c1",
+  "stage": "04-edited",
+  "agent": "agente-editor-estrategico",
+  "editor_batch_status": "COMPLETO",
+  "generated_at": "2026-05-17T03:55:00",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_redactor": 0,
+  "total_devueltos_investigador": 0,
+  "total_bloqueados": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "draft_origen": "articulo_001_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "title": "Auriculares con cancelación de ruido: guía honesta para elegir bien en 2026",
+      "slug": "auriculares-cancelacion-ruido-guia-2026",
+      "focus_keyword": "auriculares con cancelación de ruido 2026",
+      "notas_supervisor": "Verificar precios actuales de modelos antes de publicar"
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "draft_origen": "articulo_002_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 92,
+      "categoria_principal": "Salud y Bienestar Digital",
+      "title": "Síndrome Visual Informático: qué es y cómo proteger los ojos de las pantallas",
+      "slug": "sindrome-visual-informatico-proteger-ojos-pantallas",
+      "focus_keyword": "síndrome visual informático",
+      "notas_supervisor": "Verificar cifras de prevalencia con fuente primaria antes de publicar"
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "draft_origen": "articulo_003_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 93,
+      "categoria_principal": "Seguridad Digital",
+      "title": "Estafa de voz clonada con IA: cómo detectarla y protegerte (alerta INCIBE 2026)",
+      "slug": "estafa-voz-clonada-ia-como-detectar-protegerte",
+      "focus_keyword": "estafa voz clonada IA",
+      "notas_supervisor": "Añadir enlace directo a alerta INCIBE en incibe.es antes de publicar"
+    }
+  ]
+}

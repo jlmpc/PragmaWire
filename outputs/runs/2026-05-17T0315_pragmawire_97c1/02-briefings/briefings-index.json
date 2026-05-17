@@ -1,0 +1,70 @@
+{
+  "run_id": "2026-05-17T0315_pragmawire_97c1",
+  "stage": "02-briefings",
+  "agent": "agente-investigador",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "generated_at": "2026-05-17T03:20:00",
+  "routine": "B",
+  "target_categories": [
+    "Recomendaciones Tecnológicas",
+    "Salud y Bienestar Digital",
+    "Seguridad Digital"
+  ],
+  "segunda_pasada": false,
+  "total_briefings": 3,
+  "aptos": 3,
+  "descartados": 0,
+  "necesita_revision": 0,
+  "cobertura_por_categoria": {
+    "Recomendaciones Tecnológicas": {"aptos": 1, "minimo_cubierto": true},
+    "Salud y Bienestar Digital": {"aptos": 1, "minimo_cubierto": true},
+    "Seguridad Digital": {"aptos": 1, "minimo_cubierto": true}
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Guía de compra auriculares con cancelación de ruido activa (ANC) 2026",
+      "titulo_provisional": "Auriculares con cancelación de ruido: la guía honesta para no tirar el dinero en 2026",
+      "palabra_clave_principal": "auriculares con cancelación de ruido 2026",
+      "score": 82,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1700-2000 palabras"
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Síndrome Visual Informático: proteger ojos frente a pantallas, hábitos y herramientas verificadas",
+      "titulo_provisional": "Tus ojos también se cansan de las pantallas: qué es el Síndrome Visual Informático y cómo frenarlo hoy",
+      "palabra_clave_principal": "síndrome visual informático",
+      "score": 86,
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1500-1800 palabras"
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Estafas con voz clonada por IA 2026: cómo funcionan, señales de detección y protección (alerta INCIBE)",
+      "titulo_provisional": "Te llama tu hijo pidiendo dinero urgente, pero no es él: la estafa de voz con IA que ya alerta el INCIBE",
+      "palabra_clave_principal": "estafa voz clonada IA",
+      "score": 89,
+      "deduplicacion": "EXISTE_ANGULO_DIFERENTE",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1500-1800 palabras"
+    }
+  ],
+  "temas_descartados": [],
+  "redaccion_queue": [
+    "briefing_001",
+    "briefing_002",
+    "briefing_003"
+  ]
+}
