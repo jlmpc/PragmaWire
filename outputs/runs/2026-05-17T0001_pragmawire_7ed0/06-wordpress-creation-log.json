@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 1154,
+      "link": "https://www.pragmawire.com/?p=1154",
+      "title": "Enchufes inteligentes y tarifa PVPC: cómo pagar menos en la factura de la luz",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 1155,
+      "link": "https://www.pragmawire.com/?p=1155",
+      "title": "Qué es Gemini Intelligence y qué va a cambiar en tu móvil Android",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 1156,
+      "link": "https://www.pragmawire.com/?p=1156",
+      "title": "NotebookLM: qué es y cómo usarlo gratis para aprender más rápido con la IA de Google",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}

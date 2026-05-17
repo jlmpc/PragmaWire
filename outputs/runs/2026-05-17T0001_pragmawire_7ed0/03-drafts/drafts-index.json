@@ -1,0 +1,65 @@
+{
+  "run_id": "2026-05-17T0001_pragmawire_7ed0",
+  "stage": "03-drafts",
+  "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+  "generated_at": "2026-05-17T00:25:00",
+  "total_drafts": 3,
+  "completos": 3,
+  "completos_con_notas": 3,
+  "bloqueados": 0,
+  "devueltos_a_investigador": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_id": "briefing_001",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Hogar Inteligente",
+      "titulo": "Enchufes inteligentes y tarifa PVPC: cómo pagar menos en la factura de la luz sin tocar nada",
+      "keyword_principal": "enchufes inteligentes factura luz",
+      "tipo_contenido": "Guía práctica paso a paso",
+      "longitud_estimada_palabras": 1550,
+      "datos_pendientes_verificacion": [
+        "Precio exacto Tapo P115 en Amazon España al publicar",
+        "Franjas horarias PVPC vigentes en mayo 2026 (verificar en REE)",
+        "Confirmación fines de semana = tarifa valle en PVPC 2026"
+      ],
+      "enlaces_internos_sugeridos": ["matter-y-thread-guia"]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_id": "briefing_002",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo": "Qué es Gemini Intelligence y qué va a cambiar en tu móvil Android a partir de ahora",
+      "keyword_principal": "Gemini Intelligence Android qué es",
+      "tipo_contenido": "Explicación práctica con ejemplos de uso real",
+      "longitud_estimada_palabras": 1450,
+      "datos_pendientes_verificacion": [
+        "Disponibilidad de Rambler en español desde el lanzamiento",
+        "Lista completa de modelos Android que recibirán Gemini Intelligence",
+        "Detalles técnicos de política de privacidad on-device vs cloud"
+      ],
+      "enlaces_internos_sugeridos": ["ia-agentica-para-2026", "que-es-un-agente-de-ia"]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_id": "briefing_003",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Productividad Digital",
+      "titulo": "NotebookLM: qué es y cómo usarlo para aprender más rápido (y gratis) con la IA de Google",
+      "keyword_principal": "NotebookLM qué es",
+      "tipo_contenido": "Explicación + guía práctica",
+      "longitud_estimada_palabras": 1480,
+      "datos_pendientes_verificacion": [
+        "Límite exacto de fuentes en versión gratuita (citado como hasta 50)",
+        "Disponibilidad de cuestionarios/flashcards en español",
+        "Calidad del Audio Overview en español para distintos tipos de documentos"
+      ],
+      "enlaces_internos_sugeridos": ["automatizar-tareas-sin-programar", "trampa-apps-productividad"]
+    }
+  ],
+  "notas": "Los 3 artículos están completos y listos para el Agente Editor Estratégico. Todos tienen notas de verificación menores que el Editor debe revisar antes de aprobar. Ningún artículo fue bloqueado ni devuelto al Investigador."
+}

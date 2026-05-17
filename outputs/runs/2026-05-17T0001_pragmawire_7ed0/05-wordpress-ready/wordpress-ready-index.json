@@ -1,0 +1,77 @@
+{
+  "run_id": "2026-05-17T0001_pragmawire_7ed0",
+  "stage": "05-wordpress-ready",
+  "supervisor_batch_status": "COMPLETO",
+  "generated_at": "2026-05-17T01:00:00",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_bloqueados": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 91,
+      "categoria_principal": "Hogar Inteligente",
+      "titulo": "Enchufes inteligentes y tarifa PVPC: cómo pagar menos en la factura de la luz",
+      "slug": "enchufes-inteligentes-pvpc-factura-luz",
+      "keyword_principal": "enchufes inteligentes factura luz",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "notas_revision_humana": [
+        "Verificar precio actual Tapo P115 en Amazon España antes de publicar",
+        "Confirmar franjas horarias PVPC vigentes en REE antes de publicar",
+        "Añadir enlaces internos reales a ahorro-energia-hogar y dispositivos-hogar-inteligente"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 92,
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo": "Qué es Gemini Intelligence y qué va a cambiar en tu móvil Android",
+      "slug": "gemini-intelligence-android-que-es",
+      "keyword_principal": "Gemini Intelligence Android qué es",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "notas_revision_humana": [
+        "Verificar si Google ha publicado más información sobre disponibilidad de Rambler en español",
+        "Confirmar lista completa de modelos Android que recibirán Gemini Intelligence",
+        "Añadir enlaces internos reales a ia-agentica-para-2026 y que-es-un-agente-de-ia",
+        "Considerar actualizar cuando Google publique más detalles en Google I/O (19-20 mayo 2026)"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_wordpress_ready.md",
+      "estado_supervision": "CREAR_WORDPRESS_DRAFT",
+      "quality_score_validado": 90,
+      "categoria_principal": "Productividad Digital",
+      "titulo": "NotebookLM: qué es y cómo usarlo gratis para aprender más rápido con la IA de Google",
+      "slug": "notebooklm-que-es-como-usar",
+      "keyword_principal": "NotebookLM qué es",
+      "wordpress_action": {
+        "create_draft": true,
+        "publish": false
+      },
+      "notas_revision_humana": [
+        "Verificar el límite de fuentes en la versión gratuita en notebooklm.google.com",
+        "Confirmar disponibilidad de cuestionarios/flashcards en español",
+        "Añadir enlaces internos reales a trampa-apps-productividad y automatizar-tareas-sin-programar"
+      ]
+    }
+  ],
+  "scores_resumen": {
+    "articulo_001": 91,
+    "articulo_002": 92,
+    "articulo_003": 90,
+    "media": 91
+  },
+  "pipeline_final_status": "LISTO_PARA_WORDPRESS",
+  "notas": "Los 3 artículos han superado la supervisión final y están listos para crear borradores en WordPress. Ninguno autoriza publicación automática. Destino máximo: WORDPRESS_DRAFT. publish_allowed: false."
+}

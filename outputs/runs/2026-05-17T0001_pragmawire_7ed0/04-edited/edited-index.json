@@ -1,0 +1,62 @@
+{
+  "run_id": "2026-05-17T0001_pragmawire_7ed0",
+  "stage": "04-edited",
+  "editor_batch_status": "COMPLETO",
+  "generated_at": "2026-05-17T00:45:00",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_a_redactor": 0,
+  "total_devueltos_a_investigador": 0,
+  "total_bloqueados_verificacion": 0,
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 91,
+      "categoria_principal": "Hogar Inteligente",
+      "titulo": "Enchufes inteligentes y tarifa PVPC: cómo pagar menos en la factura de la luz",
+      "slug": "enchufes-inteligentes-pvpc-factura-luz",
+      "keyword_principal": "enchufes inteligentes factura luz",
+      "datos_pendientes_verificar": [
+        "Precio actual Tapo P115 en Amazon España",
+        "Franjas horarias PVPC vigentes mayo 2026 (verificar en REE)"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 92,
+      "categoria_principal": "Inteligencia Artificial",
+      "titulo": "Qué es Gemini Intelligence y qué va a cambiar en tu móvil Android",
+      "slug": "gemini-intelligence-android-que-es",
+      "keyword_principal": "Gemini Intelligence Android qué es",
+      "datos_pendientes_verificar": [
+        "Disponibilidad de Rambler en español desde lanzamiento",
+        "Lista completa de modelos Android que recibirán Gemini Intelligence"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "quality_score": 90,
+      "categoria_principal": "Productividad Digital",
+      "titulo": "NotebookLM: qué es y cómo usarlo gratis para aprender más rápido con la IA de Google",
+      "slug": "notebooklm-que-es-como-usar",
+      "keyword_principal": "NotebookLM qué es",
+      "datos_pendientes_verificar": [
+        "Límite exacto de fuentes en versión gratuita",
+        "Disponibilidad de cuestionarios/flashcards en español"
+      ]
+    }
+  ],
+  "scores_resumen": {
+    "articulo_001": 91,
+    "articulo_002": 92,
+    "articulo_003": 90,
+    "media": 91
+  },
+  "notas": "Los 3 artículos superan el umbral de calidad de 90 puntos requerido para WordPress Draft. Todos tienen vetos críticos OK o con WARNING aceptable (datos con nota de verificación). El Supervisor Final debe verificar los datos pendientes antes de aprobar la publicación definitiva."
+}

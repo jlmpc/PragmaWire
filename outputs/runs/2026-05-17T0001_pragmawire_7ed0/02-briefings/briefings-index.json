@@ -1,0 +1,68 @@
+{
+  "run_id": "2026-05-17T0001_pragmawire_7ed0",
+  "stage": "02-briefings",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "generated_at": "2026-05-17T00:10:00",
+  "total_briefings": 3,
+  "aptos": 3,
+  "descartados": 0,
+  "necesitan_revision": 0,
+  "cobertura_por_categoria": {
+    "Hogar Inteligente": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" },
+    "Inteligencia Artificial": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" },
+    "Productividad Digital": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" }
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Cómo ahorrar en la factura de la luz con enchufes inteligentes programados en horas valle (tarifa PVPC)",
+      "titulo_provisional": "Enchufes inteligentes y tarifa PVPC: cómo programar tus electrodomésticos para pagar menos en la factura de la luz",
+      "keyword_principal": "enchufes inteligentes factura luz",
+      "score": 82,
+      "tipo_contenido": "Guía práctica paso a paso",
+      "longitud_objetivo": "1.400-1.700 palabras",
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "riesgo_obsolescencia": "MEDIO"
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Gemini Intelligence: la nueva IA de Android que automatiza tareas entre apps, dicta texto limpio y crea widgets personalizados",
+      "titulo_provisional": "Qué es Gemini Intelligence y qué puede hacer por ti en tu móvil Android a partir de ahora",
+      "keyword_principal": "Gemini Intelligence Android qué es",
+      "score": 88,
+      "tipo_contenido": "Explicación práctica con ejemplos de uso real",
+      "longitud_objetivo": "1.300-1.600 palabras",
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "riesgo_obsolescencia": "ALTO"
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "tema": "NotebookLM: qué es la herramienta gratuita de Google para convertir documentos en podcasts, resúmenes y cuestionarios",
+      "titulo_provisional": "NotebookLM: qué es y cómo usarlo para aprender más rápido (y gratis) con la IA de Google",
+      "keyword_principal": "NotebookLM qué es",
+      "score": 84,
+      "tipo_contenido": "Explicación + guía práctica",
+      "longitud_objetivo": "1.400-1.800 palabras",
+      "deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "riesgo_obsolescencia": "BAJO-MEDIO"
+    }
+  ],
+  "orden_redaccion": ["briefing_001", "briefing_002", "briefing_003"],
+  "notas": "Cobertura completa de las 3 categorías activas (Rutina A). Todos los briefings son NUEVO en deduplicación. No fue necesaria segunda pasada. El briefing de mayor score es briefing_002 (Gemini Intelligence, score 88) por su frescura y oportunidad SEO."
+}
