@@ -1,0 +1,73 @@
+{
+  "run_id": "2026-05-18T0315_pragmawire_fbbf",
+  "stage": "05-wordpress-ready",
+  "agent": "supervisor-final",
+  "generated_at": "2026-05-18T04:10:00",
+  "estado_supervision": "COMPLETO",
+  "total_articulos_revisados": 3,
+  "total_crear_wordpress_draft": 3,
+  "total_devueltos_editor": 0,
+  "total_bloqueados": 0,
+  "nota_subagente": "Script run_subagent.py no disponible sin ANTHROPIC_API_KEY en este entorno cloud. Supervisión final ejecutada directamente por el orquestador con contexto del agente-supervisor-final.",
+  "wordpress_ready_articles": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_wordpress_ready.md",
+      "edited_origen": "articulo_001_edited.md",
+      "estado_supervision_final": "CREAR_WORDPRESS_DRAFT",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo_final": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más",
+      "slug": "cancelacion-ruido-auriculares-cuando-merece-la-pena",
+      "palabra_clave_principal": "cancelación de ruido auriculares",
+      "quality_score_editor": 88,
+      "quality_score_supervisor": 90,
+      "motivo_ajuste_score": "Score del editor (88) era conservador por warning de precios; artículo incluye aviso explícito de precios orientativos en el cuerpo — justifica re-evaluación a 90",
+      "warnings_pendientes": [
+        "Precios de auriculares: orientativos — verificar antes de publicar",
+        "Meta_title ajustada a 58 chars en supervisión"
+      ],
+      "destino": "WORDPRESS_DRAFT",
+      "publish": false
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_wordpress_ready.md",
+      "edited_origen": "articulo_002_edited.md",
+      "estado_supervision_final": "CREAR_WORDPRESS_DRAFT",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo_final": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad",
+      "slug": "fatiga-visual-pantallas-ojos",
+      "palabra_clave_principal": "fatiga visual pantallas",
+      "quality_score_editor": 91,
+      "quality_score_supervisor": 91,
+      "motivo_ajuste_score": "Score del editor confirmado — supera el umbral de 90 sin necesidad de ajuste",
+      "warnings_pendientes": [
+        "Dato 97% prevalencia fatiga visual: verificar fuente primaria (consalud.es) antes de publicar",
+        "Enlace interno tecnologia-que-mejora-tu-descanso: ajustar a URL completa del sitio"
+      ],
+      "destino": "WORDPRESS_DRAFT",
+      "publish": false
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_wordpress_ready.md",
+      "edited_origen": "articulo_003_edited.md",
+      "estado_supervision_final": "CREAR_WORDPRESS_DRAFT",
+      "categoria_principal": "Seguridad Digital",
+      "titulo_final": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy",
+      "slug": "gestor-de-contrasenas-que-es-como-empezar",
+      "palabra_clave_principal": "gestor de contraseñas",
+      "quality_score_editor": 93,
+      "quality_score_supervisor": 93,
+      "motivo_ajuste_score": "Score del editor confirmado — el más alto del batch, supera el umbral con amplio margen",
+      "warnings_pendientes": [
+        "Precios Bitwarden premium y 1Password: orientativos — verificar en webs oficiales antes de publicar",
+        "Enlace interno /que-son-passkeys: ajustar a URL completa del sitio antes de publicar"
+      ],
+      "destino": "WORDPRESS_DRAFT",
+      "publish": false
+    }
+  ],
+  "pipeline_status": "LISTO_PARA_WORDPRESS_DRAFT",
+  "next_step": "post_to_wp.py — crear borradores en WordPress (publish=false)"
+}

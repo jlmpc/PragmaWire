@@ -82,5 +82,35 @@
     "categoria": "Hogar inteligente",
     "fecha_publicacion": "2026-03-30",
     "estado": "publicado"
+  },
+  {
+    "title": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más",
+    "slug": "cancelacion-ruido-auriculares-cuando-merece-la-pena",
+    "categoria": "Recomendaciones Tecnológicas",
+    "fecha_run": "2026-05-18",
+    "run_id": "2026-05-18T0315_pragmawire_fbbf",
+    "wp_id": 1207,
+    "wp_link": "https://www.pragmawire.com/?p=1207",
+    "estado": "wordpress_draft"
+  },
+  {
+    "title": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad",
+    "slug": "fatiga-visual-pantallas-ojos",
+    "categoria": "Salud y Bienestar Digital",
+    "fecha_run": "2026-05-18",
+    "run_id": "2026-05-18T0315_pragmawire_fbbf",
+    "wp_id": 1208,
+    "wp_link": "https://www.pragmawire.com/?p=1208",
+    "estado": "wordpress_draft"
+  },
+  {
+    "title": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy",
+    "slug": "gestor-de-contrasenas-que-es-como-empezar",
+    "categoria": "Seguridad Digital",
+    "fecha_run": "2026-05-18",
+    "run_id": "2026-05-18T0315_pragmawire_fbbf",
+    "wp_id": 1209,
+    "wp_link": "https://www.pragmawire.com/?p=1209",
+    "estado": "wordpress_draft"
   }
 ]

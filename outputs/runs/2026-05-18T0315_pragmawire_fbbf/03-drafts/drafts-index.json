@@ -1,0 +1,51 @@
+{
+  "run_id": "2026-05-18T0315_pragmawire_fbbf",
+  "stage": "03-drafts",
+  "estado_redaccion": "REDACCION_COMPLETA_CON_NOTAS",
+  "generated_at": "2026-05-18T03:35:00",
+  "total_briefings": 3,
+  "total_redactados": 3,
+  "total_bloqueados": 0,
+  "total_devueltos": 0,
+  "drafts": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_draft.md",
+      "briefing_origen": "briefing_001",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "tema": "Auriculares con cancelación de ruido (ANC): cuándo merece la pena y cuándo no",
+      "titulo_draft": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más",
+      "palabra_clave_principal": "cancelación de ruido auriculares",
+      "slug_sugerido": "cancelacion-de-ruido-auriculares-cuando-merece-la-pena",
+      "longitud_estimada_palabras": 1750,
+      "notas_verificacion": ["Verificar precios de modelos antes de publicar", "Verificar enlace El Debate acceso abierto"]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_draft.md",
+      "briefing_origen": "briefing_002",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "tema": "Fatiga visual digital: cómo proteger los ojos de las pantallas con lo que funciona de verdad",
+      "titulo_draft": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad",
+      "palabra_clave_principal": "fatiga visual pantallas",
+      "slug_sugerido": "fatiga-visual-pantallas-como-proteger-ojos",
+      "longitud_estimada_palabras": 1650,
+      "notas_verificacion": ["Verificar dato 97% prevalencia en consalud.es", "Verificar posición AAO sobre gafas luz azul en 2026"]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_draft.md",
+      "briefing_origen": "briefing_003",
+      "estado": "REDACCION_COMPLETA_CON_NOTAS",
+      "categoria_principal": "Seguridad Digital",
+      "tema": "Gestores de contraseñas: qué son, por qué los necesitas y cómo empezar gratis hoy",
+      "titulo_draft": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy",
+      "palabra_clave_principal": "gestor de contraseñas",
+      "slug_sugerido": "gestor-de-contrasenas-guia-completa",
+      "longitud_estimada_palabras": 1900,
+      "notas_verificacion": ["Verificar precios Bitwarden y 1Password", "Verificar características plan gratuito Bitwarden", "Ajustar URL del artículo de passkeys al enlace real"]
+    }
+  ]
+}

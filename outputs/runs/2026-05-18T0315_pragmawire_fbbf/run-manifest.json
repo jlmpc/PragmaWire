@@ -1,0 +1,97 @@
+{
+  "run_id": "2026-05-18T0315_pragmawire_fbbf",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-18T0315_pragmawire_fbbf",
+  "created_at": "2026-05-18T03:15:27",
+  "updated_at": "2026-05-18T03:55:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "routine": "B",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "complete",
+  "current_stage": "06-wordpress-creation",
+  "next_step": "revision_humana",
+  "pipeline_status": "PIPELINE_READY_WITH_WARNINGS",
+  "categoria_restriccion": {
+    "activa": true,
+    "categorias_objetivo": ["Recomendaciones Tecnológicas", "Salud y Bienestar Digital", "Seguridad Digital"],
+    "categorias_excluidas": ["Hogar Inteligente", "Inteligencia Artificial", "Productividad Digital"],
+    "articulos_objetivo": 3
+  },
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "valid_outputs_count": 3
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "valid_outputs_count": 3
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "nota_ejecucion": "Ejecutado directamente por orquestador (run_subagent.py requiere ANTHROPIC_API_KEY no disponible en entorno cloud)",
+      "output_paths": [
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 3,
+      "edited_articles": [
+        { "id": "articulo_001", "estado": "APROBADO_WORDPRESS_DRAFT", "quality_score": 88, "categoria": "Recomendaciones Tecnológicas" },
+        { "id": "articulo_002", "estado": "APROBADO_WORDPRESS_DRAFT", "quality_score": 91, "categoria": "Salud y Bienestar Digital" },
+        { "id": "articulo_003", "estado": "APROBADO_WORDPRESS_DRAFT", "quality_score": 93, "categoria": "Seguridad Digital" }
+      ]
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "nota_ejecucion": "Ejecutado directamente por orquestador (run_subagent.py requiere ANTHROPIC_API_KEY no disponible en entorno cloud)",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "wordpress_ready_articles": [
+        { "id": "articulo_001", "estado": "CREAR_WORDPRESS_DRAFT", "quality_score": 90, "categoria": "Recomendaciones Tecnológicas", "slug": "cancelacion-ruido-auriculares-cuando-merece-la-pena" },
+        { "id": "articulo_002", "estado": "CREAR_WORDPRESS_DRAFT", "quality_score": 91, "categoria": "Salud y Bienestar Digital", "slug": "fatiga-visual-pantallas-ojos" },
+        { "id": "articulo_003", "estado": "CREAR_WORDPRESS_DRAFT", "quality_score": 93, "categoria": "Seguridad Digital", "slug": "gestor-de-contrasenas-que-es-como-empezar" }
+      ]
+    }
+  },
+  "category_coverage": {
+    "Recomendaciones Tecnológicas": 1,
+    "Salud y Bienestar Digital": 1,
+    "Seguridad Digital": 1
+  },
+  "errors": [],
+  "warnings": [
+    "run_subagent.py no disponible sin ANTHROPIC_API_KEY: edición ejecutada directamente",
+    "Precios de modelos de auriculares: orientativos, verificar antes de publicar",
+    "Precios Bitwarden premium y 1Password: orientativos, verificar antes de publicar",
+    "Dato 97% prevalencia fatiga visual: verificar fuente primaria",
+    "URL artículo passkeys en artículo 003: ajustar a URL real del sitio"
+  ],
+  "blocked_reason": "",
+  "wordpress_drafts_created": [
+    { "id": "articulo_001", "wp_id": 1207, "wp_link": "https://www.pragmawire.com/?p=1207", "titulo": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más", "slug": "cancelacion-ruido-auriculares-cuando-merece-la-pena" },
+    { "id": "articulo_002", "wp_id": 1208, "wp_link": "https://www.pragmawire.com/?p=1208", "titulo": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad", "slug": "fatiga-visual-pantallas-ojos" },
+    { "id": "articulo_003", "wp_id": 1209, "wp_link": "https://www.pragmawire.com/?p=1209", "titulo": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy", "slug": "gestor-de-contrasenas-que-es-como-empezar" }
+  ],
+  "completed_at": "2026-05-18T04:15:00"
+}

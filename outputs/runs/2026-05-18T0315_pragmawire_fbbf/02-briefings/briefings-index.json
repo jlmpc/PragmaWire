@@ -1,0 +1,73 @@
+{
+  "run_id": "2026-05-18T0315_pragmawire_fbbf",
+  "stage": "02-briefings",
+  "estado_investigacion": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "generated_at": "2026-05-18T03:20:00",
+  "total_briefings": 3,
+  "total_aptos": 3,
+  "total_descartados": 0,
+  "cobertura_por_categoria": {
+    "Recomendaciones Tecnológicas": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" },
+    "Salud y Bienestar Digital": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" },
+    "Seguridad Digital": { "objetivo": 1, "minimo": 1, "aptos": 1, "estado": "OK" }
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Auriculares con cancelación de ruido (ANC): cuándo merece la pena y cuándo no",
+      "titulo_provisional": "Cancelación de ruido: cuándo vale la pena pagar por ella y cuándo te la están vendiendo de más",
+      "palabra_clave_principal": "cancelación de ruido auriculares",
+      "intencion_busqueda": "commercial_investigation / practical_how_to",
+      "tipo_contenido": "guía de compra por perfil de usuario",
+      "score": 82,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO",
+      "longitud_objetivo": "1600-1900 palabras",
+      "orden_redaccion": 1
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Fatiga visual digital: cómo proteger los ojos de las pantallas con lo que funciona de verdad",
+      "titulo_provisional": "Tus ojos no están bien: cómo protegerlos de las pantallas sin caer en mitos del modo oscuro y la luz azul",
+      "palabra_clave_principal": "fatiga visual pantallas",
+      "intencion_busqueda": "informational / practical_how_to",
+      "tipo_contenido": "explicación + guía de hábitos prácticos",
+      "score": 86,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO",
+      "longitud_objetivo": "1500-1800 palabras",
+      "orden_redaccion": 2
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Seguridad Digital",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Gestores de contraseñas: qué son, por qué los necesitas y cómo empezar gratis hoy",
+      "titulo_provisional": "Gestor de contraseñas: la herramienta de seguridad que casi nadie usa y todo el mundo debería tener",
+      "palabra_clave_principal": "gestor de contraseñas",
+      "intencion_busqueda": "informational / practical_how_to / commercial_investigation",
+      "tipo_contenido": "guía práctica de inicio + comparativa básica",
+      "score": 88,
+      "recomendacion": "INVESTIGAR",
+      "deduplicacion": "NUEVO",
+      "longitud_objetivo": "1700-2000 palabras",
+      "orden_redaccion": 3
+    }
+  ],
+  "temas_descartados": [],
+  "warnings": [
+    "Google Trends no disponible directamente: tendencias inferidas de búsquedas web y análisis competitivo",
+    "Precios de modelos específicos deben verificarse en fecha de redacción"
+  ]
+}

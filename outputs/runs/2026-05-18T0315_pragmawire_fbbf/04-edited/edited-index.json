@@ -1,0 +1,50 @@
+{
+  "run_id": "2026-05-18T0315_pragmawire_fbbf",
+  "stage": "04-edited",
+  "estado_edicion": "COMPLETO",
+  "generated_at": "2026-05-18T03:55:00",
+  "total_articulos": 3,
+  "total_aprobados": 3,
+  "total_devueltos_redactor": 0,
+  "total_devueltos_investigador": 0,
+  "total_bloqueados": 0,
+  "nota_subagente": "Script run_subagent.py no disponible sin ANTHROPIC_API_KEY en este entorno cloud. Edición ejecutada directamente por el orquestador con contexto del agente-editor-estrategico.md.",
+  "edited_articles": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "draft_origen": "articulo_001_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Recomendaciones Tecnológicas",
+      "titulo_final": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más",
+      "slug": "cancelacion-ruido-auriculares-cuando-merece-la-pena",
+      "palabra_clave_principal": "cancelación de ruido auriculares",
+      "quality_score": 88,
+      "veto_precios": "WARNING — precios marcados como orientativos con aviso explícito"
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "draft_origen": "articulo_002_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Salud y Bienestar Digital",
+      "titulo_final": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad",
+      "slug": "fatiga-visual-pantallas-ojos",
+      "palabra_clave_principal": "fatiga visual pantallas",
+      "quality_score": 91,
+      "veto_precios": "OK — no aplica"
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "draft_origen": "articulo_003_draft.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Seguridad Digital",
+      "titulo_final": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy",
+      "slug": "gestor-de-contrasenas-que-es-como-empezar",
+      "palabra_clave_principal": "gestor de contraseñas",
+      "quality_score": 93,
+      "veto_precios": "WARNING — precios de Bitwarden premium y 1Password marcados como orientativos"
+    }
+  ]
+}

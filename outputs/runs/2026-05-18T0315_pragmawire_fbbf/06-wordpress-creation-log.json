@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 1207,
+      "link": "https://www.pragmawire.com/?p=1207",
+      "title": "Cancelación de ruido en auriculares: cuándo vale la pena y cuándo te la están vendiendo de más",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 1208,
+      "link": "https://www.pragmawire.com/?p=1208",
+      "title": "Fatiga visual por pantallas: qué te está pasando en los ojos y cómo solucionarlo de verdad",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 1209,
+      "link": "https://www.pragmawire.com/?p=1209",
+      "title": "Gestor de contraseñas: qué es, por qué lo necesitas y cómo empezar gratis hoy",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}
