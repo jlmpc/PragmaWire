@@ -1,0 +1,59 @@
+{
+  "run_id": "2026-05-18T0004_pragmawire_5ec2",
+  "editor_batch_status": "COMPLETO",
+  "total_articulos_recibidos": 3,
+  "total_aprobados_wordpress_draft": 3,
+  "total_devueltos_redactor": 0,
+  "total_devueltos_investigador": 0,
+  "total_bloqueados_verificacion": 0,
+  "resumen_batch": "Los 3 artículos han superado la auditoría editorial sin vetos críticos activos. Todos aprobados como WORDPRESS_DRAFT con advertencias de verificación menores (precios orientativos, límites de planes de IA que pueden cambiar). Scores: 88/85/86.",
+  "articulos": [
+    {
+      "id": "articulo_001",
+      "file": "articulo_001_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Hogar Inteligente",
+      "quality_score": 88,
+      "slug": "enchufe-inteligente-ahorro-factura-luz",
+      "titulo": "Enchufes inteligentes y horas baratas de la luz: cómo ahorrar hasta 25 euros al mes",
+      "focus_keyword": "enchufe inteligente ahorro factura luz",
+      "vetos_activos": [],
+      "warnings": [
+        "Precios de enchufes orientativos; verificar antes de publicar",
+        "Compatibilidad Matter de Tapo P110 y Shelly Plug S pendiente de verificar"
+      ]
+    },
+    {
+      "id": "articulo_002",
+      "file": "articulo_002_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Inteligencia Artificial",
+      "quality_score": 85,
+      "slug": "chatgpt-modo-voz-uso-diario",
+      "titulo": "ChatGPT en modo voz: cómo usarlo en el día a día (y en qué supera a Siri)",
+      "focus_keyword": "ChatGPT modo voz",
+      "vetos_activos": [],
+      "warnings": [
+        "Verificar límite exacto de minutos del plan gratuito de ChatGPT Voice en mayo 2026",
+        "Verificar disponibilidad de Android Auto en mayo 2026"
+      ]
+    },
+    {
+      "id": "articulo_003",
+      "file": "articulo_003_edited.md",
+      "estado": "APROBADO_WORDPRESS_DRAFT",
+      "categoria_principal": "Productividad Digital",
+      "quality_score": 86,
+      "slug": "inbox-zero-gemini-copilot-ia-correo",
+      "titulo": "Tu correo está desbordado. Cómo usar Gemini y Copilot para vaciarlo (sin instalar nada)",
+      "focus_keyword": "inbox zero herramientas IA",
+      "vetos_activos": [],
+      "warnings": [
+        "Verificar disponibilidad de Gemini gratis en Gmail personal en mayo 2026",
+        "Verificar precio actualizado de SaneBox en mayo 2026",
+        "Verificar disponibilidad de Copilot en Outlook personal vs Microsoft 365"
+      ]
+    }
+  ],
+  "created_at": "2026-05-18T00:35:00"
+}

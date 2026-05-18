@@ -1,0 +1,70 @@
+{
+  "run_id": "2026-05-18T0004_pragmawire_5ec2",
+  "investigation_status": "INVESTIGACION_COMPLETA",
+  "segunda_pasada": false,
+  "total_briefings": 3,
+  "total_aptos": 3,
+  "total_descartados": 0,
+  "total_necesita_revision": 0,
+  "cobertura_por_categoria": {
+    "Hogar Inteligente": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"},
+    "Inteligencia Artificial": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"},
+    "Productividad Digital": {"objetivo": 1, "minimo": 1, "aptos": 1, "estado": "CUBIERTO"}
+  },
+  "briefings": [
+    {
+      "id": "briefing_001",
+      "file": "briefing_001.md",
+      "estado": "APTO",
+      "categoria_principal": "Hogar Inteligente",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "Enchufes inteligentes + tarifa con discriminación horaria para ahorrar en la factura de la luz",
+      "titulo_provisional": "Enchufes inteligentes y horas baratas de la luz: el combo sencillo que te puede ahorrar 25 euros al mes",
+      "palabra_clave_principal": "enchufe inteligente ahorro factura luz",
+      "tipo_contenido": "guía práctica paso a paso",
+      "intencion_busqueda": "practical_how_to",
+      "score": 88,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1600-1900 palabras",
+      "order_redaccion": 1
+    },
+    {
+      "id": "briefing_002",
+      "file": "briefing_002.md",
+      "estado": "APTO",
+      "categoria_principal": "Inteligencia Artificial",
+      "categoria_secundaria": "Productividad Digital",
+      "tema": "ChatGPT modo de voz avanzado: cómo usarlo para el día a día sin tocar el teléfono",
+      "titulo_provisional": "ChatGPT en modo voz: 8 situaciones del día a día en las que ya supera a Siri y al Asistente de Google",
+      "palabra_clave_principal": "ChatGPT modo voz",
+      "tipo_contenido": "guía práctica de casos de uso",
+      "intencion_busqueda": "practical_how_to",
+      "score": 84,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1500-1800 palabras",
+      "order_redaccion": 2
+    },
+    {
+      "id": "briefing_003",
+      "file": "briefing_003.md",
+      "estado": "APTO",
+      "categoria_principal": "Productividad Digital",
+      "categoria_secundaria": "Inteligencia Artificial",
+      "tema": "Inbox Zero con IA: cómo usar Gemini en Gmail y Copilot en Outlook para vaciar el correo sin volverse loco",
+      "titulo_provisional": "Tu bandeja de entrada está desbordada. Estas herramientas de IA la vacían solas (y son gratis si ya tienes Gmail u Outlook)",
+      "palabra_clave_principal": "inbox zero herramientas IA",
+      "tipo_contenido": "guía práctica con comparativa",
+      "intencion_busqueda": "practical_how_to",
+      "score": 83,
+      "estado_deduplicacion": "NUEVO",
+      "recomendacion": "INVESTIGAR",
+      "longitud_objetivo": "1500-1800 palabras",
+      "order_redaccion": 3
+    }
+  ],
+  "temas_descartados": [],
+  "resumen_ejecutivo": "Se han identificado 3 temas APTOS (1 por cada categoría activa del run: Hogar Inteligente, Inteligencia Artificial y Productividad Digital). Todos con score ≥ 83, estado de deduplicación NUEVO y recomendación INVESTIGAR. No fue necesaria segunda pasada. Los ángulos son complementarios y diferenciados de los 12 artículos ya publicados.",
+  "created_at": "2026-05-18T00:10:00"
+}

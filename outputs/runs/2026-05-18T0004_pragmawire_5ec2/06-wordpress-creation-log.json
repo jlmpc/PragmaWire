@@ -1,0 +1,27 @@
+{
+  "results": [
+    {
+      "file": "articulo_001_wordpress_ready.md",
+      "wp_id": 1204,
+      "link": "https://www.pragmawire.com/?p=1204",
+      "title": "Enchufes inteligentes y horas baratas de la luz: cómo ahorrar hasta 25 euros al mes",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_002_wordpress_ready.md",
+      "wp_id": 1205,
+      "link": "https://www.pragmawire.com/?p=1205",
+      "title": "ChatGPT en modo voz: cómo usarlo en el día a día (y en qué supera a Siri)",
+      "status": "ok"
+    },
+    {
+      "file": "articulo_003_wordpress_ready.md",
+      "wp_id": 1206,
+      "link": "https://www.pragmawire.com/?p=1206",
+      "title": "Tu correo está desbordado. Cómo usar Gemini y Copilot para vaciarlo (sin instalar nada)",
+      "status": "ok"
+    }
+  ],
+  "total": 3,
+  "success": 3
+}

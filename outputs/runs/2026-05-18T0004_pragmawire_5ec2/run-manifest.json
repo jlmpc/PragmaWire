@@ -1,0 +1,112 @@
+{
+  "run_id": "2026-05-18T0004_pragmawire_5ec2",
+  "run_path": "/home/user/PragmaWire/outputs/runs/2026-05-18T0004_pragmawire_5ec2",
+  "created_at": "2026-05-18T00:04:50",
+  "updated_at": "2026-05-18T01:05:00",
+  "execution_mode": "PRODUCCION_DRAFT",
+  "routine": "A",
+  "wordpress_destination": "WORDPRESS_DRAFT",
+  "publish_allowed": false,
+  "overall_status": "complete",
+  "current_stage": "done",
+  "next_agent": "human-review",
+  "pipeline_status": "PIPELINE_COMPLETE",
+  "active_categories": ["Hogar Inteligente", "Inteligencia Artificial", "Productividad Digital"],
+  "target_articles": 3,
+  "minimum_articles": 3,
+  "stages": {
+    "01-run-context": {
+      "agent": "supervisor-inicial",
+      "status": "complete",
+      "stage_complete": true,
+      "output_paths": [
+        "01-run-context/run-context.md",
+        "01-run-context/categorias_target.md",
+        "01-run-context/_STAGE_COMPLETE"
+      ],
+      "completed_at": "2026-05-18T00:05:30"
+    },
+    "02-briefings": {
+      "agent": "agente-investigador",
+      "status": "complete",
+      "stage_complete": true,
+      "investigation_status": "INVESTIGACION_COMPLETA",
+      "output_paths": [
+        "02-briefings/briefing_001.md",
+        "02-briefings/briefing_002.md",
+        "02-briefings/briefing_003.md",
+        "02-briefings/briefings-index.json",
+        "02-briefings/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3,
+      "aptos_count": 3,
+      "completed_at": "2026-05-18T00:10:00"
+    },
+    "03-drafts": {
+      "agent": "agente-redactor",
+      "status": "complete",
+      "stage_complete": true,
+      "redaccion_status": "REDACCION_COMPLETA_CON_NOTAS",
+      "output_paths": [
+        "03-drafts/articulo_001_draft.md",
+        "03-drafts/articulo_002_draft.md",
+        "03-drafts/articulo_003_draft.md",
+        "03-drafts/drafts-index.json",
+        "03-drafts/_STAGE_COMPLETE"
+      ],
+      "valid_outputs_count": 3,
+      "completed_at": "2026-05-18T00:20:00"
+    },
+    "04-edited": {
+      "agent": "agente-editor-estrategico",
+      "status": "complete",
+      "stage_complete": true,
+      "editor_batch_status": "COMPLETO",
+      "output_paths": [
+        "04-edited/articulo_001_edited.md",
+        "04-edited/articulo_002_edited.md",
+        "04-edited/articulo_003_edited.md",
+        "04-edited/edited-index.json",
+        "04-edited/_STAGE_COMPLETE"
+      ],
+      "approved_wordpress_drafts": 3,
+      "quality_scores": {"articulo_001": 88, "articulo_002": 85, "articulo_003": 86},
+      "completed_at": "2026-05-18T00:35:00"
+    },
+    "05-wordpress-ready": {
+      "agent": "supervisor-final",
+      "status": "complete",
+      "stage_complete": true,
+      "supervision_batch_status": "COMPLETA",
+      "output_paths": [
+        "05-wordpress-ready/articulo_001_wordpress_ready.md",
+        "05-wordpress-ready/articulo_002_wordpress_ready.md",
+        "05-wordpress-ready/articulo_003_wordpress_ready.md",
+        "05-wordpress-ready/wordpress-ready-index.json",
+        "05-wordpress-ready/_STAGE_COMPLETE"
+      ],
+      "approved_for_wordpress_draft": 3,
+      "quality_scores_validated": {"articulo_001": 90, "articulo_002": 90, "articulo_003": 91},
+      "completed_at": "2026-05-18T01:00:00"
+    }
+  },
+  "category_coverage": {
+    "Hogar Inteligente": 1,
+    "Inteligencia Artificial": 1,
+    "Productividad Digital": 1
+  },
+  "wordpress_drafts": [
+    {"articulo": "articulo_001", "wp_id": 1204, "url": "https://www.pragmawire.com/?p=1204", "status": "draft"},
+    {"articulo": "articulo_002", "wp_id": 1205, "url": "https://www.pragmawire.com/?p=1205", "status": "draft"},
+    {"articulo": "articulo_003", "wp_id": 1206, "url": "https://www.pragmawire.com/?p=1206", "status": "draft"}
+  ],
+  "errors": [],
+  "warnings": [
+    "ANTHROPIC_API_KEY no disponible en entorno: sub-agentes ejecutados directamente en contexto del orquestador.",
+    "Artículo 001: precios enchufes y compatibilidad Matter pendientes de verificar antes de publicar.",
+    "Artículo 002: límites plan gratuito ChatGPT Voice y Android Auto pendientes de verificar antes de publicar.",
+    "Artículo 003: disponibilidad Gemini gratis en Gmail personal y precio SaneBox pendientes de verificar antes de publicar."
+  ],
+  "blocked_reason": "",
+  "completed_at": "2026-05-18T01:05:00"
+}
