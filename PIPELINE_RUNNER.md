@@ -35,7 +35,20 @@ python scripts/validate_run.py
 
 **Importante:** Revisa siempre el `run-manifest.json` en la carpeta del run para ver los `QUALITY_SCORE` asignados. Si un artículo tiene menos de 90, el sistema lo habrá bloqueado para proteger la reputación de la web.
 
-## 4. Reglas Innegociables
+## 4. Fase WordPress Draft
+
+Cuando exista `05-wordpress-ready/_STAGE_COMPLETE`, ejecuta siempre:
+
+```bash
+python3 scripts/post_to_wp.py --dry-run
+python3 scripts/post_to_wp.py
+```
+
+El dry-run genera `wordpress-payload-preview.json`. El paso real crea borradores con
+slug, extracto, categorías, etiquetas y metadata SEO Jetpack. La imagen destacada se
+mantiene manual.
+
+## 5. Reglas Innegociables
 
 1.  **ADN Editorial:** El contenido debe seguir siempre `resources/adn-editorial-pragmawire.md`.
 2.  **No Publicar:** El sistema tiene terminantemente prohibido publicar artículos. Solo crea borradores (`status: draft`).

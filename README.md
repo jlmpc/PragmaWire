@@ -67,6 +67,19 @@ WORDPRESS_ACTION:
   publish: false
 ```
 
+## WordPress Drafts
+
+El publicador oficial es:
+
+```bash
+python3 scripts/post_to_wp.py --dry-run
+python3 scripts/post_to_wp.py
+```
+
+No uses `curl` manual ni Make.com para este paso. El script conserva el contrato
+completo de `WORDPRESS_DRAFT_VALIDADO`: slug, extracto, categorías, etiquetas y
+metadata SEO Jetpack. La imagen destacada queda sin asignar para revisión humana.
+
 ## Cómo usarlo
 
 ### 1. Inicializar ejecución

@@ -72,5 +72,16 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
+Para crear borradores usa solo:
+
+```bash
+python3 scripts/post_to_wp.py --dry-run
+python3 scripts/post_to_wp.py
+```
+
+El dry-run debe pasar antes de crear borradores. El publicador debe enviar slug,
+extracto, categorías, etiquetas y metadata SEO Jetpack. La imagen destacada queda
+sin asignar para revisión humana.
+
 No publiques nada.
 ```
