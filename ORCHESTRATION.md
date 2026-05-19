@@ -41,9 +41,9 @@ Cada ejecución usa un `RUN_ID` único. Los agentes solo operan dentro de:
 
 ### 3.6. WordPress Draft
 - **Lee:** `05-wordpress-ready/`.
-- **Acción:** Validación, conversión a HTML y subida como borrador (vía `post_to_wp.py`).
+- **Acción:** Validación, conversión a HTML y subida como borrador (vía `create_wp_drafts.py`).
 - **Restricción:** `publish: false` siempre. Solo `create_draft: true`.
-- **Comando obligatorio:** `python3 scripts/post_to_wp.py --dry-run` antes de `python3 scripts/post_to_wp.py`.
+- **Comando obligatorio:** `python3 scripts/create_wp_drafts.py --dry-run` antes de `python3 scripts/create_wp_drafts.py`.
 - **Campos obligatorios:** slug, extracto, categorías, etiquetas y metadata SEO Jetpack.
 - **Imagen destacada:** no se asigna automáticamente; queda para revisión humana.
 

@@ -67,18 +67,19 @@ WORDPRESS_ACTION:
   publish: false
 ```
 
-## WordPress Drafts
+## Creación de borradores WordPress
 
-El publicador oficial es:
+El único publicador permitido es:
 
 ```bash
-python3 scripts/post_to_wp.py --dry-run
-python3 scripts/post_to_wp.py
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
 ```
 
-No uses `curl` manual ni Make.com para este paso. El script conserva el contrato
-completo de `WORDPRESS_DRAFT_VALIDADO`: slug, extracto, categorías, etiquetas y
-metadata SEO Jetpack. La imagen destacada queda sin asignar para revisión humana.
+No uses `curl` manual, Make.com ni blueprints improvisados para el paso WordPress.
+El script oficial conserva el contrato completo del Supervisor Final: slug, categoría,
+etiquetas, extracto y metadata SEO Jetpack. La imagen destacada queda sin asignar
+para revisión humana manual.
 
 ## Cómo usarlo
 

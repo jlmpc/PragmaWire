@@ -68,21 +68,23 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
-Ejecuta primero el dry-run del publicador oficial. Si falla, no intentes crear borradores:
+Para crear los borradores, usa exclusivamente el publicador validado del repo. No improvises un `curl`, no uses un blueprint Make.com manual y no crees borradores con payload parcial.
 
 ```bash
-python3 scripts/post_to_wp.py --dry-run
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
 ```
 
-Si el dry-run pasa, ejecuta:
+El publicador debe:
+- leer `05-wordpress-ready/*_wordpress_ready.md`;
+- extraer `WORDPRESS_DRAFT_VALIDADO`;
+- enviar `title`, `content`, `excerpt`, `slug`, `status`, `categories`, `tags` y metadata SEO Jetpack;
+- dejar la imagen destacada sin asignar, porque se genera y se establece manualmente durante la revisión humana;
+- generar `wordpress-payload-preview.json`;
+- generar `06-wordpress-creation-log.json`;
+- verificar por REST que slug, categoría, etiquetas, extracto y metadata SEO quedaron escritos.
 
-```bash
-python3 scripts/post_to_wp.py
-```
-
-El script lee los artículos de `05-wordpress-ready/`, convierte el markdown a HTML y los sube como borradores via la REST API de WordPress usando las variables de entorno WP_URL, WP_USER y WP_APP_PASSWORD. Debe enviar slug, extracto, categorías, etiquetas y metadata SEO Jetpack. Debe dejar la imagen destacada sin asignar. Guarda el preview en `wordpress-payload-preview.json` y el resultado en `06-wordpress-creation-log.json`.
-
-Lee `06-wordpress-creation-log.json` y registra los IDs y URLs de los borradores creados en `run-manifest.json`.
+Si `python3 scripts/create_wp_drafts.py --dry-run` falla, no intentes crear borradores.
 
 Si el Supervisor Final NO devuelve CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 

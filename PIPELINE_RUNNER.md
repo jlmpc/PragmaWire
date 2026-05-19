@@ -40,8 +40,8 @@ python scripts/validate_run.py
 Cuando exista `05-wordpress-ready/_STAGE_COMPLETE`, ejecuta siempre:
 
 ```bash
-python3 scripts/post_to_wp.py --dry-run
-python3 scripts/post_to_wp.py
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
 ```
 
 El dry-run genera `wordpress-payload-preview.json`. El paso real crea borradores con
