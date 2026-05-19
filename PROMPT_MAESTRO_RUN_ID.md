@@ -72,5 +72,16 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
+Si `next_agent` es `wordpress-drafts` o si el Supervisor Final ya dejó `05-wordpress-ready/_STAGE_COMPLETE` y autorizó `CREAR_WORDPRESS_DRAFT`:
+- no publiques nada;
+- no uses un `curl` manual;
+- no uses Make.com ni blueprints improvisados;
+- ejecuta primero `python3 scripts/create_wp_drafts.py --dry-run`;
+- si el dry-run pasa, ejecuta `python3 scripts/create_wp_drafts.py`;
+- verifica que `06-wordpress-creation-log.json` tiene `error_count: 0`;
+- solo entonces actualiza `memory/articulos_publicados.json` con los artículos que llegaron a WordPress Draft.
+
+El publicador oficial debe ser `scripts/create_wp_drafts.py` porque escribe slug, categoría, etiquetas, extracto y metadata SEO Jetpack. La imagen destacada queda siempre sin asignar para revisión humana manual.
+
 No publiques nada.
 ```

@@ -18,7 +18,7 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 
-RUN_DIR = "/home/user/PragmaWire/outputs/runs/2026-04-29T1502_pragmawire_2f44"
+RUN_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
 ARTICLES = [
     {"id": "001", "title": "Qué es Matter: el protocolo que hace que todos tus dispositivos inteligentes se entiendan por fin", "slug": "que-es-matter-domotica", "excerpt": "Matter es el protocolo que hace que dispositivos de Amazon, Google y Apple funcionen juntos. Cómo funciona, qué dispositivos son compatibles y cómo reconocerlo en la caja."},

@@ -36,6 +36,19 @@ Cuando quieras comprobar que la estructura está bien:
 python scripts/validate_run.py
 ```
 
+## WordPress Drafts
+
+Cuando `05-wordpress-ready/_STAGE_COMPLETE` exista y el Supervisor Final autorice
+`CREAR_WORDPRESS_DRAFT`, usa solo:
+
+```bash
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
+```
+
+El dry-run genera `wordpress-payload-preview.json`. El paso real crea o actualiza
+borradores con slug, categoría, etiquetas, extracto y metadata SEO Jetpack.
+
 ## Prohibición
 
 No publicar automáticamente en WordPress.

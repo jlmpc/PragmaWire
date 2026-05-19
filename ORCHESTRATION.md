@@ -159,3 +159,14 @@ WORDPRESS_ACTION:
 ```
 
 Si aparece `publish: true`, el flujo debe bloquearse.
+
+La creación de borradores debe ejecutarse únicamente con:
+
+```bash
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
+```
+
+El publicador debe bloquear si falta metadata crítica y debe verificar por REST que
+slug, categoría, etiquetas, extracto y metadata SEO Jetpack quedaron escritos. No
+asigna imagen destacada automáticamente.

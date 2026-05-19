@@ -68,20 +68,23 @@ WORDPRESS_ACTION:
   create_draft: true
   publish: false
 
-Para cada artículo aprobado en `05-wordpress-ready/`, crea un borrador en WordPress usando la REST API con las variables de entorno WP_URL, WP_USER y WP_APP_PASSWORD:
+Para crear los borradores, usa exclusivamente el publicador validado del repo. No improvises un `curl`, no uses un blueprint Make.com manual y no crees borradores con payload parcial.
 
 ```bash
-curl -s -X POST "$WP_URL/wp-json/wp/v2/posts" \
-  -u "$WP_USER:$WP_APP_PASSWORD" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "TÍTULO_DEL_ARTÍCULO",
-    "content": "CONTENIDO_HTML_DEL_ARTÍCULO",
-    "status": "draft"
-  }'
+python3 scripts/create_wp_drafts.py --dry-run
+python3 scripts/create_wp_drafts.py
 ```
 
-Extrae el `id` y el `link` de la respuesta JSON y regístralos en `run-manifest.json`.
+El publicador debe:
+- leer `05-wordpress-ready/*_wordpress_ready.md`;
+- extraer `WORDPRESS_DRAFT_VALIDADO`;
+- enviar `title`, `content`, `excerpt`, `slug`, `status`, `categories`, `tags` y metadata SEO Jetpack;
+- dejar la imagen destacada sin asignar, porque se genera y se establece manualmente durante la revisión humana;
+- generar `wordpress-payload-preview.json`;
+- generar `06-wordpress-creation-log.json`;
+- verificar por REST que slug, categoría, etiquetas, extracto y metadata SEO quedaron escritos.
+
+Si `python3 scripts/create_wp_drafts.py --dry-run` falla, no intentes crear borradores.
 
 Si el Supervisor Final NO devuelve CREAR_WORDPRESS_DRAFT, detente aquí y registra el motivo en el manifest.
 
