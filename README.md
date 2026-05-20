@@ -81,6 +81,16 @@ El script oficial conserva el contrato completo del Supervisor Final: slug, cate
 etiquetas, extracto y metadata SEO Jetpack. La imagen destacada queda sin asignar
 para revisión humana manual.
 
+## Flujo manual: articulo dirigido
+
+Para crear un articulo propio a partir de una idea humana, usa:
+
+```text
+PROMPT_ARTICULO_DIRIGIDO.md
+```
+
+Este flujo no sustituye a las Routines A/B. Sirve para trabajar con Codex o Claude Code como equipo editorial subordinado: primero fija tesis, audiencia y angulo; despues genera un unico `articulo_001_wordpress_ready.md` compatible con `scripts/create_wp_drafts.py`.
+
 ## Cómo usarlo
 
 ### 1. Inicializar ejecución
