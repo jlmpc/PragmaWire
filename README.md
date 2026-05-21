@@ -86,10 +86,18 @@ para revisión humana manual.
 Para crear un articulo propio a partir de una idea humana, usa:
 
 ```text
-PROMPT_ARTICULO_DIRIGIDO.md
+/articulo [idea inicial]
 ```
 
-Este flujo no sustituye a las Routines A/B. Sirve para trabajar con Codex o Claude Code como equipo editorial subordinado: primero fija tesis, audiencia y angulo; despues genera un unico `articulo_001_wordpress_ready.md` compatible con `scripts/create_wp_drafts.py`.
+El comando carga `PROMPT_ARTICULO_DIRIGIDO.md` como prompt maestro. Este flujo no sustituye a las Routines A/B. Sirve para trabajar con Codex o Claude Code como equipo editorial subordinado: primero fija tesis, audiencia y angulo; despues genera un unico `articulo_001_wordpress_ready.md` compatible con `scripts/create_wp_drafts.py`.
+
+En Claude Code esta disponible como comando de proyecto:
+
+```text
+/articulo quiero hablar sobre ...
+```
+
+En Codex, `AGENTS.md` define la misma regla de activacion para mensajes que empiecen por `/articulo`.
 
 ## Cómo usarlo
 
