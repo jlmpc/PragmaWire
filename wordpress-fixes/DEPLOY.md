@@ -2,20 +2,25 @@
 
 ## Qué hace
 
-Corrige la regresión de rendimiento post-WP 7.0 sin tocar el tema (v1.1.47).
+Corrige la regresión de rendimiento post-WP 7.0 con dos capas:
+
+1. **MU-plugin temporal**: estabiliza producción sin tocar base de datos.
+2. **Parche de tema 1.1.47**: mueve al tema los fixes permanentes que no dependen
+   de terceros.
+
 Cero cambios visuales. Solo afecta a cómo y cuándo se cargan recursos.
 
 ## Impacto esperado
 
-| Métrica | Antes | Después estimado |
-|---------|-------|-----------------|
-| Móvil Performance | 59 | ~85-92 |
-| Desktop Performance | 80 | ~90-95 |
-| LCP móvil | 8.4s | ~2.5-3.5s |
-| CLS desktop | 0.17 | ~0.02 |
-| TBT | 290ms | ~100-150ms |
+| Métrica | Antes | Objetivo |
+|---------|-------|----------|
+| Móvil Performance | 59 | >90 |
+| Desktop Performance | 80 | >95 |
+| LCP móvil | 8.4s | <3.5s |
+| CLS desktop | 0.17 | <0.05 |
+| TBT | 290ms | <150ms |
 
-## Paso 1 — Subir el MU-Plugin (5 minutos)
+## Paso 1 — Subir el MU-plugin temporal
 
 1. Conectar al servidor vía FTP/SFTP o panel de hosting
 2. Navegar a `/wp-content/mu-plugins/`
@@ -23,7 +28,10 @@ Cero cambios visuales. Solo afecta a cómo y cuándo se cargan recursos.
 3. Subir el archivo `pragmawire-perf.php`
 4. **No es necesario activarlo** — los MU-plugins se cargan automáticamente
 
-## Paso 2 — Cloudflare: desactivar Email Obfuscation (1 minuto)
+Este MU-plugin **no** genera preloads LCP. El tema ya emite dos preloads
+responsive; añadir un tercero duplica la prioridad de red.
+
+## Paso 2 — Cloudflare: mantener Email Obfuscation apagado
 
 Este es el fix más impactante junto al del `decoding`. El script `email-decode.min.js`
 de Cloudflare bloquea el render crítico durante 509ms en desktop.
@@ -36,16 +44,49 @@ de Cloudflare bloquea el render crítico durante 509ms en desktop.
 > El plugin ya añade `defer` al script de Cloudflare como solución provisional,
 > pero desactivarlo en Cloudflare es la solución definitiva.
 
-## Paso 3 — Verificar (2 minutos)
+## Paso 3 — Aplicar el parche permanente al tema 1.1.47
+
+El parche está en:
+
+`wordpress-fixes/theme-patches/pragmawire-1.1.47-wp70.patch`
+
+Aplicarlo sobre la carpeta raíz que contiene `pragmawire/`:
+
+```bash
+patch -p1 < wordpress-fixes/theme-patches/pragmawire-1.1.47-wp70.patch
+```
+
+Qué mueve al tema:
+
+- `decoding="async"` vía filtros nativos de WordPress.
+- `preconnect` correcto a `https://i0.wp.com` con `crossorigin`.
+- `aspect-ratio` para prevenir CLS en imágenes destacadas.
+- `will-change` para elementos Liquid Glass animados.
+
+Qué se mantiene temporalmente en el MU-plugin:
+
+- bloqueo de handlers `unload` de scripts de terceros.
+- carga de AdSense después del evento `load`.
+- fallback para Cloudflare email-decode si vuelve a activarse.
+
+## Paso 4 — Verificar
 
 1. Abrir https://pagespeed.web.dev
 2. Analizar https://www.pragmawire.com (esperar ~1-2 minutos a que Cloudflare limpie caché)
 3. Comparar con las métricas del informe original
+4. Confirmar en el HTML público:
+   - máximo 2 preloads LCP (`mobile` y `desktop`)
+   - cero `decoding="sync"`
+   - cero `cloudflare-static/email-decode` en ruta crítica
+   - AdSense aparece solo en el snippet post-`load`
+   - no aparecen `wp-importmap`, `modulepreload` ni `wp-interactivity` en home
 
 ## Rollback (si algo falla)
 
-Eliminar `/wp-content/mu-plugins/pragmawire-perf.php` — el sitio vuelve exactamente
-al estado anterior. No hay cambios en la base de datos ni en el tema.
+1. Eliminar `/wp-content/mu-plugins/pragmawire-perf.php`
+2. Reinstalar el ZIP estable `pragmawire-1.1.47.zip` si el parche del tema ya fue aplicado
+
+No hay cambios en la base de datos.
 
 ## Qué NO hace este plugin
 
@@ -54,12 +95,3 @@ al estado anterior. No hay cambios en la base de datos ni en el tema.
 - No elimina animaciones (solo las mueve a GPU)
 - No deshabilita ningún plugin existente
 - No toca la base de datos
-
----
-
-## Fix adicional manual (opcional, +5 pts extra)
-
-Si quieres los últimos puntos de rendimiento, en el tema hay que localizar el template
-que genera la imagen LCP (busca `data-pragmawire-lcp`) y verificar que no tenga
-hardcodeado `decoding="sync"`. El plugin ya lo corrige vía output buffer, pero
-limpiarlo en el fuente elimina la dependencia del buffer.

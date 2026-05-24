@@ -1,0 +1,86 @@
+diff --git a/pragmawire/inc/setup.php b/pragmawire/inc/setup.php
+index a1be33b..a8793b6 100644
+--- a/pragmawire/inc/setup.php
++++ b/pragmawire/inc/setup.php
+@@ -1355,6 +1355,38 @@ function pragmawire_home_lcp_image_url(): string {
+ }
+ add_action( 'wp_head', 'pragmawire_preload_home_critical_assets', 1 );
+ 
++/**
++ * Keep image decoding non-blocking on WordPress 7.0.
++ *
++ * WordPress defaults to async decoding for generated image markup, but the
++ * theme keeps this explicit so future plugin filters cannot promote public
++ * images back to decoding="sync".
++ *
++ * @param array<string,string> $attr Image attributes.
++ * @return array<string,string>
++ */
++function pragmawire_force_async_image_decoding( array $attr ): array {
++	$attr['decoding'] = 'async';
++
++	return $attr;
++}
++add_filter( 'wp_get_attachment_image_attributes', 'pragmawire_force_async_image_decoding', 20 );
++
++/**
++ * Force async decoding when WordPress optimizes hardcoded content images.
++ *
++ * @param string|false|null $value   Current decoding value.
++ * @param string            $image   Image HTML.
++ * @param string            $context Loading optimization context.
++ * @return string
++ */
++function pragmawire_force_async_content_image_decoding( $value, string $image, string $context ): string {
++	unset( $value, $image, $context );
++
++	return 'async';
++}
++add_filter( 'wp_img_tag_add_decoding_attr', 'pragmawire_force_async_content_image_decoding', 20, 3 );
++
+ /**
+  * Print compact homepage schema instead of plugin-generated page-builder bloat.
+  */
+@@ -1597,7 +1629,7 @@ function pragmawire_filter_home_performance_html( string $html ): string {
+ 			$html
+ 		) ?? $html;
+ 
+-		$early_head = "\n" . '<link rel="preconnect" href="https://i0.wp.com">' . "\n";
++		$early_head = "\n" . '<link rel="preconnect" href="https://i0.wp.com" crossorigin>' . "\n";
+ 		if ( ! empty( $lcp_preloads ) ) {
+ 			$early_head .= implode( "\n", array_unique( $lcp_preloads ) ) . "\n";
+ 		}
+diff --git a/pragmawire/style.css b/pragmawire/style.css
+index db2dbf8..01024a8 100644
+--- a/pragmawire/style.css
++++ b/pragmawire/style.css
+@@ -1482,6 +1482,7 @@ html:not(.dark) .pw-page-aurora-card.pw-newsletter-aurora-card .pw-newsletter-ba
+   display: block;
+   width: 100%;
+   height: 100%;
++  aspect-ratio: 8 / 5;
+   object-fit: cover;
+   backface-visibility: hidden;
+ }
+@@ -1521,6 +1522,7 @@ html:not(.dark) .pw-page-aurora-card.pw-newsletter-aurora-card .pw-newsletter-ba
+   display: block;
+   width: 100%;
+   height: 100%;
++  aspect-ratio: 16 / 9;
+   object-fit: cover;
+   backface-visibility: hidden;
+ }
+@@ -1533,6 +1535,13 @@ html:not(.dark) .pw-page-aurora-card.pw-newsletter-aurora-card .pw-newsletter-ba
+   }
+ }
+ 
++.lg-aurora-cta,
++.lg-interactive,
++[class*="lg-hero"],
++[class*="lg-thick"] {
++  will-change: transform;
++}
++
+ /* =============================================================
+    PHP Navbar (non-React pages)
+    ============================================================= */
